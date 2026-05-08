@@ -117,17 +117,74 @@ if (typeof process === "undefined" || process.env.NODE_ENV !== "production") {
   runSmokeTests();
 }
 
+function LegalPage({ type }) {
+  const isPrivacy = type === "privacy";
+  const title = isPrivacy ? "Privacy Policy" : "Terms & Conditions";
+
+  return (
+    <div className="min-h-screen bg-[#030908] px-5 py-10 text-white">
+      <div className="mx-auto max-w-4xl">
+        <div className="mb-8 flex items-center gap-3">
+          <BookoraLogo className="h-12 w-12" />
+          <div>
+            <p className="text-2xl font-black">BOOKORA</p>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#72D6C8]">AI Receptionist</p>
+          </div>
+        </div>
+
+        <div className="rounded-3xl border border-[#72D6C8]/20 bg-white/5 p-8 leading-7 text-slate-200">
+          <h1 className="mb-4 text-4xl font-black text-white">{title}</h1>
+          <p className="mb-6 text-sm text-slate-400">Last updated: May 2026</p>
+
+          {isPrivacy ? (
+            <div className="space-y-5">
+              <p>Bookora respects your privacy. This Privacy Policy explains how we collect, use, and protect information submitted through our website, forms, calls, text messages, and appointment booking systems.</p>
+              <p>We may collect contact details such as name, phone number, email address, business information, appointment details, and message history when you contact us, book a demo, or interact with our AI receptionist services.</p>
+              <p>We use this information to respond to inquiries, provide services, schedule appointments, send reminders, improve customer experience, and communicate with you about Bookora services.</p>
+              <p>By providing your phone number, you consent to receive calls and SMS messages from Bookora related to your inquiry, appointment, or service request. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out.</p>
+              <p>We do not sell your personal information. We may share information only with service providers necessary to operate our systems, such as CRM, phone, SMS, calendar, payment, and automation platforms.</p>
+              <p>For privacy questions, contact Bookora at (727) 620-6969 or by mail at 1224 S Highland Ave #1008, Clearwater, FL 33756.</p>
+            </div>
+          ) : (
+            <div className="space-y-5">
+              <p>These Terms & Conditions govern your use of Bookora’s website, demo systems, AI receptionist services, communication tools, and related appointment-setting services.</p>
+              <p>By using our website, submitting a form, booking a demo, calling our AI demo number, or using Bookora services, you agree to these terms.</p>
+              <p>Bookora provides AI receptionist, missed-call text-back, appointment booking, lead follow-up, automation, and related business communication services. Service details, pricing, and availability may vary by client agreement.</p>
+              <p>You agree not to misuse our website, systems, phone numbers, forms, automations, or communication services. You are responsible for ensuring that your own business use of Bookora complies with applicable laws and regulations.</p>
+              <p>SMS and call-based communications may be used for appointment reminders, follow-ups, service updates, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out of SMS communications.</p>
+              <p>Bookora is not responsible for indirect damages, missed revenue, missed appointments, or third-party platform outages. Services are provided using third-party tools that may occasionally experience downtime or changes.</p>
+              <p>For terms questions, contact Bookora at (727) 620-6969 or by mail at 1224 S Highland Ave #1008, Clearwater, FL 33756.</p>
+            </div>
+          )}
+
+          <a href="/" className="mt-8 inline-flex rounded-2xl bg-[#72D6C8] px-5 py-3 font-bold text-[#031312] hover:bg-[#8BE7DA]">
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function BookoraAIReceptionistDemoPage() {
+  const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
+
+  if (currentPath === "/privacy-policy") {
+    return <LegalPage type="privacy" />;
+  }
+
+  if (currentPath === "/terms-and-conditions") {
+    return <LegalPage type="terms" />;
+  }
+
   // ===== REPLACE THESE WITH YOUR REAL LINKS =====
   const DEMO_BOOKING_URL = "https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7";
   const GET_STARTED_URL = "https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7";
   const AI_DEMO_PHONE_NUMBER = "7276206969";
 
-const openLink = (url) => {
-  if (typeof window !== "undefined") {
+  const openLink = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
-  }
-};
+  };
   const [activePackage, setActivePackage] = useState("Growth");
   const [billing, setBilling] = useState("monthly");
   const [callingDemo, setCallingDemo] = useState(false);
@@ -414,18 +471,14 @@ const openLink = (url) => {
 
     <div className="flex gap-6">
       <a
-  href="https://bookora.ai/privacy-policy"
-  target="_blank"
-  rel="noopener noreferrer"
+  href="/privacy-policy"
         className="hover:text-white"
       >
         Privacy Policy
       </a>
 
       <a
-  href="https://bookora.ai/terms-%26-conditions"
-  target="_blank"
-  rel="noopener noreferrer"
+  href="/terms-and-conditions"
   className="hover:text-white"
       >
         Terms & Conditions
