@@ -237,8 +237,8 @@ export default function BookoraAIReceptionistDemoPage() {
 
   const packages = useMemo(() => PACKAGE_DATA, []);
   const active = getPackageByName(packages, activePackage);
-
-    const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
+  
+  const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
 
   if (currentPath === "/privacy-policy") {
     return <LegalPage type="privacy" />;
