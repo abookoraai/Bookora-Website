@@ -221,15 +221,7 @@ function LegalPage({ type }) {
 }
 
 export default function BookoraAIReceptionistDemoPage() {
-  const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
 
-  if (currentPath === "/privacy-policy") {
-    return <LegalPage type="privacy" />;
-  }
-
-  if (currentPath === "/terms-and-conditions") {
-    return <LegalPage type="terms" />;
-  }
 
   // ===== REPLACE THESE WITH YOUR REAL LINKS =====
   const DEMO_BOOKING_URL = "https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7";
@@ -245,6 +237,16 @@ export default function BookoraAIReceptionistDemoPage() {
 
   const packages = useMemo(() => PACKAGE_DATA, []);
   const active = getPackageByName(packages, activePackage);
+
+    const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
+
+  if (currentPath === "/privacy-policy") {
+    return <LegalPage type="privacy" />;
+  }
+
+  if (currentPath === "/terms-and-conditions") {
+    return <LegalPage type="terms" />;
+  }
 
   const industries = ["Med Spa", "Dental Studio", "Auto Detailing", "Fitness Club", "Chiropractic Care"];
   const steps = [
