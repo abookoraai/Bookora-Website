@@ -221,8 +221,6 @@ function LegalPage({ type }) {
 }
 
 export default function BookoraAIReceptionistDemoPage() {
-
-
   // ===== REPLACE THESE WITH YOUR REAL LINKS =====
   const DEMO_BOOKING_URL = "https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7";
   const GET_STARTED_URL = "https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7";
@@ -237,14 +235,15 @@ export default function BookoraAIReceptionistDemoPage() {
 
   const packages = useMemo(() => PACKAGE_DATA, []);
   const active = getPackageByName(packages, activePackage);
-  
-  const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
 
-  if (currentPath === "/privacy-policy") {
+  const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
+  const pageParam = typeof window !== "undefined" ? new URLSearchParams(window.location.search).get("page") : "";
+
+  if (currentPath === "/privacy-policy" || pageParam === "privacy-policy") {
     return <LegalPage type="privacy" />;
   }
 
-  if (currentPath === "/terms-and-conditions") {
+  if (currentPath === "/terms-and-conditions" || pageParam === "terms-and-conditions") {
     return <LegalPage type="terms" />;
   }
 
@@ -527,14 +526,14 @@ export default function BookoraAIReceptionistDemoPage() {
 
     <div className="flex gap-6">
       <a
-  href="/privacy-policy"
+  href="/?page=privacy-policy"
         className="hover:text-white"
       >
         Privacy Policy
       </a>
 
       <a
-  href="/terms-and-conditions"
+  href="/?page=terms-and-conditions"
   className="hover:text-white"
       >
         Terms & Conditions
