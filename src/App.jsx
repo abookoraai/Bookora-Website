@@ -138,22 +138,76 @@ function LegalPage({ type }) {
 
           {isPrivacy ? (
             <div className="space-y-5">
-              <p>Bookora respects your privacy. This Privacy Policy explains how we collect, use, and protect information submitted through our website, forms, calls, text messages, and appointment booking systems.</p>
-              <p>We may collect contact details such as name, phone number, email address, business information, appointment details, and message history when you contact us, book a demo, or interact with our AI receptionist services.</p>
-              <p>We use this information to respond to inquiries, provide services, schedule appointments, send reminders, improve customer experience, and communicate with you about Bookora services.</p>
-              <p>By providing your phone number, you consent to receive calls and SMS messages from Bookora related to your inquiry, appointment, or service request. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out.</p>
-              <p>We do not sell your personal information. We may share information only with service providers necessary to operate our systems, such as CRM, phone, SMS, calendar, payment, and automation platforms.</p>
-              <p>For privacy questions, contact Bookora at (727) 620-6969 or by mail at 1224 S Highland Ave #1008, Clearwater, FL 33756.</p>
+              <p>Bookora (“we,” “our,” or “us”) respects your privacy and is committed to protecting the personal information you provide to us. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or interact with our services.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">1. Information We Collect</h2>
+              <p>We may collect personal information including your name, email address, phone number, and business information if provided.</p>
+              <p>We may also collect automatically collected information including IP address, browser type, device information, and pages visited on our website.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">2. How We Use Your Information</h2>
+              <p>We use the information we collect to respond to inquiries, provide customer support, schedule appointments, communicate with you, send service-related communications via email, phone, or SMS, improve our services and website functionality, and provide updates, promotions, or relevant business information.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">3. SMS Communications</h2>
+              <p>By providing your phone number and submitting a form on our website, you consent to receive SMS text messages from Bookora. These messages may include appointment confirmations and reminders, follow-ups regarding your inquiry, and service-related notifications.</p>
+              <p>Message frequency varies. Message and data rates may apply. You can opt out at any time by replying STOP. For assistance, reply HELP.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">4. How We Share Your Information</h2>
+              <p>We do not share, sell, rent, or disclose your SMS opt-in data or consent with any third parties for marketing purposes.</p>
+              <p>We may share your information with trusted third-party service providers only as necessary to operate our business and provide our services, such as CRM, messaging platforms, and automation tools. These providers are required to keep your information secure and confidential.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">5. Data Security</h2>
+              <p>We take reasonable administrative, technical, and physical measures to protect your personal information from unauthorized access, use, or disclosure.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">6. Your Rights and Choices</h2>
+              <p>You have the right to request access to the personal information we have about you, request corrections or updates, request deletion of your data where applicable, and opt out of communications at any time. To make a request, contact us at support@bookora.ai.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">7. Cookies and Tracking Technologies</h2>
+              <p>We may use cookies and similar tracking technologies to enhance your experience on our website and analyze usage. You can adjust your browser settings to refuse cookies if you prefer.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">8. Third-Party Services</h2>
+              <p>Our website may use third-party tools, such as analytics or CAPTCHA services, that may collect information according to their own privacy policies.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">9. Changes to This Privacy Policy</h2>
+              <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">10. Contact Information</h2>
+              <p>Bookora<br />1224 S Highland Ave #1008<br />Clearwater, FL 33756<br />United States<br />Email: support@bookora.ai<br />Phone: (727) 620-6969</p>
             </div>
           ) : (
             <div className="space-y-5">
-              <p>These Terms & Conditions govern your use of Bookora’s website, demo systems, AI receptionist services, communication tools, and related appointment-setting services.</p>
-              <p>By using our website, submitting a form, booking a demo, calling our AI demo number, or using Bookora services, you agree to these terms.</p>
-              <p>Bookora provides AI receptionist, missed-call text-back, appointment booking, lead follow-up, automation, and related business communication services. Service details, pricing, and availability may vary by client agreement.</p>
-              <p>You agree not to misuse our website, systems, phone numbers, forms, automations, or communication services. You are responsible for ensuring that your own business use of Bookora complies with applicable laws and regulations.</p>
-              <p>SMS and call-based communications may be used for appointment reminders, follow-ups, service updates, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out of SMS communications.</p>
-              <p>Bookora is not responsible for indirect damages, missed revenue, missed appointments, or third-party platform outages. Services are provided using third-party tools that may occasionally experience downtime or changes.</p>
-              <p>For terms questions, contact Bookora at (727) 620-6969 or by mail at 1224 S Highland Ave #1008, Clearwater, FL 33756.</p>
+              <p>Welcome to Bookora. By accessing or using our website and services, you agree to be bound by the following Terms and Conditions. If you do not agree with these terms, please do not use our services.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">1. Use of Services</h2>
+              <p>Bookora provides AI-powered communication, appointment scheduling, and customer engagement tools for businesses. By using our services, you agree to use them only for lawful purposes and in accordance with these Terms.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">2. Communications Consent</h2>
+              <p>By submitting your information through our website, you agree to receive communications from Bookora via email, phone, and SMS text messages.</p>
+              <p>These communications may include appointment confirmations and reminders, follow-ups regarding your inquiry, and service-related notifications.</p>
+              <p>Message frequency varies. Message and data rates may apply. You may opt out at any time by replying STOP to any SMS message. For assistance, reply HELP.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">3. User Responsibilities</h2>
+              <p>You agree that the information you provide is accurate and complete, that you will not use our services for unlawful or prohibited activities, and that you will not attempt to interfere with or disrupt our systems.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">4. Intellectual Property</h2>
+              <p>All content on this website, including text, graphics, logos, and software, is the property of Bookora and is protected by applicable intellectual property laws. You may not copy, reproduce, or distribute any content without prior written permission.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">5. Limitation of Liability</h2>
+              <p>Bookora is not liable for any indirect, incidental, or consequential damages arising from the use of our services. We do not guarantee specific business results, including increased bookings or revenue.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">6. Third-Party Services</h2>
+              <p>Our services may integrate with third-party tools and platforms. We are not responsible for the performance or policies of these third-party services.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">7. Termination</h2>
+              <p>We reserve the right to suspend or terminate access to our services at any time for violations of these Terms.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">8. Changes to Terms</h2>
+              <p>We may update these Terms and Conditions at any time. Updates will be posted on this page with a revised effective date.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">9. Additional Terms</h2>
+              <p>Carriers are not liable for delayed or undelivered messages. You must be at least 18 years old to use our services. Please review our Privacy Policy for more information on how we collect and use your data.</p>
+
+              <h2 className="pt-4 text-2xl font-black text-white">10. Contact Information</h2>
+              <p>Bookora<br />1224 S Highland Ave #1008<br />Clearwater, FL 33756<br />United States<br />Email: support@bookora.ai<br />Phone: (727) 620-6969</p>
             </div>
           )}
 
