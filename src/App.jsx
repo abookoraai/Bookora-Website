@@ -223,7 +223,10 @@ function LegalPage({ type }) {
 export default function BookoraAIReceptionistDemoPage() {
   // ===== REPLACE THESE WITH YOUR REAL LINKS =====
   const DEMO_BOOKING_URL = "https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7";
-  const GET_STARTED_URL = "https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7";
+
+const STARTER_URL = "https://links.bookora.ai/payment-link/6a00004634d67b041e7e893f";
+const GROWTH_URL = "https://links.bookora.ai/payment-link/6a00009134d67b041e7e8940";
+const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a";
   const AI_DEMO_PHONE_NUMBER = "7276206969";
 
   const openLink = (url) => {
