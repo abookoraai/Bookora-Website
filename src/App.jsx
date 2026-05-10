@@ -467,7 +467,15 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
                     <Button
                       variant={pkg.name === "Growth" ? "solid" : "outline"}
                       className="mt-7 w-full"
-                      onClick={() => openLink(GET_STARTED_URL)}
+                      onClick={() =>
+                        openLink(
+                          pkg.name === "Starter"
+                          ? STARTER_URL
+                          : pkg.name === "Growth"
+                          ? GROWTH_URL
+                          : PRO_URL
+  )
+}
                     >
                       Get Started
                     </Button>
