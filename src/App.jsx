@@ -67,21 +67,23 @@ function Card({ children, className = "" }) {
 const PACKAGE_DATA = [
   {
     name: "Starter",
-    price: "$297/mo",
-    setup: "No heavy setup required",
+    price: "$500 today",
+monthly: "$297/mo after 30 days",
     bestFor: "Missed-call recovery + appointment reminders",
     features: ["AI answers calls 24/7", "Missed call text-back", "Books appointments", "Basic integrations", "Email support"],
   },
-  {
-    name: "Growth",
-    price: "$497/mo",
+    {
+  name: "Growth",
+  price: "$500 today",
+  monthly: "$497/mo after 30 days",
     setup: "Most popular",
     bestFor: "AI receptionist + lead nurturing",
     features: ["Everything in Starter", "Advanced integrations", "Custom call flows", "Priority support", "Call logs and analytics"],
   },
   {
-    name: "Pro",
-    price: "$797/mo",
+  name: "Pro",
+  price: "$500 today",
+  monthly: "$797/mo after 30 days",
     setup: "For high-volume businesses",
     bestFor: "Full lead conversion system",
     features: ["Everything in Growth", "Multi-location support", "Advanced analytics", "Dedicated account manager", "VIP support"],
@@ -438,12 +440,13 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
         <section id="pricing" className="mx-auto max-w-7xl px-5 py-16">
           <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <h2 className="text-4xl font-black tracking-tight md:text-5xl">Simple Pricing. <span className="text-[#72D6C8]">Big Impact.</span></h2>
-              <p className="mt-3 text-slate-300">Choose the perfect plan for your business.</p>
-            </div>
-            <div className="flex w-fit rounded-full border border-[#72D6C8]/30 p-1">
-              <button onClick={() => setBilling("monthly")} className={`rounded-full px-5 py-2 text-sm font-bold ${billing === "monthly" ? "bg-[#72D6C8] text-[#031312]" : "text-slate-300"}`}>Monthly</button>
-              <button onClick={() => setBilling("annual")} className={`rounded-full px-5 py-2 text-sm font-bold ${billing === "annual" ? "bg-[#72D6C8] text-[#031312]" : "text-slate-300"}`}>Annual</button>
+              <h2 className="text-4xl font-black tracking-tight md:text-5xl">
+  Simple Pricing. <span className="text-[#72D6C8]">Easy Start.</span>
+</h2>
+
+<p className="mt-3 max-w-2xl text-slate-300">
+  Start today for $500. Your first 30 days are included, then continue month-to-month. Cancel anytime.
+</p>
             </div>
           </div>
 
@@ -455,7 +458,19 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
                   <div className="p-7">
                     <h3 className="text-2xl font-black">{pkg.name}</h3>
                     <p className="mt-1 text-sm text-slate-400">{pkg.bestFor}</p>
-                    <p className="mt-6 text-4xl font-black">{pkg.price}<span className="text-base font-semibold text-slate-400"> /mo</span></p>
+                    <div className="mt-6">
+  <p className="text-4xl font-black">
+    {pkg.price}
+  </p>
+
+  <p className="mt-2 text-sm font-semibold text-[#72D6C8]">
+    {pkg.monthly}
+  </p>
+
+  <p className="mt-2 text-xs text-slate-400">
+    Includes setup + first 30 days
+  </p>
+</div>
                     <div className="mt-6 space-y-3">
                       {pkg.features.map((feature) => (
                         <div key={feature} className="flex gap-3 text-sm text-slate-200">
@@ -486,7 +501,7 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
 
             <div className="space-y-5 rounded-3xl border border-white/10 bg-white/5 p-7">
               {[
-                ["spark", "No Setup Fees", "Get started in minutes."],
+                ["spark", "$500 Includes Setup", "Your first 30 days are included."],
                 ["shield", "Cancel Anytime", "No contracts. No hassle."],
                 ["check", "30-Day Guarantee", "Love it or your money back."],
                 ["users", "Built For Small Business", "Simple systems that help you grow."],
