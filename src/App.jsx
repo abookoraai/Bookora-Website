@@ -68,14 +68,14 @@ const PACKAGE_DATA = [
   {
     name: "Starter",
     price: "$500 today",
-monthly: "$297/mo after 30 days",
+    monthly: "$297/mo",
     bestFor: "Missed-call recovery + appointment reminders",
     features: ["AI answers calls 24/7", "Missed call text-back", "Books appointments", "Basic integrations", "Email support"],
   },
     {
   name: "Growth",
   price: "$500 today",
-  monthly: "$497/mo after 30 days",
+  monthly: "$497/mo",
     setup: "Most popular",
     bestFor: "AI receptionist + lead nurturing",
     features: ["Everything in Starter", "Advanced integrations", "Custom call flows", "Priority support", "Call logs and analytics"],
@@ -83,7 +83,7 @@ monthly: "$297/mo after 30 days",
   {
   name: "Pro",
   price: "$500 today",
-  monthly: "$797/mo after 30 days",
+  monthly: "$797/mo",
     setup: "For high-volume businesses",
     bestFor: "Full lead conversion system",
     features: ["Everything in Growth", "Multi-location support", "Advanced analytics", "Dedicated account manager", "VIP support"],
@@ -459,13 +459,24 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
                     <h3 className="text-2xl font-black">{pkg.name}</h3>
                     <p className="mt-1 text-sm text-slate-400">{pkg.bestFor}</p>
                     <div className="mt-6">
-  <p className="text-4xl font-black">
-    {pkg.price}
-  </p>
-
-  <p className="mt-2 text-sm font-semibold text-[#72D6C8]">
+  <div className="mt-6">
+  <p className="text-5xl font-black">
     {pkg.monthly}
   </p>
+
+  <p className="mt-2 text-sm font-semibold text-slate-400">
+    after your first 30 days
+  </p>
+
+  <div className="mt-4 rounded-2xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-4">
+    <p className="text-sm font-black text-[#72D6C8]">
+      $500 Startup Includes
+    </p>
+    <p className="mt-1 text-xs text-slate-300">
+      Setup • onboarding • first 30 days
+    </p>
+  </div>
+</div>
 
   <p className="mt-2 text-xs text-slate-400">
     Includes setup + first 30 days
@@ -492,8 +503,11 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
   )
 }
                     >
-                      Get Started
+                      Start Setup
                     </Button>
+                    <p className="mt-3 text-center text-xs text-slate-400">
+                     Cancel anytime after your first 30 days.
+                   </p>
                   </div>
                 </Card>
               </div>
