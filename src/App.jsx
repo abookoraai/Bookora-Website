@@ -503,7 +503,7 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
               {[
                 ["spark", "$500 Includes Setup", "Your first 30 days are included."],
                 ["shield", "Cancel Anytime", "No contracts. No hassle."],
-                ["check", "30-Day Guarantee", "Love it or your money back."],
+                ["check", "30-Day Launch Guarantee", "If your system isn’t working as designed, we’ll make it right."],
                 ["users", "Built For Small Business", "Simple systems that help you grow."],
               ].map(([icon, title, desc]) => (
                 <div key={title} className="flex gap-4">
