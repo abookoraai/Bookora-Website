@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-
+import BookoraRevenueLossCalculator from "./BookoraRevenueLossCalculator";
 const ACCENT = "#58AA9D";
 const ACCENT_LIGHT = "#72D6C8";
 const DARK = "#030908";
@@ -387,7 +387,12 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
 if (currentPath === "/terms-and-conditions" || pageParam === "terms-and-conditions") {
   return <LegalPage type="terms" />;
 }
-
+if (
+  currentPath === "/revenue-calculator" ||
+  pageParam === "revenue-calculator"
+) {
+  return <BookoraRevenueLossCalculator />;
+}
   if (currentPath === "/privacy-policy" || pageParam === "privacy-policy") {
     return <LegalPage type="privacy" />;
   }
