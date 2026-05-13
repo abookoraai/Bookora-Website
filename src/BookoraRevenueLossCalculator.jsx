@@ -274,9 +274,20 @@ export default function BookoraRevenueLossCalculator() {
               <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-300">
                 This is an estimate, but it gives prospects a clear reason to fix missed calls now instead of waiting.
               </p>
-              <button className="mt-5 w-full rounded-2xl bg-[#72D6C8] px-5 py-4 font-black text-[#031312] transition hover:bg-[#8BE7DA] sm:w-auto sm:px-7">
-                Recover These Leads With Bookora
-              </button>
+              <a
+  href="https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-5 inline-flex w-full items-center justify-center rounded-2xl bg-[#72D6C8] px-5 py-4 text-sm font-black text-[#031312] transition hover:bg-[#8BE7DA] sm:w-auto sm:px-7 sm:text-base"
+>
+  Book a 10-Minute Demo
+</a>
+<a
+  href="/#pricing"
+  className="mt-4 inline-block text-sm font-semibold text-[#72D6C8] hover:underline"
+>
+  Or view packages
+</a>
               <p className="mt-3 text-xs text-slate-400">No pressure. Just a quick 10-minute demo.</p>
             </div>
           </div>
