@@ -221,6 +221,145 @@ function LegalPage({ type }) {
     </div>
   );
 }
+```jsx
+function RevenueImpactSection() {
+  const rows = [
+    {
+      metric: "Missed Calls",
+      traditional: "15–40%",
+      ai: "<3%",
+      impact: "Very High",
+      estimate: "+$5k–$20k/mo",
+    },
+    {
+      metric: "Response Time",
+      traditional: "~30 min",
+      ai: "<10 sec",
+      impact: "High",
+      estimate: "+$3k–$12k/mo",
+    },
+    {
+      metric: "Lead Follow-Up",
+      traditional: "Inconsistent",
+      ai: "24/7 Instant",
+      impact: "Very High",
+      estimate: "+$8k–$25k/mo",
+    },
+    {
+      metric: "Appointment Booking",
+      traditional: "Manual",
+      ai: "Automated",
+      impact: "High",
+      estimate: "+$4k–$15k/mo",
+    },
+    {
+      metric: "Review Requests",
+      traditional: "Rarely Sent",
+      ai: "Automatic",
+      impact: "Medium",
+      estimate: "+$2k–$8k/mo",
+    },
+    {
+      metric: "Lead Conversion",
+      traditional: "20–30%",
+      ai: "40–60%",
+      impact: "Very High",
+      estimate: "+$10k–$40k/mo",
+    },
+  ];
+
+  return (
+    <section
+      id="revenue-impact"
+      className="mx-auto max-w-7xl px-5 py-20"
+    >
+      <div className="mb-10 text-center">
+        <h2 className="text-4xl font-black tracking-tight md:text-5xl">
+          Numbers Don’t <span className="text-[#72D6C8]">Lie</span>
+        </h2>
+
+        <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+          Slow response times and missed calls cost local businesses
+          thousands every month. Bookora helps recover lost revenue
+          automatically.
+        </p>
+      </div>
+
+      <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-[#58AA9D]/10 backdrop-blur">
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[900px] border-collapse">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="px-6 py-6 text-left text-sm font-black uppercase tracking-wide text-slate-400">
+                  Metric
+                </th>
+
+                <th className="px-6 py-6 text-center text-sm font-black uppercase tracking-wide text-slate-400">
+                  Human Staff
+                </th>
+
+                <th className="bg-[#72D6C8]/10 px-6 py-6 text-center text-sm font-black uppercase tracking-wide text-[#72D6C8]">
+                  Bookora AI
+                </th>
+
+                <th className="px-6 py-6 text-center text-sm font-black uppercase tracking-wide text-slate-400">
+                  Revenue Impact
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {rows.map((row, index) => (
+                <tr
+                  key={index}
+                  className="border-b border-white/5"
+                >
+                  <td className="px-6 py-5 font-semibold text-white">
+                    {row.metric}
+                  </td>
+
+                  <td className="px-6 py-5 text-center text-slate-300">
+                    {row.traditional}
+                  </td>
+
+                  <td className="bg-[#72D6C8]/5 px-6 py-5 text-center font-black text-[#72D6C8]">
+                    {row.ai}
+                  </td>
+
+                  <td className="px-6 py-5 text-center">
+                    <div className="inline-flex rounded-full bg-[#72D6C8]/10 px-4 py-2 text-sm font-black text-[#72D6C8]">
+                      {row.estimate}
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="border-t border-white/10 p-8 text-center">
+          <h3 className="text-3xl font-black">
+            Curious How Much Revenue You’re Losing?
+          </h3>
+
+          <p className="mx-auto mt-3 max-w-2xl text-slate-300">
+            Use the Revenue Leak Calculator to estimate how much
+            missed calls and slow response times may be costing your
+            business every month.
+          </p>
+
+          <a
+            href="/?page=revenue-calculator"
+            className="mt-6 inline-flex rounded-2xl bg-[#72D6C8] px-7 py-4 font-black text-[#031312] transition hover:bg-[#8BE7DA]"
+          >
+            Calculate Your Revenue Leak
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+```
 
 export default function BookoraAIReceptionistDemoPage() {
   // ===== REPLACE THESE WITH YOUR REAL LINKS =====
@@ -281,6 +420,9 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
           <a href="#features" className="hover:text-[#72D6C8]">Features</a>
           <a href="#how" className="hover:text-[#72D6C8]">How It Works</a>
           <a href="#pricing" className="hover:text-[#72D6C8]">Pricing</a>
+          <a href="#revenue-impact" className="hover:text-[#72D6C8]">
+  Revenue Leak Calculator
+</a>
           <a href="#industries" className="hover:text-[#72D6C8]">Industries</a>
           <a href="#resources" className="hover:text-[#72D6C8]">Resources</a>
         </nav>
@@ -436,7 +578,7 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
             </div>
           </div>
         </section>
-
+<RevenueImpactSection />
         <section id="pricing" className="mx-auto max-w-7xl px-5 py-16">
           <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
