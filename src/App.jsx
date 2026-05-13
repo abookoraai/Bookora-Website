@@ -453,9 +453,18 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
           <div className="grid gap-5 lg:grid-cols-[1fr_1fr_1fr_0.9fr]">
             {packages.map((pkg) => (
               <div key={pkg.name} className="text-left">
-                <Card className={`relative h-full overflow-hidden bg-white/5 transition ${activePackage === pkg.name ? "border-[#72D6C8] shadow-2xl shadow-[#58AA9D]/20" : "border-white/10 hover:border-[#72D6C8]/40"}`}>
+                <Card
+  className={`relative h-full cursor-pointer overflow-hidden bg-white/5 transition hover:-translate-y-1 ${
+    activePackage === pkg.name
+      ? "scale-[1.02] border-[#72D6C8] shadow-2xl shadow-[#58AA9D]/30"
+      : "border-white/10 hover:border-[#72D6C8]/40"
+  }`}
+>
                   {pkg.name === "Growth" && <div className="bg-[#72D6C8] py-2 text-center text-xs font-black text-[#031312]">Most Popular</div>}
-                  <div className="p-7">
+                  <div
+  className="p-7"
+  onClick={() => setActivePackage(pkg.name)}
+>
                     <h3 className="text-2xl font-black">{pkg.name}</h3>
                     <p className="mt-1 text-sm text-slate-400">{pkg.bestFor}</p>
                     <div className="mt-6">
@@ -490,20 +499,24 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
                       ))}
                     </div>
                     <Button
-                      variant={pkg.name === "Growth" ? "solid" : "outline"}
-                      className="mt-7 w-full"
-                      onClick={() =>
-                        openLink(
-                          pkg.name === "Starter"
-                          ? STARTER_URL
-                          : pkg.name === "Growth"
-                          ? GROWTH_URL
-                          : PRO_URL
-  )
-}
-                    >
-                      Get Started
-                    </Button>
+  variant={activePackage === pkg.name ? "solid" : "outline"}
+  className="mt-7 w-full"
+  onClick={(e) => {
+    e.stopPropagation();
+
+    setActivePackage(pkg.name);
+
+    openLink(
+      pkg.name === "Starter"
+        ? STARTER_URL
+        : pkg.name === "Growth"
+        ? GROWTH_URL
+        : PRO_URL
+    );
+  }}
+>
+  Get Started
+</Button>
                     <p className="mt-3 text-center text-xs text-slate-400">
                      Secure checkout powered by Stripe
                    </p>
