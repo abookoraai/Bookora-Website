@@ -221,7 +221,6 @@ function LegalPage({ type }) {
     </div>
   );
 }
-```jsx
 function RevenueImpactSection() {
   const rows = [
     {
@@ -359,7 +358,6 @@ function RevenueImpactSection() {
     </section>
   );
 }
-```
 
 export default function BookoraAIReceptionistDemoPage() {
   // ===== REPLACE THESE WITH YOUR REAL LINKS =====
@@ -420,9 +418,7 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
           <a href="#features" className="hover:text-[#72D6C8]">Features</a>
           <a href="#how" className="hover:text-[#72D6C8]">How It Works</a>
           <a href="#pricing" className="hover:text-[#72D6C8]">Pricing</a>
-          <a href="#revenue-impact" className="hover:text-[#72D6C8]">
-  Revenue Leak Calculator
-</a>
+          
           <a href="#industries" className="hover:text-[#72D6C8]">Industries</a>
           <a href="#resources" className="hover:text-[#72D6C8]">Resources</a>
         </nav>
