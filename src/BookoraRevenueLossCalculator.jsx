@@ -129,16 +129,35 @@ function InputCard({ label, value, onChange, prefix, suffix, helper, min = 0, ma
 function ResultCard({ icon, title, value, desc, featured = false }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
-      className={`rounded-3xl border p-5 ${featured ? "border-[#72D6C8] bg-[#72D6C8]/10 shadow-2xl shadow-[#58AA9D]/20" : "border-white/10 bg-white/5"}`}
+      className={`rounded-2xl border p-4 sm:rounded-3xl sm:p-5 ${
+        featured
+          ? "border-[#72D6C8] bg-[#72D6C8]/10 shadow-xl shadow-[#58AA9D]/10"
+          : "border-white/10 bg-white/5"
+      }`}
     >
-      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#72D6C8] text-[#031312]">
-        <Icon name={icon} />
+      <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-full bg-[#72D6C8] text-[#031312] sm:h-11 sm:w-11">
+        <Icon name={icon} className="h-4 w-4 sm:h-5 sm:w-5" />
       </div>
-      <p className="text-sm font-black uppercase tracking-wide text-slate-400">{title}</p>
-      <p className={`mt-2 break-words font-black ${featured ? "text-3xl text-[#72D6C8] sm:text-5xl" : "text-2xl text-white sm:text-3xl"}`}>{value}</p>
-      <p className="mt-3 text-sm leading-6 text-slate-400">{desc}</p>
+
+      <p className="text-xs font-black uppercase tracking-wide text-slate-400 sm:text-sm">
+        {title}
+      </p>
+
+      <p
+        className={`mt-2 break-words font-black leading-tight ${
+          featured
+            ? "text-3xl text-[#72D6C8] sm:text-5xl"
+            : "text-2xl text-white sm:text-3xl"
+        }`}
+      >
+        {value}
+      </p>
+
+      <p className="mt-2 text-sm leading-6 text-slate-400 sm:mt-3">
+        {desc}
+      </p>
     </motion.div>
   );
 }
