@@ -380,6 +380,13 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
 
   const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
   const pageParam = typeof window !== "undefined" ? new URLSearchParams(window.location.search).get("page") : "";
+  if (currentPath === "/privacy-policy" || pageParam === "privacy-policy") {
+  return <LegalPage type="privacy" />;
+}
+
+if (currentPath === "/terms-and-conditions" || pageParam === "terms-and-conditions") {
+  return <LegalPage type="terms" />;
+}
 
   if (currentPath === "/privacy-policy" || pageParam === "privacy-policy") {
     return <LegalPage type="privacy" />;
@@ -388,7 +395,12 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
   if (currentPath === "/terms-and-conditions" || pageParam === "terms-and-conditions") {
     return <LegalPage type="terms" />;
   }
-
+if (
+  currentPath === "/revenue-calculator" ||
+  pageParam === "revenue-calculator"
+) {
+  return <BookoraRevenueLossCalculator />;
+}
   const industries = ["Med Spa", "Dental Studio", "Auto Detailing", "Fitness Club", "Chiropractic Care"];
   const steps = [
     ["phone", "AI Answers Calls", "Bookora answers your calls instantly, just like a real receptionist."],
