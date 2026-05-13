@@ -117,7 +117,7 @@ function InputCard({ label, value, onChange, prefix, suffix, helper, min = 0, ma
           max={max}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="min-w-0 flex-1 bg-transparent text-3xl font-black text-white outline-none"
+          className="min-w-0 flex-1 bg-transparent text-2xl font-black text-white outline-none sm:text-3xl"
         />
         {suffix && <span className="ml-2 text-xl font-black text-slate-400">{suffix}</span>}
       </div>
@@ -137,7 +137,7 @@ function ResultCard({ icon, title, value, desc, featured = false }) {
         <Icon name={icon} />
       </div>
       <p className="text-sm font-black uppercase tracking-wide text-slate-400">{title}</p>
-      <p className={`mt-2 font-black ${featured ? "text-5xl text-[#72D6C8]" : "text-3xl text-white"}`}>{value}</p>
+      <p className={`mt-2 break-words font-black ${featured ? "text-3xl text-[#72D6C8] sm:text-5xl" : "text-2xl text-white sm:text-3xl"}`}>{value}</p>
       <p className="mt-3 text-sm leading-6 text-slate-400">{desc}</p>
     </motion.div>
   );
@@ -155,7 +155,7 @@ export default function BookoraRevenueLossCalculator() {
   );
 
   return (
-    <div className="min-h-screen bg-[#030908] px-5 py-10 text-white">
+    <div className="min-h-screen bg-[#030908] px-4 py-8 text-white sm:px-5 sm:py-10">
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[#58AA9D]/25 blur-3xl" />
         <div className="absolute -left-48 top-80 h-96 w-96 rounded-full bg-[#72D6C8]/15 blur-3xl" />
@@ -167,10 +167,10 @@ export default function BookoraRevenueLossCalculator() {
           <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-[#72D6C8]/40 bg-white/5 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#72D6C8]">
             <Icon name="calculator" className="h-4 w-4" /> Revenue Leak Calculator
           </div>
-          <h1 className="text-4xl font-black tracking-tight md:text-6xl">
+          <h1 className="text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
             See How Much Revenue You’re <span className="text-[#72D6C8]">Losing From Missed Calls</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
             Most local businesses miss calls every week. Use this calculator to estimate how much revenue could be slipping away — and how much Bookora may help recover.
           </p>
         </div>
@@ -249,11 +249,13 @@ export default function BookoraRevenueLossCalculator() {
 
             <div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6 text-center">
               <p className="text-sm font-black uppercase tracking-wide text-[#72D6C8]">Potential yearly recovered revenue</p>
-              <p className="mt-2 text-5xl font-black text-white">{currency(results.yearlyRecoverableRevenue)}</p>
+              <p className="mt-2 break-words text-3xl font-black text-white sm:text-5xl">
+  {currency(results.yearlyRecoverableRevenue)}
+</p>
               <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-300">
                 This is an estimate, but it gives prospects a clear reason to fix missed calls now instead of waiting.
               </p>
-              <button className="mt-5 rounded-2xl bg-[#72D6C8] px-7 py-4 font-black text-[#031312] transition hover:bg-[#8BE7DA]">
+              <button className="mt-5 w-full rounded-2xl bg-[#72D6C8] px-5 py-4 font-black text-[#031312] transition hover:bg-[#8BE7DA] sm:w-auto sm:px-7">
                 Recover These Leads With Bookora
               </button>
               <p className="mt-3 text-xs text-slate-400">No pressure. Just a quick 10-minute demo.</p>
