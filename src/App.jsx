@@ -505,7 +505,7 @@ const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a"
                       Get Started
                     </Button>
                     <p className="mt-3 text-center text-xs text-slate-400">
-                     Cancel anytime
+                     Secure checkout powered by Stripe
                    </p>
                   </div>
                 </Card>
