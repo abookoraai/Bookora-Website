@@ -107,21 +107,29 @@ runSmokeTests();
 
 function InputCard({ label, value, onChange, prefix, suffix, helper, min = 0, max }) {
   return (
-    <div className="min-h-screen bg-[#050816] px-4 py-8 text-white sm:px-6 lg:px-8">
-      <label className="text-sm font-black uppercase tracking-wide text-[#72D6C8]">{label}</label>
-      <div className="mt-3 flex items-center rounded-2xl border border-white/10 bg-black/30 px-4 py-3 focus-within:border-[#72D6C8]/60">
-        {prefix && <span className="mr-2 text-xl font-black text-slate-400">{prefix}</span>}
+    <div className="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5">
+      <label className="mb-2 block text-sm font-black uppercase tracking-wide text-[#72D6C8]">
+        {label}
+      </label>
+
+      <div className="flex items-center rounded-2xl border border-white/10 bg-black/30 px-4 py-3 focus-within:border-[#72D6C8]/60">
+        {prefix && <span className="mr-2 text-lg font-black text-slate-400 sm:text-xl">{prefix}</span>}
+
         <input
           type="number"
           min={min}
           max={max}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="min-w-0 flex-1 bg-transparent text-2xl font-black text-white outline-none sm:text-3xl"
+          className="min-w-0 flex-1 bg-transparent text-xl font-black text-white outline-none sm:text-2xl"
         />
-        {suffix && <span className="ml-2 text-xl font-black text-slate-400">{suffix}</span>}
+
+        {suffix && <span className="ml-2 text-lg font-black text-slate-400 sm:text-xl">{suffix}</span>}
       </div>
-      <p className="mt-3 text-sm leading-6 text-slate-400">{helper}</p>
+
+      <p className="mt-3 text-sm leading-6 text-slate-400">
+        {helper}
+      </p>
     </div>
   );
 }
@@ -183,19 +191,19 @@ export default function BookoraRevenueLossCalculator() {
 
       <section className="relative z-10 mx-auto max-w-7xl">
         <div className="mx-auto w-full max-w-5xl rounded-2xl border border-white/10 bg-white/5 p-5 shadow-xl backdrop-blur sm:p-8 lg:p-10">
-          <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-[#72D6C8]/40 bg-white/5 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#72D6C8]">
+          <div className="mx-auto mb-5 flex w-fit items-center gap-2 rounded-full border border-[#72D6C8]/40 bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-wide text-[#72D6C8] sm:text-sm">
             <Icon name="calculator" className="h-4 w-4" /> Revenue Leak Calculator
           </div>
-          <h1 className="text-3xl font-black tracking-tight sm:text-4xl md:text-6xl">
+          <h1 className="text-center text-3xl font-black tracking-tight sm:text-4xl lg:text-6xl">
             See How Much Revenue You’re <span className="text-[#72D6C8]">Losing From Missed Calls</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+          <p className="mx-auto mt-4 max-w-3xl text-center text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
             Most local businesses miss calls every week. Use this calculator to estimate how much revenue could be slipping away — and how much Bookora may help recover.
           </p>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="space-y-5">
+        <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="space-y-4 sm:space-y-5">
             <InputCard
               label="Missed calls per week"
               value={missedCallsPerWeek}
