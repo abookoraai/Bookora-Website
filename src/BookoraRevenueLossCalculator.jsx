@@ -107,7 +107,7 @@ runSmokeTests();
 
 function InputCard({ label, value, onChange, prefix, suffix, helper, min = 0, max }) {
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/5 p-5">
+    <div className="min-h-screen bg-[#050816] px-4 py-8 text-white sm:px-6 lg:px-8">
       <label className="text-sm font-black uppercase tracking-wide text-[#72D6C8]">{label}</label>
       <div className="mt-3 flex items-center rounded-2xl border border-white/10 bg-black/30 px-4 py-3 focus-within:border-[#72D6C8]/60">
         {prefix && <span className="mr-2 text-xl font-black text-slate-400">{prefix}</span>}
@@ -182,7 +182,7 @@ export default function BookoraRevenueLossCalculator() {
       </div>
 
       <section className="relative z-10 mx-auto max-w-7xl">
-        <div className="mb-10 text-center">
+        <div className="mx-auto w-full max-w-5xl rounded-2xl border border-white/10 bg-white/5 p-5 shadow-xl backdrop-blur sm:p-8 lg:p-10">
           <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border border-[#72D6C8]/40 bg-white/5 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#72D6C8]">
             <Icon name="calculator" className="h-4 w-4" /> Revenue Leak Calculator
           </div>
