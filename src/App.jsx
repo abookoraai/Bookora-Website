@@ -582,9 +582,8 @@ if (
                 <div key={title} className="relative text-center">
                   <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#58AA9D]/40 bg-[#72D6C8]/40 text-[#031312]">
                     <Icon name={icon} className="h-8 w-8" />
-                  </div>
-                  <div className="mx-auto mt-5 flex h-7 w-7 items-center justify-center rounded-md bg-[#58AA9D] text-sm font-black text-white">{index + 1}</div>
-                  <h3 className="mt-4 font-black">{title}</h3>
+                  </div>                  
+                  <h3 className="mt-6 font-black">{title}</h3>
                   <p className="mt-3 text-sm leading-6 text-slate-700">{desc}</p>
                 </div>
               ))}
