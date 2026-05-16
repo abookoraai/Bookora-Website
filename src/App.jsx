@@ -65,28 +65,58 @@ function Card({ children, className = "" }) {
 }
 
 const PACKAGE_DATA = [
+  const PACKAGE_DATA = [
   {
     name: "Starter",
     price: "$500 today",
     monthly: "$297/mo",
-    bestFor: "Missed-call recovery + appointment reminders",
-    features: ["AI answers calls 24/7", "Missed call text-back", "Books appointments", "Basic integrations", "Email support"],
-  },
-    {
-  name: "Growth",
-  price: "$500 today",
-  monthly: "$497/mo",
-    setup: "Most popular",
-    bestFor: "AI receptionist + lead nurturing",
-    features: ["Everything in Starter", "Advanced integrations", "Custom call flows", "Priority support", "Call logs and analytics"],
+    bestFor: "Missed-call recovery + appointment follow-up",
+    features: [
+      "Missed call text-back",
+      "Instant SMS follow-up",
+      "Appointment reminders",
+      "Review request automation",
+      "Basic booking link/calendar setup",
+      "Simple lead pipeline",
+      "Email support",
+      "Voice AI available in Growth",
+    ],
   },
   {
-  name: "Pro",
-  price: "$500 today",
-  monthly: "$797/mo",
+    name: "Growth",
+    price: "$500 today",
+    monthly: "$497/mo",
+    setup: "Most popular",
+    bestFor: "AI receptionist + lead nurturing",
+    features: [
+      "Everything in Starter",
+      "Voice AI receptionist",
+      "AI answers calls when staff is unavailable",
+      "Lead qualification",
+      "Appointment booking support",
+      "Custom call flow",
+      "Call summaries/transcripts",
+      "Advanced lead follow-up",
+      "Priority support",
+    ],
+  },
+  {
+    name: "Pro",
+    price: "$500 today",
+    monthly: "$797/mo",
     setup: "For high-volume businesses",
-    bestFor: "Full lead conversion system",
-    features: ["Everything in Growth", "Multi-location support", "Advanced analytics", "Dedicated account manager", "VIP support"],
+    bestFor: "Full AI lead conversion system",
+    features: [
+      "Everything in Growth",
+      "Advanced Voice AI setup",
+      "More complex call routing",
+      "Multi-location or multi-department support",
+      "Advanced automations",
+      "Reactivation campaigns",
+      "Advanced analytics",
+      "Dedicated account manager",
+      "VIP support",
+    ],
   },
 ];
 
@@ -110,7 +140,7 @@ function buildTelLink(phoneNumber) {
 
 function runSmokeTests() {
   console.assert(PACKAGE_DATA.length === 3, "Expected exactly 3 packages.");
-  console.assert(getPackageByName(PACKAGE_DATA, "Growth").price === "$497/mo", "Growth package price should be $497/mo.");
+  console.assert(getPackageByName(PACKAGE_DATA, "Growth").monthly === "$497/mo", "Growth package monthly price should be $497/mo.");
   console.assert(getPackageByName(PACKAGE_DATA, "Missing").name === "Growth", "Unknown package should default to Growth.");
   console.assert(ACCENT === "#58AA9D", "Accent color should match the Bookora logo teal.");
 }
