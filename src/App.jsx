@@ -428,8 +428,10 @@ if (
         <div className="flex items-center gap-3">
           <BookoraLogo className="h-14 w-14" />
           <div>
-            <p className="text-2xl font-black tracking-tight">BOOKORA</p>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#72D6C8]">AI Receptionist</p>
+            <p className="text-xl font-black tracking-tight sm:text-2xl">BOOKORA</p>
+<p className="hidden text-sm font-bold uppercase tracking-[0.18em] text-[#72D6C8] sm:block">
+  AI Receptionist
+</p>
           </div>
         </div>
 
@@ -450,19 +452,23 @@ if (
   </a>
 </nav>
 
-        <div className="hidden items-center gap-3 sm:flex">
+        <div className="flex items-center gap-2 sm:gap-3">
   <a
     href={CLIENT_LOGIN_URL}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-2xl border border-[#72D6C8]/40 bg-white/5 px-5 py-4 font-bold text-white transition hover:bg-[#58AA9D]/10 focus:outline-none focus:ring-2 focus:ring-[#72D6C8] focus:ring-offset-2 focus:ring-offset-[#030908]"
+    className="inline-flex items-center justify-center rounded-xl border border-[#72D6C8]/40 bg-white/5 px-3 py-2 text-xs font-bold text-white transition hover:bg-[#58AA9D]/10 focus:outline-none focus:ring-2 focus:ring-[#72D6C8] focus:ring-offset-2 focus:ring-offset-[#030908] sm:rounded-2xl sm:px-5 sm:py-4 sm:text-base"
   >
     Client Login
   </a>
 
-  <Button onClick={() => openLink(DEMO_BOOKING_URL)}>
-    Book a Demo
-  </Button>
+  <button
+    type="button"
+    onClick={() => openLink(DEMO_BOOKING_URL)}
+    className="inline-flex items-center justify-center rounded-xl bg-[#72D6C8] px-3 py-2 text-xs font-bold text-[#031312] transition hover:bg-[#8BE7DA] focus:outline-none focus:ring-2 focus:ring-[#72D6C8] focus:ring-offset-2 focus:ring-offset-[#030908] sm:rounded-2xl sm:px-6 sm:py-4 sm:text-base"
+  >
+    Book Demo
+  </button>
 </div>
       </header>
 
