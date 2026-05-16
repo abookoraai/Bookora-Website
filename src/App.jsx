@@ -363,10 +363,12 @@ export default function BookoraAIReceptionistDemoPage() {
   // ===== REPLACE THESE WITH YOUR REAL LINKS =====
   const DEMO_BOOKING_URL = "https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7";
 
+const CLIENT_LOGIN_URL = "https://app.gohighlevel.com/";
+
 const STARTER_URL = "https://links.bookora.ai/payment-link/6a00004634d67b041e7e893f";
 const GROWTH_URL = "https://links.bookora.ai/payment-link/6a00009134d67b041e7e8940";
 const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a";
-  const AI_DEMO_PHONE_NUMBER = "7276206969";
+const AI_DEMO_PHONE_NUMBER = "7276206969";
 
   const openLink = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
@@ -432,17 +434,36 @@ if (
         </div>
 
         <nav className="hidden items-center gap-8 text-sm font-semibold text-slate-200 lg:flex">
-          <a href="#features" className="hover:text-[#72D6C8]">Features</a>
-          <a href="#how" className="hover:text-[#72D6C8]">How It Works</a>
-          <a href="#pricing" className="hover:text-[#72D6C8]">Pricing</a>
-          
-          <a href="#industries" className="hover:text-[#72D6C8]">Industries</a>
-          <a href="#resources" className="hover:text-[#72D6C8]">Resources</a>
-        </nav>
+  <a href="#features" className="hover:text-[#72D6C8]">Features</a>
+  <a href="#how" className="hover:text-[#72D6C8]">How It Works</a>
+  <a href="#pricing" className="hover:text-[#72D6C8]">Pricing</a>
+  <a href="#industries" className="hover:text-[#72D6C8]">Industries</a>
+  <a href="#resources" className="hover:text-[#72D6C8]">Resources</a>
 
-        <Button className="hidden sm:inline-flex" onClick={() => openLink(DEMO_BOOKING_URL)}>
-          Book a Demo
-        </Button>
+  <a
+    href={CLIENT_LOGIN_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-[#72D6C8] hover:text-white"
+  >
+    Client Login
+  </a>
+</nav>
+
+        <div className="hidden items-center gap-3 sm:flex">
+  <a
+    href={CLIENT_LOGIN_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center rounded-2xl border border-[#72D6C8]/40 bg-white/5 px-5 py-4 font-bold text-white transition hover:bg-[#58AA9D]/10 focus:outline-none focus:ring-2 focus:ring-[#72D6C8] focus:ring-offset-2 focus:ring-offset-[#030908]"
+  >
+    Client Login
+  </a>
+
+  <Button onClick={() => openLink(DEMO_BOOKING_URL)}>
+    Book a Demo
+  </Button>
+</div>
       </header>
 
       <main className="relative z-10">
