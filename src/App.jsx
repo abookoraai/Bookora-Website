@@ -65,7 +65,6 @@ function Card({ children, className = "" }) {
 }
 
 const PACKAGE_DATA = [
-  const PACKAGE_DATA = [
   {
     name: "Starter",
     price: "$500 today",
