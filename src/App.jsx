@@ -78,7 +78,6 @@ const PACKAGE_DATA = [
       "Basic booking link/calendar setup",
       "Simple lead pipeline",
       "Email support",
-      "Voice AI available in Growth",
     ],
   },
   {
