@@ -68,6 +68,7 @@ const PACKAGE_DATA = [
   {
     name: "Starter",
     price: "$500 today",
+    startup: "$500",
     monthly: "$297/mo",
     bestFor: "Missed-call recovery + appointment follow-up",
     features: [
@@ -78,17 +79,20 @@ const PACKAGE_DATA = [
       "Basic booking link/calendar setup",
       "Simple lead pipeline",
       "Email support",
+      "Voice AI available in Growth",
     ],
   },
   {
     name: "Growth",
-    price: "$500 today",
+    price: "$1,000 today",
+    startup: "$1,000",
     monthly: "$497/mo",
     setup: "Most popular",
     bestFor: "AI receptionist + lead nurturing",
     features: [
       "Everything in Starter",
       "Voice AI receptionist",
+      "AI answers calls when staff is unavailable",
       "Lead qualification",
       "Appointment booking support",
       "Custom call flow",
@@ -99,7 +103,8 @@ const PACKAGE_DATA = [
   },
   {
     name: "Pro",
-    price: "$500 today",
+    price: "$1,500 today",
+    startup: "$1,500",
     monthly: "$797/mo",
     setup: "For high-volume businesses",
     bestFor: "Full AI lead conversion system",
@@ -644,7 +649,7 @@ if (
 </h2>
 
 <p className="mt-3 max-w-2xl text-slate-300">
-  Start today for $500. Your first 30 days are included, then continue month-to-month. Cancel anytime.
+  Setup starts at $500 and includes onboarding, launch support, and your first 30 days. Then continue month-to-month. Cancel anytime.
 </p>
             </div>
           </div>
@@ -678,11 +683,11 @@ if (
 
   <div className="mt-4 rounded-2xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-4">
     <p className="text-sm font-black text-[#72D6C8]">
-      $500 Startup Includes
-    </p>
-    <p className="mt-1 text-xs text-slate-300">
-      Setup • onboarding • first 30 days
-    </p>
+  {pkg.startup} Startup Includes
+</p>
+<p className="mt-1 text-xs text-slate-300">
+  Setup • onboarding • first 30 days
+</p>
   </div>
 </div>
 
@@ -726,7 +731,7 @@ if (
 
             <div className="flex h-full flex-col justify-center gap-8 rounded-3xl border border-white/10 bg-white/5 p-8">
   {[
-    ["spark", "Low Setup Fees", "Your first 30 days are included."],
+    ["spark", "Setup Includes First Month", "Setup, onboarding, and your first 30 days are included."],
     ["shield", "Cancel Anytime", "No contracts. No hassle."],
     ["check", "30-Day Launch Guarantee", "If your system isn’t working as designed, we’ll make it right."],
     ["users", "Built For Small Business", "Simple systems that help you grow."],
