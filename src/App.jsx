@@ -79,7 +79,6 @@ const PACKAGE_DATA = [
       "Basic booking link/calendar setup",
       "Simple lead pipeline",
       "Email support",
-      "Voice AI available in Growth",
     ],
   },
   {
@@ -92,7 +91,6 @@ const PACKAGE_DATA = [
     features: [
       "Everything in Starter",
       "Voice AI receptionist",
-      "AI answers calls when staff is unavailable",
       "Lead qualification",
       "Appointment booking support",
       "Custom call flow",
