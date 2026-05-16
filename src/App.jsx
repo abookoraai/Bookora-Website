@@ -406,7 +406,7 @@ if (
 ) {
   return <BookoraRevenueLossCalculator />;
 }
-  const industries = ["Auto Repair Shops", "med Spas", "HVAC / Plumbing/ Roofing / Electrical", "Law Firms", "Dental / Chiropractic Care"];
+  const industries = ["Auto Repair Shops", "med Spas", "HVAC / Plumbing / Roofing / Electrical", "Law Firms", "Dental / Chiropractic Care"];
   const steps = [
     ["phone", "AI Answers Calls", "Bookora answers your calls instantly, just like a real receptionist."],
     ["message", "Engages & Qualifies", "It has natural conversations, answers questions, and qualifies leads."],
