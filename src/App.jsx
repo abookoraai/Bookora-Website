@@ -726,7 +726,7 @@ if (
 
             <div className="flex h-full flex-col justify-center gap-8 rounded-3xl border border-white/10 bg-white/5 p-8">
   {[
-    ["spark", "$500 Includes Setup", "Your first 30 days are included."],
+    ["spark", "Low Setup Fees", "Your first 30 days are included."],
     ["shield", "Cancel Anytime", "No contracts. No hassle."],
     ["check", "30-Day Launch Guarantee", "If your system isn’t working as designed, we’ll make it right."],
     ["users", "Built For Small Business", "Simple systems that help you grow."],
