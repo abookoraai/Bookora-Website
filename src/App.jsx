@@ -89,7 +89,6 @@ const PACKAGE_DATA = [
     features: [
       "Everything in Starter",
       "Voice AI receptionist",
-      "AI answers calls when staff is unavailable",
       "Lead qualification",
       "Appointment booking support",
       "Custom call flow",
