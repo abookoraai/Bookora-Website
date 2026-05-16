@@ -468,15 +468,6 @@ if (
   <a href="#pricing" className="hover:text-[#72D6C8]">Pricing</a>
   <a href="#industries" className="hover:text-[#72D6C8]">Industries</a>
   <a href="#resources" className="hover:text-[#72D6C8]">Resources</a>
-
-  <a
-    href={CLIENT_LOGIN_URL}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-[#72D6C8] hover:text-white"
-  >
-    Client Login
-  </a>
 </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
