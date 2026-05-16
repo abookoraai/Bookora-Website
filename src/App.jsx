@@ -679,24 +679,30 @@ if (
               </div>
             ))}
 
-            <div className="space-y-5 rounded-3xl border border-white/10 bg-white/5 p-7">
-              {[
-                ["spark", "$500 Includes Setup", "Your first 30 days are included."],
-                ["shield", "Cancel Anytime", "No contracts. No hassle."],
-                ["check", "30-Day Launch Guarantee", "If your system isn’t working as designed, we’ll make it right."],
-                ["users", "Built For Small Business", "Simple systems that help you grow."],
-              ].map(([icon, title, desc]) => (
-                <div key={title} className="flex gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#72D6C8]/40 text-[#72D6C8]">
-                    <Icon name={icon} className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <h4 className="font-black">{title}</h4>
-                    <p className="mt-1 text-sm text-slate-400">{desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <div className="flex h-full flex-col justify-center gap-8 rounded-3xl border border-white/10 bg-white/5 p-8">
+  {[
+    ["spark", "$500 Includes Setup", "Your first 30 days are included."],
+    ["shield", "Cancel Anytime", "No contracts. No hassle."],
+    ["check", "30-Day Launch Guarantee", "If your system isn’t working as designed, we’ll make it right."],
+    ["users", "Built For Small Business", "Simple systems that help you grow."],
+  ].map(([icon, title, desc]) => (
+    <div key={title} className="flex items-start gap-5">
+      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#72D6C8]/40 text-[#72D6C8]">
+        <Icon name={icon} className="h-5 w-5" />
+      </div>
+
+      <div className="pt-1">
+        <h4 className="text-base font-black leading-snug text-white">
+          {title}
+        </h4>
+
+        <p className="mt-2 max-w-[180px] text-sm leading-6 text-slate-400">
+          {desc}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
           </div>
 
           <div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6">
