@@ -824,18 +824,18 @@ if (
 
         <section id="faq" className="mx-auto max-w-5xl px-5 py-12">
   <div className="mb-8 text-center">
-    <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
-      FAQ
-    </p>
+  <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
+    Frequently Asked Questions
+  </p>
 
-    <h2 className="mt-3 text-3xl font-black tracking-tight md:text-4xl">
-      Common Questions
-    </h2>
+  <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">
+    Questions Before You <span className="text-[#72D6C8]">Get Started?</span>
+  </h2>
 
-    <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-400">
-      Quick answers about how Bookora works, setup, usage, and pricing.
-    </p>
-  </div>
+  <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+    Here are the most common questions businesses ask before using Bookora to capture missed calls, follow up with leads, and book more appointments.
+  </p>
+</div>
 
   <div className="divide-y divide-white/10 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
     {[
