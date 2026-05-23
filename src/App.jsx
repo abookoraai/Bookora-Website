@@ -70,6 +70,7 @@ const PACKAGE_DATA = [
     price: "$500 today",
     startup: "$500",
     monthly: "$297/mo",
+    usage: "No Voice AI included • SMS & phone usage billed separately",
     bestFor: "Missed-call recovery + appointment follow-up",
     features: [
       "Missed call text-back",
@@ -86,6 +87,7 @@ const PACKAGE_DATA = [
     price: "$1,000 today",
     startup: "$1,000",
     monthly: "$497/mo",
+    usage: "150 AI voice minutes included • then $0.25/min",
     setup: "Most popular",
     bestFor: "AI receptionist + lead nurturing",
     features: [
@@ -104,6 +106,7 @@ const PACKAGE_DATA = [
     price: "$1,500 today",
     startup: "$1,500",
     monthly: "$797/mo",
+    usage: "300 AI voice minutes included • then $0.25/min",
     setup: "For high-volume businesses",
     bestFor: "Full AI lead conversion system",
     features: [
@@ -676,10 +679,19 @@ if (
   </p>
 
   <p className="mt-2 text-sm font-semibold text-slate-400">
-    after your first 30 days
-  </p>
+  after your first 30 days
+</p>
 
-  <div className="mt-4 rounded-2xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-4">
+<div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4">
+  <p className="text-xs font-black uppercase tracking-wide text-[#72D6C8]">
+    Usage
+  </p>
+  <p className="mt-1 text-sm font-semibold leading-6 text-slate-200">
+    {pkg.usage}
+  </p>
+</div>
+
+<div className="mt-4 rounded-2xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-4">
     <p className="text-sm font-black text-[#72D6C8]">
   {pkg.startup} Startup Includes
 </p>
@@ -753,10 +765,19 @@ if (
 </div>
           </div>
 
+          <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 text-sm leading-6 text-slate-300">
+  <p className="font-black text-white">Usage-Based Costs</p>
+  <p className="mt-2">
+    Growth includes 150 AI voice minutes per month. Pro includes 300 AI voice minutes per month.
+    Additional AI voice minutes are billed at $0.25/min. SMS, phone, and carrier usage may be billed separately based on actual usage.
+  </p>
+</div>
+
           <div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6">
             <p className="text-sm text-[#C8FFF7]">Selected package</p>
             <h3 className="mt-1 text-2xl font-black">{active.name} — {active.price}</h3>
             <p className="mt-2 text-slate-300">{active.bestFor}</p>
+            <p className="mt-2 text-sm font-semibold text-[#72D6C8]">{active.usage}</p>
           </div>
         </section>
 
