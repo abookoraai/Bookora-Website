@@ -6,13 +6,12 @@ const DARK = "#030908";
 
 const BOOKORA_LOGO_SRC = "/bookora-logo.png";
 
-function BookoraLogo({ className = "h-14 w-14" }) {
+function BookoraLogo({ className = "h-12 w-12 object-contain" }) {
   return (
     <img
       src={BOOKORA_LOGO_SRC}
       alt="Bookora logo"
-      className={`${className} block shrink-0 rounded-full object-cover`}
-      style={{ aspectRatio: "1 / 1" }}
+      className={`${className} block shrink-0`}
     />
   );
 }
@@ -499,7 +498,7 @@ if (
 
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-6">
         <div className="flex items-center gap-3">
-          <BookoraLogo className="h-14 w-14" />
+          <BookoraLogo className="h-12 w-12 object-contain" />
           <div>
             <p className="text-xl font-black tracking-tight sm:text-2xl">BOOKORA</p>
 <p className="hidden text-sm font-bold uppercase tracking-[0.18em] text-[#72D6C8] sm:block">
