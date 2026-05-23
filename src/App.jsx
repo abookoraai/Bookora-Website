@@ -822,99 +822,103 @@ if (
           </div>
         </section>
 
-        <section id="faq" className="mx-auto max-w-7xl px-5 py-16">
-  <div className="mb-10 text-center">
+        <section id="faq" className="mx-auto max-w-5xl px-5 py-12">
+  <div className="mb-8 text-center">
     <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
-      Frequently Asked Questions
+      FAQ
     </p>
 
-    <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">
-      Questions Before You <span className="text-[#72D6C8]">Get Started?</span>
+    <h2 className="mt-3 text-3xl font-black tracking-tight md:text-4xl">
+      Common Questions
     </h2>
 
-    <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">
-      Here are the most common questions businesses ask before using Bookora to capture missed calls, follow up with leads, and book more appointments.
+    <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-400">
+      Quick answers about how Bookora works, setup, usage, and pricing.
     </p>
   </div>
 
-  <div className="grid gap-5 md:grid-cols-2">
+  <div className="divide-y divide-white/10 overflow-hidden rounded-3xl border border-white/10 bg-white/5">
     {[
       {
         question: "What does Bookora do?",
         answer:
-          "Bookora helps businesses capture more leads by answering calls with AI, texting missed calls instantly, following up with new leads, sending appointment reminders, requesting reviews, and helping book more appointments automatically.",
+          "Bookora helps businesses answer calls with AI, text missed calls instantly, follow up with leads, send reminders, request reviews, and book more appointments automatically.",
       },
       {
         question: "Does Bookora replace my front desk?",
         answer:
-          "Not necessarily. Most businesses use Bookora to support their team, not replace them. It can step in when your staff is busy, after hours, on another call, or when a lead slips through the cracks.",
+          "Not necessarily. Most businesses use Bookora to support their team when staff is busy, after hours, on another call, or when a lead slips through the cracks.",
       },
       {
         question: "Can Bookora book appointments?",
         answer:
-          "Yes. Depending on your setup, Bookora can help collect appointment details, guide leads toward booking, connect with your calendar, and send appointment confirmations and reminders.",
+          "Yes. Depending on your setup, Bookora can collect appointment details, connect with your calendar, and send confirmations and reminders.",
       },
       {
         question: "What happens when someone misses a call?",
         answer:
-          "Bookora can instantly text the missed caller so the lead does not go cold. From there, the system can continue the conversation, collect details, and help move the lead toward booking.",
+          "Bookora can instantly text the missed caller, continue the conversation, collect details, and help move the lead toward booking.",
       },
       {
         question: "Does Bookora work after hours?",
         answer:
-          "Yes. That is one of the biggest benefits. Bookora can respond when your business is closed, when your team is unavailable, or when someone reaches out outside normal business hours.",
+          "Yes. Bookora can respond when your business is closed, when your team is unavailable, or when someone reaches out outside normal hours.",
       },
       {
         question: "How long does setup take?",
         answer:
-          "Simple setups can usually be launched quickly once your onboarding information is submitted. Setup time depends on your package, call flow, calendar setup, services, business rules, and whether Voice AI is included.",
+          "Simple setups can usually launch quickly once onboarding is submitted. Timing depends on your package, call flow, calendar setup, services, and business rules.",
       },
       {
         question: "Are there usage fees?",
         answer:
-          "Yes, some usage-based costs may apply depending on your package and actual usage. Starter does not include Voice AI. Growth includes 150 AI voice minutes per month. Pro includes 300 AI voice minutes per month. Additional AI voice minutes are billed at $0.25/min. SMS, phone, carrier, and other usage-based costs may be billed separately.",
+          "Yes. Starter does not include Voice AI. Growth includes 150 AI voice minutes. Pro includes 300 AI voice minutes. Additional minutes are $0.25/min. SMS, phone, and carrier usage may be billed separately.",
       },
       {
         question: "Is there a contract?",
         answer:
-          "No long-term contract is required. Your startup fee includes setup, onboarding, launch support, and your first 30 days. After that, your service continues month-to-month and can be canceled anytime.",
+          "No long-term contract is required. Your startup fee includes setup, onboarding, launch support, and your first 30 days. After that, service continues month-to-month.",
       },
       {
         question: "What happens after I purchase?",
         answer:
-          "After you purchase, you’ll receive an onboarding form where you provide your business details, services, hours, booking preferences, phone and call handling preferences, and any special instructions. Once submitted, we begin setting up your system and preparing it for launch.",
+          "You’ll receive an onboarding form. Once submitted, we begin setting up your system and preparing it for launch.",
       },
       {
         question: "Can I use Bookora with my existing phone number?",
         answer:
-          "In many cases, yes. The best setup depends on your current phone provider, call flow, and whether you want AI to answer live calls, handle missed calls, or support after-hours calls. We’ll review the best option during setup or on your demo.",
+          "In many cases, yes. The best setup depends on your current phone provider, call flow, and whether AI will answer live calls, missed calls, or after-hours calls.",
       },
     ].map((item) => (
-      <div
-        key={item.question}
-        className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-[#58AA9D]/5"
-      >
-        <h3 className="text-xl font-black text-white">{item.question}</h3>
-        <p className="mt-3 text-sm leading-7 text-slate-300">{item.answer}</p>
-      </div>
+      <details key={item.question} className="group">
+        <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left font-black text-white transition hover:bg-white/5">
+          <span>{item.question}</span>
+          <span className="text-xl text-[#72D6C8] transition group-open:rotate-45">
+            +
+          </span>
+        </summary>
+
+        <div className="px-5 pb-5">
+          <p className="text-sm leading-6 text-slate-300">{item.answer}</p>
+        </div>
+      </details>
     ))}
   </div>
 
-  <div className="mt-8 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6 text-center">
-    <h3 className="text-2xl font-black text-white">
-      Still have questions?
-    </h3>
-
-    <p className="mx-auto mt-2 max-w-2xl text-slate-300">
-      Book a quick 10-minute demo and we’ll show you how Bookora could work for your business.
-    </p>
+  <div className="mt-6 flex flex-col items-center justify-between gap-4 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-5 text-center md:flex-row md:text-left">
+    <div>
+      <h3 className="text-xl font-black text-white">Still have questions?</h3>
+      <p className="mt-1 text-sm text-slate-300">
+        Book a quick 10-minute demo and we’ll show you how Bookora works.
+      </p>
+    </div>
 
     <button
       type="button"
       onClick={() => openLink(DEMO_BOOKING_URL)}
-      className="mt-5 inline-flex items-center justify-center rounded-2xl bg-[#72D6C8] px-7 py-4 font-black text-[#031312] transition hover:bg-[#8BE7DA]"
+      className="shrink-0 rounded-2xl bg-[#72D6C8] px-5 py-3 text-sm font-black text-[#031312] transition hover:bg-[#8BE7DA]"
     >
-      Book a 10-Minute Demo
+      Book Demo
     </button>
   </div>
 </section>
