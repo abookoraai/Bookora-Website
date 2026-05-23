@@ -161,7 +161,7 @@ function LegalPage({ type }) {
         <div className="mb-8 flex items-center gap-3">
           <BookoraLogo className="h-12 w-12" />
           <div>
-            <p className="text-2xl font-black">BOOKORA</p>
+            <p className="text-2xl font-black">Bookora</p>
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#72D6C8]">AI Receptionist</p>
           </div>
         </div>
@@ -500,7 +500,7 @@ if (
         <div className="flex items-center gap-3">
           <BookoraLogo className="h-12 w-12 object-contain" />
           <div>
-            <p className="text-xl font-black tracking-tight sm:text-2xl">BOOKORA</p>
+            <p className="text-xl font-black tracking-tight sm:text-2xl">Bookora</p>
 <p className="hidden text-sm font-bold uppercase tracking-[0.18em] text-[#72D6C8] sm:block">
   AI Receptionist
 </p>
