@@ -508,13 +508,14 @@ if (
           </div>
         </div>
 
-        <nav className="hidden items-center gap-8 text-sm font-semibold text-slate-200 lg:flex">
-  <a href="#features" className="hover:text-[#72D6C8]">Features</a>
-  <a href="#how" className="hover:text-[#72D6C8]">How It Works</a>
-  <a href="#pricing" className="hover:text-[#72D6C8]">Pricing</a>
-  <a href="#industries" className="hover:text-[#72D6C8]">Industries</a>
-  <a href="#resources" className="hover:text-[#72D6C8]">Resources</a>
-</nav>
+    <nav className="hidden items-center gap-8 text-sm font-semibold text-slate-200 lg:flex">
+      <a href="#features" className="hover:text-[#72D6C8]">Features</a>
+      <a href="#how" className="hover:text-[#72D6C8]">How It Works</a>
+      <a href="#pricing" className="hover:text-[#72D6C8]">Pricing</a>
+      <a href="#faq" className="hover:text-[#72D6C8]">FAQ</a>
+      <a href="#industries" className="hover:text-[#72D6C8]">Industries</a>
+      <a href="#resources" className="hover:text-[#72D6C8]">Resources</a>
+    </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
   <a
@@ -820,6 +821,103 @@ if (
             <p className="mt-2 text-sm font-semibold text-[#72D6C8]">{active.usage}</p>
           </div>
         </section>
+
+        <section id="faq" className="mx-auto max-w-7xl px-5 py-16">
+  <div className="mb-10 text-center">
+    <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
+      Frequently Asked Questions
+    </p>
+
+    <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">
+      Questions Before You <span className="text-[#72D6C8]">Get Started?</span>
+    </h2>
+
+    <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+      Here are the most common questions businesses ask before using Bookora to capture missed calls, follow up with leads, and book more appointments.
+    </p>
+  </div>
+
+  <div className="grid gap-5 md:grid-cols-2">
+    {[
+      {
+        question: "What does Bookora do?",
+        answer:
+          "Bookora helps businesses capture more leads by answering calls with AI, texting missed calls instantly, following up with new leads, sending appointment reminders, requesting reviews, and helping book more appointments automatically.",
+      },
+      {
+        question: "Does Bookora replace my front desk?",
+        answer:
+          "Not necessarily. Most businesses use Bookora to support their team, not replace them. It can step in when your staff is busy, after hours, on another call, or when a lead slips through the cracks.",
+      },
+      {
+        question: "Can Bookora book appointments?",
+        answer:
+          "Yes. Depending on your setup, Bookora can help collect appointment details, guide leads toward booking, connect with your calendar, and send appointment confirmations and reminders.",
+      },
+      {
+        question: "What happens when someone misses a call?",
+        answer:
+          "Bookora can instantly text the missed caller so the lead does not go cold. From there, the system can continue the conversation, collect details, and help move the lead toward booking.",
+      },
+      {
+        question: "Does Bookora work after hours?",
+        answer:
+          "Yes. That is one of the biggest benefits. Bookora can respond when your business is closed, when your team is unavailable, or when someone reaches out outside normal business hours.",
+      },
+      {
+        question: "How long does setup take?",
+        answer:
+          "Simple setups can usually be launched quickly once your onboarding information is submitted. Setup time depends on your package, call flow, calendar setup, services, business rules, and whether Voice AI is included.",
+      },
+      {
+        question: "Are there usage fees?",
+        answer:
+          "Yes, some usage-based costs may apply depending on your package and actual usage. Starter does not include Voice AI. Growth includes 150 AI voice minutes per month. Pro includes 300 AI voice minutes per month. Additional AI voice minutes are billed at $0.25/min. SMS, phone, carrier, and other usage-based costs may be billed separately.",
+      },
+      {
+        question: "Is there a contract?",
+        answer:
+          "No long-term contract is required. Your startup fee includes setup, onboarding, launch support, and your first 30 days. After that, your service continues month-to-month and can be canceled anytime.",
+      },
+      {
+        question: "What happens after I purchase?",
+        answer:
+          "After you purchase, you’ll receive an onboarding form where you provide your business details, services, hours, booking preferences, phone and call handling preferences, and any special instructions. Once submitted, we begin setting up your system and preparing it for launch.",
+      },
+      {
+        question: "Can I use Bookora with my existing phone number?",
+        answer:
+          "In many cases, yes. The best setup depends on your current phone provider, call flow, and whether you want AI to answer live calls, handle missed calls, or support after-hours calls. We’ll review the best option during setup or on your demo.",
+      },
+    ].map((item) => (
+      <div
+        key={item.question}
+        className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-[#58AA9D]/5"
+      >
+        <h3 className="text-xl font-black text-white">{item.question}</h3>
+        <p className="mt-3 text-sm leading-7 text-slate-300">{item.answer}</p>
+      </div>
+    ))}
+  </div>
+
+  <div className="mt-8 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6 text-center">
+    <h3 className="text-2xl font-black text-white">
+      Still have questions?
+    </h3>
+
+    <p className="mx-auto mt-2 max-w-2xl text-slate-300">
+      Book a quick 10-minute demo and we’ll show you how Bookora could work for your business.
+    </p>
+
+    <button
+      type="button"
+      onClick={() => openLink(DEMO_BOOKING_URL)}
+      className="mt-5 inline-flex items-center justify-center rounded-2xl bg-[#72D6C8] px-7 py-4 font-black text-[#031312] transition hover:bg-[#8BE7DA]"
+    >
+      Book a 10-Minute Demo
+    </button>
+  </div>
+</section>
 
         <section id="resources" className="bg-[#72D6C8] px-5 py-10 text-[#031312]">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
