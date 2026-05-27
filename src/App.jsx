@@ -259,6 +259,12 @@ function LegalPage({ type }) {
   <h2 className="pt-4 text-2xl font-black text-white">7. Healthcare and Emergency Disclaimer</h2>
   <p>Bookora is not a healthcare provider and does not provide medical advice, diagnosis, treatment, or emergency services. Our tools are intended for scheduling, communication, lead follow-up, and administrative support only. For medical emergencies, call 911 or contact a qualified healthcare provider directly.</p>
 
+  <h2 className="pt-4 text-2xl font-black text-white">8. Medical, Healthcare, and HIPAA-Supported Workflows</h2>
+  <p>Bookora may provide appointment communication, missed-call follow-up, lead follow-up, reminders, review requests, and administrative automation services for medical-aesthetic businesses, wellness clinics, med spas, and other health-related businesses.</p>
+  <p>Bookora’s standard services are not intended to collect medical history, diagnosis information, symptoms, medications, treatment photos, insurance information, or other protected health information through standard SMS, AI voice, chat, or non-secure forms.</p>
+  <p>If a client requires Bookora to create, receive, maintain, or transmit protected health information, additional HIPAA-supported configuration, Business Associate Agreements, vendor requirements, access controls, and compliance procedures may be required before those workflows are enabled.</p>
+  <p>Website visitors, callers, and customers should not submit sensitive medical information, treatment details, medical history, symptoms, medications, or photos through Bookora’s standard website forms, SMS messages, AI voice tools, or chat tools unless a HIPAA-supported workflow has been specifically implemented.</p>
+
   <h2 className="pt-4 text-2xl font-black text-white">8. Data Security</h2>
   <p>We take reasonable administrative, technical, and physical measures to protect personal information from unauthorized access, use, disclosure, alteration, or destruction. However, no method of transmission or storage is completely secure.</p>
 
@@ -307,14 +313,22 @@ function LegalPage({ type }) {
   <p>Some services may include usage-based costs, including AI voice minutes, phone usage, SMS usage, email usage, carrier fees, and related platform charges. Usage-based costs may be billed separately or added to the client’s invoice based on actual usage and the selected plan.</p>
 
   <h2 className="pt-4 text-2xl font-black text-white">7. Payments, Setup Fees, and Monthly Plans</h2>
+  <p>Medical-aesthetic, healthcare, or HIPAA-supported workflows may require additional setup fees, monthly fees, platform fees, compliance-supported configuration, Business Associate Agreements, or vendor-related costs. These fees may vary depending on the selected package and required workflow.</p>
   <p>Bookora may charge setup fees, monthly subscription fees, and usage-based fees according to the package selected. Setup fees may include onboarding, system setup, launch support, and the first 30 days where stated. After the first 30 days, monthly service fees continue month-to-month unless canceled.</p>
   <p>Failure to pay invoices or usage-based charges may result in suspension or termination of services.</p>
 
-  <h2 className="pt-4 text-2xl font-black text-white">8. No Guaranteed Results</h2>
-  <p>Bookora does not guarantee specific business results, revenue increases, appointment volume, call answer rates, lead conversion rates, customer responses, or return on investment. Results depend on many factors outside of Bookora’s control, including market demand, offer quality, staffing, pricing, reputation, lead volume, and client follow-up.</p>
+  <h2 className="pt-4 text-2xl font-black text-white">8. Results, Guarantees, and Client Responsibilities</h2>
+  <p>Bookora may offer certain limited promotional guarantees, launch guarantees, or service commitments in writing as part of a specific package, proposal, or agreement. Any such guarantee applies only if the client meets the stated conditions, including providing required access, accurate business information, approved scripts, sufficient lead volume where applicable, timely staff follow-up, and continued use of the approved workflows during the guarantee period.</p>
+  <p>Except for guarantees expressly stated in a written agreement, Bookora does not guarantee specific business results, revenue increases, appointment volume, call answer rates, lead conversion rates, customer responses, or return on investment. Results depend on many factors outside of Bookora’s control, including market demand, offer quality, staffing, pricing, reputation, lead volume, and client follow-up.</p>
 
   <h2 className="pt-4 text-2xl font-black text-white">9. Healthcare and Emergency Disclaimer</h2>
   <p>Bookora is not a healthcare provider and does not provide medical advice, diagnosis, treatment, or emergency services. Bookora’s tools are intended for scheduling, communication, lead follow-up, and administrative support only. For medical emergencies, call 911 or contact a qualified healthcare provider directly.</p>
+
+  <h2 className="pt-4 text-2xl font-black text-white">10. Medical-Aesthetic, Healthcare, and HIPAA-Supported Services</h2>
+  <p>Bookora may offer privacy-conscious workflows for med spas, medical-aesthetic businesses, wellness clinics, and other health-related businesses. These workflows are designed for administrative support, appointment communication, missed-call follow-up, reminders, lead follow-up, and review requests.</p>
+  <p>Bookora’s standard services are not designed for medical intake or for collecting protected health information through standard SMS, AI voice, chat, or non-secure forms. Clients agree not to use Bookora’s standard services to collect medical history, diagnosis information, symptoms, medications, treatment photos, insurance information, or other protected health information unless a HIPAA-supported workflow and required agreements are in place.</p>
+  <p>If a client’s use of Bookora may involve protected health information, the client is responsible for notifying Bookora before launch. Additional HIPAA-supported configuration, Business Associate Agreements, vendor requirements, access controls, and compliance procedures may be required. Bookora may decline, pause, or modify any workflow that creates compliance, privacy, or security concerns.</p>
+  <p>Clients remain responsible for their own legal, healthcare, privacy, advertising, call recording, SMS consent, and industry-specific compliance obligations. Bookora does not provide medical, legal, or compliance advice.</p>
 
   <h2 className="pt-4 text-2xl font-black text-white">10. Prohibited Uses</h2>
   <p>You may not use Bookora for unlawful, abusive, deceptive, fraudulent, harassing, harmful, or non-compliant communications. You may not use our services to send spam, violate consent requirements, impersonate others, collect sensitive information without authorization, or interfere with our systems.</p>
