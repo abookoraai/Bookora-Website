@@ -66,11 +66,11 @@ function Card({ children, className = "" }) {
 const PACKAGE_DATA = [
   {
     name: "Starter",
-    price: "$500 today",
+    price: "$500 setup",
     startup: "$500",
-    monthly: "$297/mo",
+    monthly: "$147/mo",
     usage: "No Voice AI included • SMS & phone usage billed separately",
-    bestFor: "Missed-call recovery + appointment follow-up",
+    bestFor: "Missed-call recovery + basic appointment follow-up",
     features: [
       "Missed call text-back",
       "Instant SMS follow-up",
@@ -83,9 +83,9 @@ const PACKAGE_DATA = [
   },
   {
     name: "Growth",
-    price: "$1,000 today",
+    price: "$1,000 setup",
     startup: "$1,000",
-    monthly: "$497/mo",
+    monthly: "$297/mo",
     usage: "150 AI voice minutes included • then $0.25/min",
     setup: "Most popular",
     bestFor: "AI receptionist + lead nurturing",
@@ -102,9 +102,9 @@ const PACKAGE_DATA = [
   },
   {
     name: "Pro",
-    price: "$1,500 today",
+    price: "$1,500 setup",
     startup: "$1,500",
-    monthly: "$797/mo",
+    monthly: "$597/mo",
     usage: "300 AI voice minutes included • then $0.25/min",
     setup: "For high-volume businesses",
     bestFor: "Full AI lead conversion system",
@@ -117,6 +117,63 @@ const PACKAGE_DATA = [
       "Reactivation campaigns",
       "Advanced analytics",
       "Dedicated account manager",
+      "VIP support",
+    ],
+  },
+];
+
+const MEDICAL_PACKAGE_DATA = [
+  {
+    name: "Med Spa Starter",
+    price: "$1,000 setup",
+    startup: "$1,000",
+    monthly: "$497/mo",
+    usage: "Privacy-safe setup • No medical intake by standard SMS",
+    bestFor: "Med spas that need missed-call recovery and basic booking support",
+    features: [
+      "Missed call text-back",
+      "Privacy-safe SMS templates",
+      "Appointment reminders",
+      "Review request automation",
+      "Basic booking link/calendar setup",
+      "Simple lead pipeline",
+      "Medical-safe messaging rules",
+    ],
+  },
+  {
+    name: "Med Spa Growth",
+    price: "$1,500 setup",
+    startup: "$1,500",
+    monthly: "$697/mo",
+    usage: "HIPAA-supported setup available when required • 150 AI voice minutes included",
+    setup: "Best for med spas",
+    bestFor: "AI receptionist + privacy-conscious lead follow-up",
+    features: [
+      "Everything in Med Spa Starter",
+      "Voice AI receptionist",
+      "Privacy-safe AI voice instructions",
+      "Lead qualification without collecting medical details",
+      "Appointment booking support",
+      "Call summaries/transcripts",
+      "Priority support",
+    ],
+  },
+  {
+    name: "Med Spa Pro",
+    price: "$2,500 setup",
+    startup: "$2,500",
+    monthly: "$997/mo+",
+    usage: "HIPAA-supported setup available when required • 300 AI voice minutes included",
+    setup: "For high-volume med spas",
+    bestFor: "Full medical-aesthetic lead conversion system",
+    features: [
+      "Everything in Med Spa Growth",
+      "Advanced Voice AI setup",
+      "More complex call routing",
+      "Multi-provider or multi-location support",
+      "Advanced automations",
+      "Reactivation campaigns",
+      "Advanced analytics",
       "VIP support",
     ],
   },
@@ -142,7 +199,7 @@ function buildTelLink(phoneNumber) {
 
 function runSmokeTests() {
   console.assert(PACKAGE_DATA.length === 3, "Expected exactly 3 packages.");
-  console.assert(getPackageByName(PACKAGE_DATA, "Growth").monthly === "$497/mo", "Growth package monthly price should be $497/mo.");
+  console.assert(getPackageByName(PACKAGE_DATA, "Growth").monthly === "$297/mo", "Growth package monthly price should be $297/mo.");
   console.assert(getPackageByName(PACKAGE_DATA, "Missing").name === "Growth", "Unknown package should default to Growth.");
   console.assert(ACCENT === "#58AA9D", "Accent color should match the Bookora logo teal.");
 }
@@ -450,6 +507,7 @@ const AI_DEMO_PHONE_NUMBER = "7276206969";
   const [callingDemo, setCallingDemo] = useState(false);
 
   const packages = useMemo(() => PACKAGE_DATA, []);
+  const medicalPackages = useMemo(() => MEDICAL_PACKAGE_DATA, []);
   const active = getPackageByName(packages, activePackage);
 
   const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
@@ -686,14 +744,23 @@ if (
           <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <h2 className="text-4xl font-black tracking-tight md:text-5xl">
-  Simple Pricing. <span className="text-[#72D6C8]">Easy Start.</span>
+  Simple Pricing. <span className="text-[#72D6C8]">Built To Grow.</span>
 </h2>
 
 <p className="mt-3 max-w-2xl text-slate-300">
-  Setup starts at $500 and includes onboarding, launch support, and your first 30 days. Then continue month-to-month. Cancel anytime.
+  Standard businesses start at $147/mo. Med spas and medical-aesthetic businesses use privacy-conscious workflows with HIPAA-supported setup available when required.
 </p>
             </div>
           </div>
+
+          <div className="mb-6 rounded-3xl border border-white/10 bg-white/5 p-5">
+  <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
+    Standard Business Plans
+  </p>
+  <p className="mt-2 text-sm leading-6 text-slate-300">
+    For auto shops, salons, home services, and non-medical local businesses.
+  </p>
+</div>
 
           <div className="grid gap-5 lg:grid-cols-[1fr_1fr_1fr_0.9fr]">
             {packages.map((pkg) => (
@@ -819,6 +886,94 @@ if (
             <p className="mt-2 text-slate-300">{active.bestFor}</p>
             <p className="mt-2 text-sm font-semibold text-[#72D6C8]">{active.usage}</p>
           </div>
+
+<div className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-5">
+  <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
+    Med Spa / Medical-Aesthetic Plans
+  </p>
+  <p className="mt-2 text-sm leading-6 text-slate-300">
+    For med spas, injectors, wellness clinics, and medical-aesthetic businesses that need privacy-conscious appointment workflows.
+  </p>
+</div>
+
+<div className="mt-6 grid gap-5 lg:grid-cols-3">
+  {medicalPackages.map((pkg) => (
+    <Card
+      key={pkg.name}
+      className={`relative h-full overflow-hidden bg-white/5 transition hover:-translate-y-1 ${
+        pkg.name === "Med Spa Growth"
+          ? "scale-[1.02] border-[#72D6C8] shadow-2xl shadow-[#58AA9D]/30"
+          : "border-white/10 hover:border-[#72D6C8]/40"
+      }`}
+    >
+      {pkg.name === "Med Spa Growth" && (
+        <div className="bg-[#72D6C8] py-2 text-center text-xs font-black text-[#031312]">
+          Best For Med Spas
+        </div>
+      )}
+
+      <div className="p-7">
+        <h3 className="text-2xl font-black">{pkg.name}</h3>
+        <p className="mt-1 text-sm text-slate-400">{pkg.bestFor}</p>
+
+        <div className="mt-6">
+          <p className="text-5xl font-black">{pkg.monthly}</p>
+
+          <p className="mt-2 text-sm font-semibold text-slate-400">
+            after setup
+          </p>
+
+          <div className="mt-4 rounded-2xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-4">
+            <p className="text-sm font-black text-[#72D6C8]">
+              {pkg.startup} Setup Fee
+            </p>
+            <p className="mt-1 text-xs text-slate-300">
+              Medical-safe setup • onboarding • workflow launch
+            </p>
+          </div>
+
+          <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4">
+            <p className="text-xs font-black uppercase tracking-wide text-[#72D6C8]">
+              Compliance Note
+            </p>
+            <p className="mt-1 text-sm font-semibold leading-6 text-slate-200">
+              {pkg.usage}
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-6 space-y-3">
+          {pkg.features.map((feature) => (
+            <div key={feature} className="flex gap-3 text-sm text-slate-200">
+              <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-[#72D6C8]" />
+              {feature}
+            </div>
+          ))}
+        </div>
+
+        <Button
+          variant={pkg.name === "Med Spa Growth" ? "solid" : "outline"}
+          className="mt-7 w-full"
+          onClick={() => openLink(DEMO_BOOKING_URL)}
+        >
+          Book Med Spa Demo
+        </Button>
+
+        <p className="mt-3 text-center text-xs text-slate-400">
+          Medical workflows may require additional agreements and HIPAA-supported setup.
+        </p>
+      </div>
+    </Card>
+  ))}
+</div>
+
+<div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6 text-sm leading-6 text-slate-300">
+  <p className="font-black text-white">Med Spa Compliance Note</p>
+  <p className="mt-2">
+    Bookora’s standard automations are designed for appointment follow-up and lead conversion, not medical intake. For med spas and medical-aesthetic businesses, we use privacy-conscious workflows and avoid collecting medical details through standard SMS or AI conversations unless a HIPAA-supported workflow and required agreements are in place.
+  </p>
+</div>
+
         </section>
 
         <section id="faq" className="mx-auto max-w-5xl px-5 py-12">
@@ -869,9 +1024,14 @@ if (
           "Simple setups can usually launch quickly once onboarding is submitted. Timing depends on your package, call flow, calendar setup, services, and business rules.",
       },
       {
-        question: "Are there usage fees?",
-        answer:
-          "Yes. Starter does not include Voice AI. Growth includes 150 AI voice minutes. Pro includes 300 AI voice minutes. Additional minutes are $0.25/min. SMS, phone, and carrier usage may be billed separately.",
+  question: "Are there usage fees?",
+  answer:
+    "Yes. Starter does not include Voice AI. Growth includes 150 AI voice minutes. Pro includes 300 AI voice minutes. Additional minutes are $0.25/min. SMS, phone, carrier usage, and compliance-supported medical workflows may be billed separately depending on the plan.",
+      },
+      {
+  question: "Can med spas use Bookora?",
+  answer:
+    "Yes. Med spas can use Bookora for privacy-conscious appointment follow-up, missed-call recovery, reminders, and lead conversion. Bookora’s standard setup is not designed for medical intake. If a workflow may involve protected health information, a HIPAA-supported setup and required agreements may be needed.",
       },
       {
         question: "Is there a contract?",
