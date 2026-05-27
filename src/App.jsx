@@ -978,8 +978,7 @@ if (
           ))}
         </div>
 
-        <Button
-  <Button
+<Button
   variant={activeMedicalPackage === pkg.name ? "solid" : "outline"}
   className="mt-7 w-full"
   onClick={(e) => {
