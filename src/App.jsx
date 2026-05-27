@@ -966,7 +966,7 @@ if (
     openLink(DEMO_BOOKING_URL);
   }}
 >
-  Book Med Spa Demo
+  Get Started
 </Button>
 
         <p className="mt-3 text-center text-xs text-slate-400">
