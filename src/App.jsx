@@ -511,6 +511,11 @@ const CLIENT_LOGIN_URL = "https://app.gohighlevel.com/";
 const STARTER_URL = "https://links.bookora.ai/payment-link/6a00004634d67b041e7e893f";
 const GROWTH_URL = "https://links.bookora.ai/payment-link/6a00009134d67b041e7e8940";
 const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a";
+
+const MED_SPA_STARTER_URL = "https://links.bookora.ai/payment-link/6a167597f4e3f699673a5de1";
+const MED_SPA_GROWTH_URL = "https://links.bookora.ai/payment-link/6a167701f4e3f699673a5de6";
+const MED_SPA_PRO_URL = "https://links.bookora.ai/payment-link/6a167732f4e3f699673a5de7";
+
 const AI_DEMO_PHONE_NUMBER = "7276206969";
 
   const openLink = (url) => {
@@ -974,6 +979,7 @@ if (
         </div>
 
         <Button
+  <Button
   variant={activeMedicalPackage === pkg.name ? "solid" : "outline"}
   className="mt-7 w-full"
   onClick={(e) => {
@@ -981,7 +987,13 @@ if (
 
     setActiveMedicalPackage(pkg.name);
 
-    openLink(DEMO_BOOKING_URL);
+    openLink(
+      pkg.name === "Med Spa Starter"
+        ? MED_SPA_STARTER_URL
+        : pkg.name === "Med Spa Growth"
+        ? MED_SPA_GROWTH_URL
+        : MED_SPA_PRO_URL
+    );
   }}
 >
   Get Started
