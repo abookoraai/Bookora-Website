@@ -777,7 +777,7 @@ if (
   </p>
 </div>
 
-          <div className="grid gap-5 lg:grid-cols-[1fr_1fr_1fr_0.9fr]">
+          <div className="grid gap-5 lg:grid-cols-3">
             {packages.map((pkg) => (
               <div key={pkg.name} className="text-left">
                 <Card
@@ -861,32 +861,36 @@ if (
               </div>
             ))}
 
-            <div className="flex h-full flex-col justify-center gap-8 rounded-3xl border border-white/10 bg-white/5 p-8">
+          </div>
+<div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
   {[
     ["spark", "Setup Includes First Month", "Setup, onboarding, and your first 30 days are included."],
     ["shield", "Cancel Anytime", "No contracts. No hassle."],
     ["check", "30-Day Launch Guarantee", "If your system isn’t working as designed, we’ll make it right."],
     ["users", "Built For Small Business", "Simple systems that help you grow."],
   ].map(([icon, title, desc]) => (
-    <div key={title} className="flex items-start gap-5">
-      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#72D6C8]/40 text-[#72D6C8]">
-        <Icon name={icon} className="h-5 w-5" />
-      </div>
+    <div
+      key={title}
+      className="rounded-3xl border border-white/10 bg-white/5 p-5"
+    >
+      <div className="flex items-start gap-4">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#72D6C8]/40 bg-[#58AA9D]/10 text-[#72D6C8]">
+          <Icon name={icon} className="h-5 w-5" />
+        </div>
 
-      <div className="pt-1">
-        <h4 className="text-base font-black leading-snug text-white">
-          {title}
-        </h4>
+        <div>
+          <h4 className="text-sm font-black leading-snug text-white">
+            {title}
+          </h4>
 
-        <p className="mt-2 max-w-[180px] text-sm leading-6 text-slate-400">
-          {desc}
-        </p>
+          <p className="mt-2 text-xs leading-5 text-slate-400">
+            {desc}
+          </p>
+        </div>
       </div>
     </div>
   ))}
 </div>
-          </div>
-
           <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 text-sm leading-6 text-slate-300">
   <p className="font-black text-white">Usage-Based Costs</p>
   <p className="mt-2">
