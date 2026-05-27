@@ -503,6 +503,7 @@ const AI_DEMO_PHONE_NUMBER = "7276206969";
     window.open(url, "_blank", "noopener,noreferrer");
   };
   const [activePackage, setActivePackage] = useState("Growth");
+  const [activeMedicalPackage, setActiveMedicalPackage] = useState("Med Spa Growth");
   const [billing, setBilling] = useState("monthly");
   const [callingDemo, setCallingDemo] = useState(false);
 
@@ -900,11 +901,11 @@ if (
   {medicalPackages.map((pkg) => (
     <Card
       key={pkg.name}
-      className={`relative h-full overflow-hidden bg-white/5 transition hover:-translate-y-1 ${
-        pkg.name === "Med Spa Growth"
-          ? "scale-[1.02] border-[#72D6C8] shadow-2xl shadow-[#58AA9D]/30"
-          : "border-white/10 hover:border-[#72D6C8]/40"
-      }`}
+      className={`relative h-full cursor-pointer overflow-hidden bg-white/5 transition hover:-translate-y-1 ${
+  activeMedicalPackage === pkg.name
+    ? "scale-[1.02] border-[#72D6C8] shadow-2xl shadow-[#58AA9D]/30"
+    : "border-white/10 hover:border-[#72D6C8]/40"
+}`}
     >
       {pkg.name === "Med Spa Growth" && (
         <div className="bg-[#72D6C8] py-2 text-center text-xs font-black text-[#031312]">
@@ -912,7 +913,10 @@ if (
         </div>
       )}
 
-      <div className="p-7">
+      <div
+  className="p-7"
+  onClick={() => setActiveMedicalPackage(pkg.name)}
+>
         <h3 className="text-2xl font-black">{pkg.name}</h3>
         <p className="mt-1 text-sm text-slate-400">{pkg.bestFor}</p>
 
@@ -952,12 +956,18 @@ if (
         </div>
 
         <Button
-          variant={pkg.name === "Med Spa Growth" ? "solid" : "outline"}
-          className="mt-7 w-full"
-          onClick={() => openLink(DEMO_BOOKING_URL)}
-        >
-          Book Med Spa Demo
-        </Button>
+  variant={activeMedicalPackage === pkg.name ? "solid" : "outline"}
+  className="mt-7 w-full"
+  onClick={(e) => {
+    e.stopPropagation();
+
+    setActiveMedicalPackage(pkg.name);
+
+    openLink(DEMO_BOOKING_URL);
+  }}
+>
+  Book Med Spa Demo
+</Button>
 
         <p className="mt-3 text-center text-xs text-slate-400">
           Medical workflows may require additional agreements and HIPAA-supported setup.
@@ -965,6 +975,19 @@ if (
       </div>
     </Card>
   ))}
+</div>
+
+<div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6">
+  <p className="text-sm text-[#C8FFF7]">Selected med spa package</p>
+  <h3 className="mt-1 text-2xl font-black">
+    {getPackageByName(medicalPackages, activeMedicalPackage).name} — {getPackageByName(medicalPackages, activeMedicalPackage).price}
+  </h3>
+  <p className="mt-2 text-slate-300">
+    {getPackageByName(medicalPackages, activeMedicalPackage).bestFor}
+  </p>
+  <p className="mt-2 text-sm font-semibold text-[#72D6C8]">
+    {getPackageByName(medicalPackages, activeMedicalPackage).usage}
+  </p>
 </div>
 
 <div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6 text-sm leading-6 text-slate-300">
