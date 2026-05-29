@@ -124,12 +124,12 @@ const PACKAGE_DATA = [
 
 const MEDICAL_PACKAGE_DATA = [
   {
-    name: "Med Spa Starter",
+    name: "Healthcare Starter",
     price: "$1,000 setup",
     startup: "$1,000",
     monthly: "$497/mo",
-    usage: "Privacy-safe setup • No medical intake by standard SMS",
-    bestFor: "Med spas that need missed-call recovery and basic booking support",
+    usage: "Privacy-conscious setup • No sensitive client data collected by standard SMS",
+    bestFor: "Businesses that need missed-call recovery and basic booking support while protecting sensitive client information",
     features: [
       "Missed call text-back",
       "Privacy-safe SMS templates",
@@ -141,13 +141,13 @@ const MEDICAL_PACKAGE_DATA = [
     ],
   },
   {
-    name: "Med Spa Growth",
+    name: "Healthcare Growth",
     price: "$1,500 setup",
     startup: "$1,500",
     monthly: "$697/mo",
     usage: "HIPAA-supported setup available when required • 150 AI voice minutes included",
-    setup: "Best for med spas",
-    bestFor: "AI receptionist + privacy-conscious lead follow-up",
+    setup: "Best for healthcare",
+    bestFor: "AI receptionist + privacy-conscious lead follow-up for sensitive client conversations",
     features: [
       "Everything in Med Spa Starter",
       "Voice AI receptionist",
@@ -159,13 +159,13 @@ const MEDICAL_PACKAGE_DATA = [
     ],
   },
   {
-    name: "Med Spa Pro",
+    name: "Healthcare Pro",
     price: "$2,500 setup",
     startup: "$2,500",
     monthly: "$997/mo+",
     usage: "HIPAA-supported setup available when required • 300 AI voice minutes included",
-    setup: "For high-volume med spas",
-    bestFor: "Full medical-aesthetic lead conversion system",
+    setup: "For high-volume healthcare businesses",
+    bestFor: "Full AI lead conversion system for privacy-sensitive businesses",
     features: [
       "Everything in Med Spa Growth",
       "Advanced Voice AI setup",
@@ -522,7 +522,7 @@ const AI_DEMO_PHONE_NUMBER = "7278664823";
     window.open(url, "_blank", "noopener,noreferrer");
   };
   const [activePackage, setActivePackage] = useState("Growth");
-  const [activeMedicalPackage, setActiveMedicalPackage] = useState("Med Spa Growth");
+  const [activeMedicalPackage, setActiveMedicalPackage] = useState("Healthcare Growth");
   const [billing, setBilling] = useState("monthly");
   const [callingDemo, setCallingDemo] = useState(false);
 
@@ -768,7 +768,7 @@ if (
 </h2>
 
 <p className="mt-3 max-w-2xl text-slate-300">
-  Standard businesses start at $147/mo. Med spas and medical-aesthetic businesses use privacy-conscious workflows with HIPAA-supported setup available when required.
+  Choose a standard plan for everyday appointment follow-up, or a healthcare plan when your business needs privacy-conscious workflows and HIPAA-supported setup.
 </p>
             </div>
           </div>
@@ -904,19 +904,12 @@ if (
   </p>
 </div>
 
-          <div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6">
-            <p className="text-sm text-[#C8FFF7]">Selected package</p>
-            <h3 className="mt-1 text-2xl font-black">{active.name} — {active.price}</h3>
-            <p className="mt-2 text-slate-300">{active.bestFor}</p>
-            <p className="mt-2 text-sm font-semibold text-[#72D6C8]">{active.usage}</p>
-          </div>
-
 <div className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-5">
   <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
-    Med Spa / Medical-Aesthetic Plans
+    Healthcare & Privacy-Sensitive Plans
   </p>
   <p className="mt-2 text-sm leading-6 text-slate-300">
-    For med spas, injectors, wellness clinics, and medical-aesthetic businesses that need privacy-conscious appointment workflows.
+    For healthcare, wellness, medical-aesthetic, and other privacy-sensitive businesses that need safer appointment communication workflows.
   </p>
 </div>
 
@@ -930,9 +923,9 @@ if (
     : "border-white/10 hover:border-[#72D6C8]/40"
 }`}
     >
-      {pkg.name === "Med Spa Growth" && (
+      {pkg.name === "Healthcare Growth" && (
         <div className="bg-[#72D6C8] py-2 text-center text-xs font-black text-[#031312]">
-          Best For Med Spas
+          Best For Healthcare
         </div>
       )}
 
@@ -987,12 +980,12 @@ if (
     setActiveMedicalPackage(pkg.name);
 
     openLink(
-      pkg.name === "Med Spa Starter"
-        ? MED_SPA_STARTER_URL
-        : pkg.name === "Med Spa Growth"
-        ? MED_SPA_GROWTH_URL
-        : MED_SPA_PRO_URL
-    );
+  pkg.name === "Healthcare Starter"
+    ? MED_SPA_STARTER_URL
+    : pkg.name === "Healthcare Growth"
+    ? MED_SPA_GROWTH_URL
+    : MED_SPA_PRO_URL
+);
   }}
 >
   Get Started
@@ -1006,23 +999,10 @@ if (
   ))}
 </div>
 
-<div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6">
-  <p className="text-sm text-[#C8FFF7]">Selected med spa package</p>
-  <h3 className="mt-1 text-2xl font-black">
-    {getPackageByName(medicalPackages, activeMedicalPackage).name} — {getPackageByName(medicalPackages, activeMedicalPackage).price}
-  </h3>
-  <p className="mt-2 text-slate-300">
-    {getPackageByName(medicalPackages, activeMedicalPackage).bestFor}
-  </p>
-  <p className="mt-2 text-sm font-semibold text-[#72D6C8]">
-    {getPackageByName(medicalPackages, activeMedicalPackage).usage}
-  </p>
-</div>
-
 <div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6 text-sm leading-6 text-slate-300">
-  <p className="font-black text-white">Med Spa Compliance Note</p>
+  <p className="font-black text-white">Healthcare Compliance Note</p>
   <p className="mt-2">
-    Bookora’s standard automations are designed for appointment follow-up and lead conversion, not medical intake. For med spas and medical-aesthetic businesses, we use privacy-conscious workflows and avoid collecting medical details through standard SMS or AI conversations unless a HIPAA-supported workflow and required agreements are in place.
+    Bookora’s standard automations are designed for appointment follow-up and lead conversion, not medical intake. For healthcare, wellness, and privacy-sensitive businesses, we use privacy-conscious workflows and avoid collecting sensitive client information through standard SMS or AI conversations unless a HIPAA-supported workflow and required agreements are in place.
   </p>
 </div>
 
