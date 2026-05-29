@@ -68,7 +68,7 @@ const PACKAGE_DATA = [
     name: "Starter",
     price: "$500 setup",
     startup: "$500",
-    monthly: "$147/mo",
+    monthly: "$297/mo",
     usage: "No Voice AI included • SMS & phone usage billed separately",
     bestFor: "Missed-call recovery + basic appointment follow-up",
     features: [
@@ -85,7 +85,7 @@ const PACKAGE_DATA = [
     name: "Growth",
     price: "$1,000 setup",
     startup: "$1,000",
-    monthly: "$297/mo",
+    monthly: "$497/mo",
     usage: "150 AI voice minutes included • then $0.25/min",
     setup: "Most popular",
     bestFor: "AI receptionist + lead nurturing",
@@ -104,7 +104,7 @@ const PACKAGE_DATA = [
     name: "Pro",
     price: "$1,500 setup",
     startup: "$1,500",
-    monthly: "$597/mo",
+    monthly: "$797/mo",
     usage: "300 AI voice minutes included • then $0.25/min",
     setup: "For high-volume businesses",
     bestFor: "Full AI lead conversion system",
@@ -199,7 +199,7 @@ function buildTelLink(phoneNumber) {
 
 function runSmokeTests() {
   console.assert(PACKAGE_DATA.length === 3, "Expected exactly 3 packages.");
-  console.assert(getPackageByName(PACKAGE_DATA, "Growth").monthly === "$297/mo", "Growth package monthly price should be $297/mo.");
+  console.assert(getPackageByName(PACKAGE_DATA, "Growth").monthly === "$497/mo", "Growth package monthly price should be $497/mo.");
   console.assert(getPackageByName(PACKAGE_DATA, "Missing").name === "Growth", "Unknown package should default to Growth.");
   console.assert(ACCENT === "#58AA9D", "Accent color should match the Bookora logo teal.");
 }
