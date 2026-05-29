@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import BookoraRevenueLossCalculator from "./BookoraRevenueLossCalculator";
-const ACCENT = "#58AA9D";
-const ACCENT_LIGHT = "#72D6C8";
+const ACCENT = "#55a498";
+const ACCENT_LIGHT = "#6fc9bd";
 const DARK = "#030908";
 
 const BOOKORA_LOGO_SRC = "/bookora-logo.png";
@@ -47,10 +47,10 @@ function Icon({ name, className = "h-6 w-6" }) {
 }
 
 function Button({ children, onClick, variant = "solid", className = "" }) {
-  const base = "inline-flex items-center justify-center rounded-2xl px-6 py-4 font-bold transition focus:outline-none focus:ring-2 focus:ring-[#72D6C8] focus:ring-offset-2 focus:ring-offset-[#030908]";
+  const base = "inline-flex items-center justify-center rounded-2xl px-6 py-4 font-bold transition focus:outline-none focus:ring-2 focus:ring-[#6fc9bd] focus:ring-offset-2 focus:ring-offset-[#030908]";
   const styles = variant === "outline"
-    ? "border border-[#72D6C8]/40 bg-white/5 text-white hover:bg-[#58AA9D]/10"
-    : "bg-[#72D6C8] text-[#031312] hover:bg-[#8BE7DA]";
+    ? "border border-[#6fc9bd]/40 bg-white/5 text-white hover:bg-[##55a498]/10"
+    : "bg-[#6fc9bd] text-[#031312] hover:bg-[#8BE7DA]";
 
   return (
     <button type="button" onClick={onClick} className={`${base} ${styles} ${className}`}>
@@ -201,7 +201,7 @@ function runSmokeTests() {
   console.assert(PACKAGE_DATA.length === 3, "Expected exactly 3 packages.");
   console.assert(getPackageByName(PACKAGE_DATA, "Growth").monthly === "$497/mo", "Growth package monthly price should be $497/mo.");
   console.assert(getPackageByName(PACKAGE_DATA, "Missing").name === "Growth", "Unknown package should default to Growth.");
-  console.assert(ACCENT === "#58AA9D", "Accent color should match the Bookora logo teal.");
+  console.assert(ACCENT === "#55a498", "Accent color should match the Bookora logo teal.");
 }
 
 if (typeof process === "undefined" || process.env.NODE_ENV !== "production") {
@@ -219,11 +219,11 @@ function LegalPage({ type }) {
           <BookoraLogo className="h-12 w-12" />
           <div>
             <p className="text-2xl font-black">Bookora</p>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#72D6C8]">AI Receptionist</p>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#6fc9bd]">AI Receptionist</p>
           </div>
         </div>
 
-        <div className="rounded-3xl border border-[#72D6C8]/20 bg-white/5 p-8 leading-7 text-slate-200">
+        <div className="rounded-3xl border border-[#6fc9bd]/20 bg-white/5 p-8 leading-7 text-slate-200">
           <h1 className="mb-4 text-4xl font-black text-white">{title}</h1>
           <p className="mb-6 text-sm text-slate-400">Last updated: May 2026</p>
 
@@ -356,7 +356,7 @@ function LegalPage({ type }) {
 </div>
           )}
 
-          <a href="/" className="mt-8 inline-flex rounded-2xl bg-[#72D6C8] px-5 py-3 font-bold text-[#031312] hover:bg-[#8BE7DA]">
+          <a href="/" className="mt-8 inline-flex rounded-2xl bg-[#6fc9bd] px-5 py-3 font-bold text-[#031312] hover:bg-[#8BE7DA]">
             Back to Home
           </a>
         </div>
@@ -417,7 +417,7 @@ function RevenueImpactSection() {
     >
       <div className="mb-10 text-center">
         <h2 className="text-4xl font-black tracking-tight md:text-5xl">
-          Numbers Don’t <span className="text-[#72D6C8]">Lie</span>
+          Numbers Don’t <span className="text-[#6fc9bd]">Lie</span>
         </h2>
 
         <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">
@@ -427,7 +427,7 @@ function RevenueImpactSection() {
         </p>
       </div>
 
-      <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-[#58AA9D]/10 backdrop-blur">
+      <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-[#55a498]/10 backdrop-blur">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[900px] border-collapse">
             <thead>
@@ -440,7 +440,7 @@ function RevenueImpactSection() {
                   Human Staff
                 </th>
 
-                <th className="bg-[#72D6C8]/10 px-6 py-6 text-center text-sm font-black uppercase tracking-wide text-[#72D6C8]">
+                <th className="bg-[#6fc9bd]/10 px-6 py-6 text-center text-sm font-black uppercase tracking-wide text-[#6fc9bd]">
                   Bookora AI
                 </th>
 
@@ -464,12 +464,12 @@ function RevenueImpactSection() {
                     {row.traditional}
                   </td>
 
-                  <td className="bg-[#72D6C8]/5 px-6 py-5 text-center font-black text-[#72D6C8]">
+                  <td className="bg-[#6fc9bd]/5 px-6 py-5 text-center font-black text-[#6fc9bd]">
                     {row.ai}
                   </td>
 
                   <td className="px-6 py-5 text-center">
-                    <div className="inline-flex rounded-full bg-[#72D6C8]/10 px-4 py-2 text-sm font-black text-[#72D6C8]">
+                    <div className="inline-flex rounded-full bg-[#6fc9bd]/10 px-4 py-2 text-sm font-black text-[#6fc9bd]">
                       {row.estimate}
                     </div>
                   </td>
@@ -492,7 +492,7 @@ function RevenueImpactSection() {
 
           <a
             href="/?page=revenue-calculator"
-            className="mt-6 inline-flex rounded-2xl bg-[#72D6C8] px-7 py-4 font-black text-[#031312] transition hover:bg-[#8BE7DA]"
+            className="mt-6 inline-flex rounded-2xl bg-[#6fc9bd] px-7 py-4 font-black text-[#031312] transition hover:bg-[#8BE7DA]"
           >
             Calculate Your Revenue Leak
           </a>
@@ -569,9 +569,9 @@ if (
   return (
     <div className="min-h-screen bg-[#030908] text-white">
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[#58AA9D]/25 blur-3xl" />
-        <div className="absolute -left-48 top-80 h-96 w-96 rounded-full bg-[#72D6C8]/15 blur-3xl" />
-        <div className="absolute bottom-10 right-20 h-80 w-80 rounded-full bg-[#58AA9D]/10 blur-3xl" />
+        <div className="absolute -right-40 -top-40 h-96 w-96 rounded-full bg-[#55a498]/25 blur-3xl" />
+        <div className="absolute -left-48 top-80 h-96 w-96 rounded-full bg-[#6fc9bd]/15 blur-3xl" />
+        <div className="absolute bottom-10 right-20 h-80 w-80 rounded-full bg-[#55a498]/10 blur-3xl" />
       </div>
 
       <header className="relative z-10 mx-auto flex max-w-7xl items-center justify-between px-5 py-6">
@@ -579,19 +579,19 @@ if (
           <BookoraLogo className="h-12 w-12 object-contain" />
           <div>
             <p className="text-xl font-black tracking-tight sm:text-2xl">Bookora</p>
-<p className="hidden text-sm font-bold uppercase tracking-[0.18em] text-[#72D6C8] sm:block">
+<p className="hidden text-sm font-bold uppercase tracking-[0.18em] text-[#6fc9bd] sm:block">
   AI Receptionist
 </p>
           </div>
         </div>
 
     <nav className="hidden items-center gap-8 text-sm font-semibold text-slate-200 lg:flex">
-      <a href="#features" className="hover:text-[#72D6C8]">Features</a>
-      <a href="#how" className="hover:text-[#72D6C8]">How It Works</a>
-      <a href="#pricing" className="hover:text-[#72D6C8]">Pricing</a>
-      <a href="#faq" className="hover:text-[#72D6C8]">FAQ</a>
-      <a href="#industries" className="hover:text-[#72D6C8]">Industries</a>
-      <a href="#resources" className="hover:text-[#72D6C8]">Resources</a>
+      <a href="#features" className="hover:text-[#6fc9bd]">Features</a>
+      <a href="#how" className="hover:text-[#6fc9bd]">How It Works</a>
+      <a href="#pricing" className="hover:text-[#6fc9bd]">Pricing</a>
+      <a href="#faq" className="hover:text-[#6fc9bd]">FAQ</a>
+      <a href="#industries" className="hover:text-[#6fc9bd]">Industries</a>
+      <a href="#resources" className="hover:text-[#6fc9bd]">Resources</a>
     </nav>
 
         <div className="flex items-center gap-2 sm:gap-3">
@@ -599,7 +599,7 @@ if (
     href={CLIENT_LOGIN_URL}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-xl border border-[#72D6C8]/40 bg-white/5 px-3 py-2 text-xs font-bold text-white transition hover:bg-[#58AA9D]/10 focus:outline-none focus:ring-2 focus:ring-[#72D6C8] focus:ring-offset-2 focus:ring-offset-[#030908] sm:rounded-2xl sm:px-5 sm:py-4 sm:text-base"
+    className="inline-flex items-center justify-center rounded-xl border border-[#6fc9bd]/40 bg-white/5 px-3 py-2 text-xs font-bold text-white transition hover:bg-[##55a498]/10 focus:outline-none focus:ring-2 focus:ring-[#6fc9bd] focus:ring-offset-2 focus:ring-offset-[#030908] sm:rounded-2xl sm:px-5 sm:py-4 sm:text-base"
   >
     Client Login
   </a>
@@ -607,7 +607,7 @@ if (
   <button
     type="button"
     onClick={() => openLink(DEMO_BOOKING_URL)}
-    className="inline-flex items-center justify-center rounded-xl bg-[#72D6C8] px-3 py-2 text-xs font-bold text-[#031312] transition hover:bg-[#8BE7DA] focus:outline-none focus:ring-2 focus:ring-[#72D6C8] focus:ring-offset-2 focus:ring-offset-[#030908] sm:rounded-2xl sm:px-6 sm:py-4 sm:text-base"
+    className="inline-flex items-center justify-center rounded-xl bg-[#6fc9bd] px-3 py-2 text-xs font-bold text-[#031312] transition hover:bg-[#8BE7DA] focus:outline-none focus:ring-2 focus:ring-[#6fc9bd] focus:ring-offset-2 focus:ring-offset-[#030908] sm:rounded-2xl sm:px-6 sm:py-4 sm:text-base"
   >
     Book Demo
   </button>
@@ -617,11 +617,11 @@ if (
       <main className="relative z-10">
         <section className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-14 pt-10 lg:grid-cols-[1.05fr_0.95fr] lg:pb-20 lg:pt-16">
           <div>
-            <div className="mb-6 inline-flex items-center rounded-full border border-[#72D6C8]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#72D6C8]">
+            <div className="mb-6 inline-flex items-center rounded-full border border-[#6fc9bd]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[##6fc9bd]">
               24/7 AI Receptionist For Your Business
             </div>
             <h1 className="max-w-3xl text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
-              Never Miss Another Call. <span className="text-[#72D6C8]">Book More Appointments.</span>
+              Never Miss Another Call. <span className="text-[#6fc9bd]">Book More Appointments.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
               Bookora’s AI Receptionist answers your calls, texts missed calls instantly, and books appointments — so you never lose a customer again.
@@ -655,7 +655,7 @@ if (
             </div>
 
             {callingDemo && (
-              <div className="mt-4 rounded-2xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-4 text-sm text-[#C8FFF7]">
+              <div className="mt-4 rounded-2xl border border-[#6fc9bd]/25 bg-[#55a498]/10 p-4 text-sm text-[#C8FFF7]">
                 Opening the live Bookora AI receptionist demo now.
               </div>
             )}
@@ -667,8 +667,8 @@ if (
                 ["calendar", "Books Appointments"],
                 ["clock", "Works 24/7"],
               ].map(([icon, label]) => (
-                <div key={label} className="flex items-center gap-2 rounded-xl border border-[#72D6C8]/25 bg-white/5 px-3 py-2 text-xs font-semibold text-slate-100">
-                  <Icon name={icon} className="h-4 w-4 text-[#72D6C8]" />
+                <div key={label} className="flex items-center gap-2 rounded-xl border border-[#6fc9bd]/25 bg-white/5 px-3 py-2 text-xs font-semibold text-slate-100">
+                  <Icon name={icon} className="h-4 w-4 text-[#6fc9bd]" />
                   {label}
                 </div>
               ))}
@@ -676,13 +676,13 @@ if (
           </div>
 
           <div className="grid gap-5 lg:grid-cols-[0.85fr_1fr]">
-            <div className="mx-auto w-full max-w-[270px] rounded-[2.5rem] border border-white/20 bg-black p-3 shadow-2xl shadow-[#58AA9D]/20">
+            <div className="mx-auto w-full max-w-[270px] rounded-[2.5rem] border border-white/20 bg-black p-3 shadow-2xl shadow-[#55a498]/20">
               <div className="rounded-[2rem] border border-white/10 bg-[#071210] p-5 text-center">
                 <div className="mx-auto mb-5 h-5 w-24 rounded-b-2xl bg-black" />
                 <p className="text-sm text-slate-300">Incoming Call</p>
                 <h3 className="mt-1 text-xl font-bold">Dream Med Spa</h3>
                 <p className="text-slate-400">(702) 555-0187</p>
-                <div className="mx-auto my-8 flex h-32 w-32 items-center justify-center rounded-full border border-[#72D6C8]/40 bg-[#58AA9D]/10 p-2">
+                <div className="mx-auto my-8 flex h-32 w-32 items-center justify-center rounded-full border border-[#6fc9bd]/40 bg-[#55a498]/10 p-2">
                   <BookoraLogo className="h-28 w-28" />
                 </div>
                 <p className="font-bold">Bookora AI</p>
@@ -693,21 +693,21 @@ if (
                     <p className="mt-2 text-xs text-slate-400">Decline</p>
                   </div>
                   <div>
-                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#72D6C8]"><Icon name="phone" className="h-5 w-5 text-[#031312]" /></div>
+                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#6fc9bd]"><Icon name="phone" className="h-5 w-5 text-[#031312]" /></div>
                     <p className="mt-2 text-xs text-slate-400">Accept</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <Card className="hidden border-[#72D6C8]/25 bg-white/5 p-5 backdrop-blur md:block">
-              <p className="mb-4 text-sm font-black uppercase tracking-wide text-[#72D6C8]">Missed Call Text Back</p>
+            <Card className="hidden border-[#6fc9bd]/25 bg-white/5 p-5 backdrop-blur md:block">
+              <p className="mb-4 text-sm font-black uppercase tracking-wide text-[#6fc9bd]">Missed Call Text Back</p>
               <div className="space-y-4 text-sm">
                 <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
                   Hi! Thank you for calling <b>Dream Med Spa</b>. How can I help you today?
                   <p className="mt-1 text-right text-[10px] text-slate-500">2:31 PM</p>
                 </div>
-                <div className="ml-auto max-w-[88%] rounded-2xl bg-[#72D6C8] p-4 text-[#031312] shadow-lg">
+                <div className="ml-auto max-w-[88%] rounded-2xl bg-[#6fc9bd] p-4 text-[#031312] shadow-lg">
                   Hi! I was wondering if you have any availability for a facial this week?
                   <p className="mt-1 text-right text-[10px] text-[#031312]/60">2:32 PM</p>
                 </div>
@@ -715,7 +715,7 @@ if (
                   Yes! I’d be happy to help you book that. What day works best for you?
                   <p className="mt-1 text-right text-[10px] text-slate-500">2:32 PM</p>
                 </div>
-                <div className="ml-auto max-w-[80%] rounded-2xl bg-[#72D6C8] p-4 text-[#031312] shadow-lg">
+                <div className="ml-auto max-w-[80%] rounded-2xl bg-[#6fc9bd] p-4 text-[#031312] shadow-lg">
                   Thursday morning works!
                   <p className="mt-1 text-right text-[10px] text-[#031312]/60">2:33 PM</p>
                 </div>
@@ -728,9 +728,9 @@ if (
           </div>
         </section>
 
-        <section id="industries" className="border-y border-[#72D6C8]/15 bg-black/25 py-9">
+        <section id="industries" className="border-y border-[#6fc9bd]/15 bg-black/25 py-9">
           <div className="mx-auto max-w-7xl px-5 text-center">
-            <p className="mb-7 text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">Trusted by businesses that value every call</p>
+            <p className="mb-7 text-sm font-black uppercase tracking-[0.2em] text-[#6fc9bd]">Trusted by businesses that value every call</p>
             <div className="grid gap-5 text-left sm:grid-cols-2 md:grid-cols-5">
               {industries.map((industry) => (
                 <div key={industry} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center text-sm font-black uppercase tracking-wide text-slate-400">
@@ -744,12 +744,12 @@ if (
         <section id="how" className="bg-slate-50 px-5 py-16 text-[#031312]">
           <div className="mx-auto max-w-7xl">
             <div className="mb-12 text-center">
-              <h2 className="text-4xl font-black tracking-tight md:text-5xl">How <span className="text-[#58AA9D]">Bookora</span> AI Receptionist Works</h2>
+              <h2 className="text-4xl font-black tracking-tight md:text-5xl">How <span className="text-[#55a498]">Bookora</span> AI Receptionist Works</h2>
             </div>
             <div className="grid gap-8 md:grid-cols-4">
               {steps.map(([icon, title, desc], index) => (
                 <div key={title} className="relative text-center">
-                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#58AA9D]/40 bg-[#72D6C8]/40 text-[#031312]">
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#55a498]/40 bg-[#6fc9bd]/40 text-[#031312]">
                     <Icon name={icon} className="h-8 w-8" />
                   </div>                  
                   <h3 className="mt-6 font-black">{title}</h3>
@@ -764,7 +764,7 @@ if (
           <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <h2 className="text-4xl font-black tracking-tight md:text-5xl">
-  Simple Pricing. <span className="text-[#72D6C8]">Built To Grow.</span>
+  Simple Pricing. <span className="text-[#6fc9bd]">Built To Grow.</span>
 </h2>
 
 <p className="mt-3 max-w-2xl text-slate-300">
@@ -773,10 +773,10 @@ if (
             </div>
           </div>
 
-          <div className="mb-6 rounded-3xl border border-[#72D6C8]/20 bg-gradient-to-r from-[#58AA9D]/10 to-white/5 p-6">
+          <div className="mb-6 rounded-3xl border border-[#6fc9bd]/20 bg-gradient-to-r from-[#55a498]/10 to-white/5 p-6">
   <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
     <div>
-      <p className="text-sm font-black uppercase tracking-[0.22em] text-[#72D6C8]">
+      <p className="text-sm font-black uppercase tracking-[0.22em] text-[#6fc9bd]">
         Standard Business Plans
       </p>
       <h3 className="mt-2 text-2xl font-black text-white">
@@ -787,7 +787,7 @@ if (
       </p>
     </div>
 
-    <div className="rounded-2xl border border-[#72D6C8]/25 bg-black/20 px-4 py-3 text-sm font-bold text-[#C8FFF7]">
+    <div className="rounded-2xl border border-[#6fc9bd]/25 bg-black/20 px-4 py-3 text-sm font-bold text-[#C8FFF7]">
       Starts at $297/mo
     </div>
   </div>
@@ -799,11 +799,11 @@ if (
                 <Card
   className={`relative h-full cursor-pointer overflow-hidden bg-white/5 transition hover:-translate-y-1 ${
     activePackage === pkg.name
-      ? "scale-[1.02] border-[#72D6C8] shadow-2xl shadow-[#58AA9D]/30"
-      : "border-white/10 hover:border-[#72D6C8]/40"
+      ? "scale-[1.02] border-[#6fc9bd] shadow-2xl shadow-[#55a498]/30"
+      : "border-white/10 hover:border-[#6fc9bd]/40"
   }`}
 >
-                  {pkg.name === "Growth" && <div className="bg-[#72D6C8] py-2 text-center text-xs font-black text-[#031312]">Most Popular</div>}
+                  {pkg.name === "Growth" && <div className="bg-[#6fc9bd] py-2 text-center text-xs font-black text-[#031312]">Most Popular</div>}
                   <div
   className="p-7"
   onClick={() => setActivePackage(pkg.name)}
@@ -821,7 +821,7 @@ if (
 </p>
 
 <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4">
-  <p className="text-xs font-black uppercase tracking-wide text-[#72D6C8]">
+  <p className="text-xs font-black uppercase tracking-wide text-[#6fc9bd]">
     Usage
   </p>
   <p className="mt-1 text-sm font-semibold leading-6 text-slate-200">
@@ -829,8 +829,8 @@ if (
   </p>
 </div>
 
-<div className="mt-4 rounded-2xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-4">
-    <p className="text-sm font-black text-[#72D6C8]">
+<div className="mt-4 rounded-2xl border border-[#6fc9bd]/25 bg-[#55a498]/10 p-4">
+    <p className="text-sm font-black text-[#6fc9bd]">
   {pkg.startup} Startup Includes
 </p>
 <p className="mt-1 text-xs text-slate-300">
@@ -845,7 +845,7 @@ if (
                     <div className="mt-6 space-y-3">
                       {pkg.features.map((feature) => (
                         <div key={feature} className="flex gap-3 text-sm text-slate-200">
-                          <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-[#72D6C8]" />
+                          <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-[#6fc9bd]" />
                           {feature}
                         </div>
                       ))}
@@ -890,7 +890,7 @@ if (
       className="rounded-3xl border border-white/10 bg-white/5 p-5"
     >
       <div className="flex items-start gap-4">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#72D6C8]/40 bg-[#58AA9D]/10 text-[#72D6C8]">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#6fc9bd]/40 bg-[#55a498]/10 text-[#6fc9bd]">
           <Icon name={icon} className="h-5 w-5" />
         </div>
 
@@ -915,10 +915,10 @@ if (
   </p>
 </div>
 
-<div className="mt-12 rounded-3xl border border-[#72D6C8]/20 bg-gradient-to-r from-[#58AA9D]/10 to-white/5 p-6">
+<div className="mt-12 rounded-3xl border border-[#6fc9bd]/20 bg-gradient-to-r from-[#55a498]/10 to-white/5 p-6">
   <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
     <div>
-      <p className="text-sm font-black uppercase tracking-[0.22em] text-[#72D6C8]">
+      <p className="text-sm font-black uppercase tracking-[0.22em] text-[#6fc9bd]">
         Healthcare & Privacy-Sensitive Plans
       </p>
       <h3 className="mt-2 text-2xl font-black text-white">
@@ -929,7 +929,7 @@ if (
       </p>
     </div>
 
-    <div className="rounded-2xl border border-[#72D6C8]/25 bg-black/20 px-4 py-3 text-sm font-bold text-[#C8FFF7]">
+    <div className="rounded-2xl border border-[#6fc9bd]/25 bg-black/20 px-4 py-3 text-sm font-bold text-[#C8FFF7]">
       HIPAA-supported setup available
     </div>
   </div>
@@ -941,12 +941,12 @@ if (
       key={pkg.name}
       className={`relative h-full cursor-pointer overflow-hidden bg-white/5 transition hover:-translate-y-1 ${
   activeMedicalPackage === pkg.name
-    ? "scale-[1.02] border-[#72D6C8] shadow-2xl shadow-[#58AA9D]/30"
-    : "border-white/10 hover:border-[#72D6C8]/40"
+    ? "scale-[1.02] border-[#6fc9bd] shadow-2xl shadow-[#55a498]/30"
+    : "border-white/10 hover:border-[#6fc9bd]/40"
 }`}
     >
       {pkg.name === "Healthcare Growth" && (
-        <div className="bg-[#72D6C8] py-2 text-center text-xs font-black text-[#031312]">
+        <div className="bg-[#6fc9bd] py-2 text-center text-xs font-black text-[#031312]">
           Best For Healthcare
         </div>
       )}
@@ -965,8 +965,8 @@ if (
             after setup
           </p>
 
-          <div className="mt-4 rounded-2xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-4">
-            <p className="text-sm font-black text-[#72D6C8]">
+          <div className="mt-4 rounded-2xl border border-[#6fc9bd]/25 bg-[##55a498]/10 p-4">
+            <p className="text-sm font-black text-[#6fc9bd]">
               {pkg.startup} Setup Fee
             </p>
             <p className="mt-1 text-xs text-slate-300">
@@ -975,7 +975,7 @@ if (
           </div>
 
           <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4">
-            <p className="text-xs font-black uppercase tracking-wide text-[#72D6C8]">
+            <p className="text-xs font-black uppercase tracking-wide text-[#6fc9bd]">
               Compliance Note
             </p>
             <p className="mt-1 text-sm font-semibold leading-6 text-slate-200">
@@ -987,7 +987,7 @@ if (
         <div className="mt-6 space-y-3">
           {pkg.features.map((feature) => (
             <div key={feature} className="flex gap-3 text-sm text-slate-200">
-              <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-[#72D6C8]" />
+              <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-[#6fc9bd]" />
               {feature}
             </div>
           ))}
@@ -1021,7 +1021,7 @@ if (
   ))}
 </div>
 
-<div className="mt-6 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-6 text-sm leading-6 text-slate-300">
+<div className="mt-6 rounded-3xl border border-[#6fc9bd]/25 bg-[#55a498]/10 p-6 text-sm leading-6 text-slate-300">
   <p className="font-black text-white">Healthcare Compliance Note</p>
   <p className="mt-2">
     Bookora’s standard automations are designed for appointment follow-up and lead conversion, not medical intake. For healthcare, wellness, and privacy-sensitive businesses, we use privacy-conscious workflows and avoid collecting sensitive client information through standard SMS or AI conversations unless a HIPAA-supported workflow and required agreements are in place.
@@ -1032,12 +1032,12 @@ if (
 
         <section id="faq" className="mx-auto max-w-5xl px-5 py-12">
   <div className="mb-8 text-center">
-  <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
+  <p className="text-sm font-black uppercase tracking-[0.2em] text-[#6fc9bd]">
     Frequently Asked Questions
   </p>
 
   <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">
-    Questions Before You <span className="text-[#72D6C8]">Get Started?</span>
+    Questions Before You <span className="text-[#6fc9bd]">Get Started?</span>
   </h2>
 
   <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">
@@ -1106,7 +1106,7 @@ if (
       <details key={item.question} className="group">
         <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-left font-black text-white transition hover:bg-white/5">
           <span>{item.question}</span>
-          <span className="text-xl text-[#72D6C8] transition group-open:rotate-45">
+          <span className="text-xl text-[#6fc9bd] transition group-open:rotate-45">
             +
           </span>
         </summary>
@@ -1118,7 +1118,7 @@ if (
     ))}
   </div>
 
-  <div className="mt-6 flex flex-col items-center justify-between gap-4 rounded-3xl border border-[#72D6C8]/25 bg-[#58AA9D]/10 p-5 text-center md:flex-row md:text-left">
+  <div className="mt-6 flex flex-col items-center justify-between gap-4 rounded-3xl border border-[#6fc9bd]/25 bg-[#55a498]/10 p-5 text-center md:flex-row md:text-left">
     <div>
       <h3 className="text-xl font-black text-white">Still have questions?</h3>
       <p className="mt-1 text-sm text-slate-300">
@@ -1129,14 +1129,14 @@ if (
     <button
       type="button"
       onClick={() => openLink(DEMO_BOOKING_URL)}
-      className="shrink-0 rounded-2xl bg-[#72D6C8] px-5 py-3 text-sm font-black text-[#031312] transition hover:bg-[#8BE7DA]"
+      className="shrink-0 rounded-2xl bg-[#6fc9bd] px-5 py-3 text-sm font-black text-[#031312] transition hover:bg-[#8BE7DA]"
     >
       Book Demo
     </button>
   </div>
 </section>
 
-        <section id="resources" className="bg-[#72D6C8] px-5 py-10 text-[#031312]">
+        <section id="resources" className="bg-[#6fc9bd] px-5 py-10 text-[#031312]">
           <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
             <div className="flex items-center gap-4">
               <BookoraLogo className="h-16 w-16" />
