@@ -773,13 +773,24 @@ if (
             </div>
           </div>
 
-          <div className="mb-6 rounded-3xl border border-white/10 bg-white/5 p-5">
-  <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
-    Standard Business Plans
-  </p>
-  <p className="mt-2 text-sm leading-6 text-slate-300">
-    For auto shops, salons, home services, and non-medical local businesses.
-  </p>
+          <div className="mb-6 rounded-3xl border border-[#72D6C8]/20 bg-gradient-to-r from-[#58AA9D]/10 to-white/5 p-6">
+  <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p className="text-sm font-black uppercase tracking-[0.22em] text-[#72D6C8]">
+        Standard Business Plans
+      </p>
+      <h3 className="mt-2 text-2xl font-black text-white">
+        For businesses that want to capture more calls, leads, and appointments.
+      </h3>
+      <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300">
+        Perfect for auto shops, salons, home services, studios, and local service businesses that need faster follow-up without hiring more staff.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-[#72D6C8]/25 bg-black/20 px-4 py-3 text-sm font-bold text-[#C8FFF7]">
+      Starts at $297/mo
+    </div>
+  </div>
 </div>
 
           <div className="grid gap-5 lg:grid-cols-3">
@@ -904,13 +915,24 @@ if (
   </p>
 </div>
 
-<div className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-5">
-  <p className="text-sm font-black uppercase tracking-[0.2em] text-[#72D6C8]">
-    Healthcare & Privacy-Sensitive Plans
-  </p>
-  <p className="mt-2 text-sm leading-6 text-slate-300">
-    For healthcare, wellness, medical-aesthetic, and other privacy-sensitive businesses that need safer appointment communication workflows.
-  </p>
+<div className="mt-12 rounded-3xl border border-[#72D6C8]/20 bg-gradient-to-r from-[#58AA9D]/10 to-white/5 p-6">
+  <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p className="text-sm font-black uppercase tracking-[0.22em] text-[#72D6C8]">
+        Healthcare & Privacy-Sensitive Plans
+      </p>
+      <h3 className="mt-2 text-2xl font-black text-white">
+        For businesses that need safer follow-up and HIPAA-supported workflows.
+      </h3>
+      <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300">
+        Built for healthcare, wellness, medical-aesthetic, dental, chiropractic, and other businesses where client information needs to be handled carefully.
+      </p>
+    </div>
+
+    <div className="rounded-2xl border border-[#72D6C8]/25 bg-black/20 px-4 py-3 text-sm font-bold text-[#C8FFF7]">
+      HIPAA-supported setup available
+    </div>
+  </div>
 </div>
 
 <div className="mt-6 grid gap-5 lg:grid-cols-3">
