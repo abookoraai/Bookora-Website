@@ -516,7 +516,7 @@ const MED_SPA_STARTER_URL = "https://links.bookora.ai/payment-link/6a167597f4e3f
 const MED_SPA_GROWTH_URL = "https://links.bookora.ai/payment-link/6a167701f4e3f699673a5de6";
 const MED_SPA_PRO_URL = "https://links.bookora.ai/payment-link/6a167732f4e3f699673a5de7";
 
-const AI_DEMO_PHONE_NUMBER = "7276206969";
+const AI_DEMO_PHONE_NUMBER = "7278664823";
 
   const openLink = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
@@ -1154,7 +1154,7 @@ if (
 
     <div>
       <p className="font-semibold text-white">Bookora</p>
-      <p>(727) 620-6969</p>
+      <p>(727) 866-4823</p>
       <p>1224 S Highland Ave #1008 Clearwater, FL 33756</p>
     </div>
 
