@@ -615,7 +615,7 @@ if (
       </header>
 
       <main className="relative z-10">
-        <section className="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-20 pt-10 lg:grid-cols-[0.9fr_1.1fr] lg:pb-24 lg:pt-16">
+        <section className="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-20 pt-10 lg:grid-cols-[0.85fr_1.15fr] lg:pb-24 lg:pt-16">
           <div>
             <div className="mb-6 inline-flex items-center rounded-full border border-[#6fc9bd]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[##6fc9bd]">
               24/7 AI Receptionist For Your Business
@@ -688,47 +688,47 @@ if (
     </div>
 
     {/* Call Summary Card */}
-    <div className="absolute -left-4 top-8 max-w-[260px] rounded-3xl border border-white/70 bg-white p-4 text-[#031312] shadow-2xl shadow-black/20 backdrop-blur md:-left-8 lg:-left-10">
-      <div className="flex gap-3">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#55a498]/15 text-[#55a498]">
-          <Icon name="phone" className="h-5 w-5" />
-        </div>
-
-        <div>
-          <p className="font-black">Call Summary</p>
-          <p className="mt-1 text-sm leading-5 text-slate-700">
-            Caller needs brake service and oil change. Preferred time: tomorrow morning.
-          </p>
-        </div>
-      </div>
+<div className="absolute -left-3 top-8 max-w-[220px] rounded-2xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur md:-left-6 lg:-left-8">
+  <div className="flex gap-2">
+    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#55a498]/15 text-[#55a498]">
+      <Icon name="phone" className="h-4 w-4" />
     </div>
+
+    <div>
+      <p className="text-sm font-black">Call Summary</p>
+      <p className="mt-1 text-xs leading-5 text-slate-700">
+        Caller needs brake service and oil change. Preferred time: tomorrow morning.
+      </p>
+    </div>
+  </div>
+</div>
 
     {/* Appointment Confirmed Card */}
-    <div className="absolute -right-4 top-40 max-w-[270px] rounded-3xl border border-white/70 bg-white p-4 text-[#031312] shadow-2xl shadow-black/20 backdrop-blur md:-right-8 lg:-right-12">
-      <div className="flex items-center gap-3">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#55a498] text-white">
-          <Icon name="check" className="h-5 w-5" />
-        </div>
-
-        <div>
-          <p className="font-black">Appointment Confirmed</p>
-          <p className="mt-1 text-sm text-slate-700">Tue 10:30 AM</p>
-        </div>
-      </div>
-
-      <div className="mt-4 border-t border-slate-200 pt-3">
-        <p className="text-2xl font-black text-[#55a498]">$285</p>
-      </div>
+<div className="absolute -right-3 top-36 max-w-[220px] rounded-2xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur md:-right-6 lg:-right-8">
+  <div className="flex items-center gap-2">
+    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#55a498] text-white">
+      <Icon name="check" className="h-4 w-4" />
     </div>
+
+    <div>
+      <p className="text-sm font-black leading-tight">Appointment Confirmed</p>
+      <p className="mt-1 text-xs text-slate-700">Tue 10:30 AM</p>
+    </div>
+  </div>
+
+  <div className="mt-3 border-t border-slate-200 pt-2">
+    <p className="text-xl font-black text-[#55a498]">$285</p>
+  </div>
+</div>
 
     {/* Recovered Appointments Card */}
-    <div className="absolute -bottom-8 -right-4 w-[310px] rounded-3xl border border-white/70 bg-white p-5 text-[#031312] shadow-2xl shadow-black/20 backdrop-blur md:-right-10 lg:-right-16">
-      <p className="font-black">Recovered Appointments This Week</p>
-      <p className="mt-3 text-4xl font-black text-[#55a498]">$3,420</p>
-      <p className="mt-1 text-sm text-slate-700">12 appointments recovered</p>
+<div className="absolute -bottom-6 -right-3 w-[250px] rounded-2xl border border-white/70 bg-white p-4 text-[#031312] shadow-xl shadow-black/20 backdrop-blur md:-right-6 lg:-right-8">
+  <p className="text-sm font-black leading-tight">Recovered Appointments This Week</p>
+  <p className="mt-2 text-3xl font-black text-[#55a498]">$3,420</p>
+  <p className="mt-1 text-xs text-slate-700">12 appointments recovered</p>
 
-      <div className="mt-4 h-12 rounded-2xl bg-gradient-to-r from-[#55a498]/10 to-[#55a498]/30" />
-    </div>
+  <div className="mt-3 h-9 rounded-xl bg-gradient-to-r from-[#55a498]/10 to-[#55a498]/30" />
+</div>
   </div>
 </div>
         </section>
