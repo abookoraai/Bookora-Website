@@ -733,6 +733,106 @@ if (
 </div>
         </section>
 
+        <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[0.9fr_1.1fr]">
+  <div>
+    <p className="text-sm font-black uppercase tracking-[0.22em] text-[#6fc9bd]">
+      See It In Action
+    </p>
+
+    <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">
+      Your AI Receptionist Handles The Call While You Handle The Work.
+    </h2>
+
+    <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+      Bookora answers calls, captures lead details, sends booking links, and notifies your team automatically. SMS automations can be added after carrier verification.
+    </p>
+
+    <div className="mt-6 grid gap-3 sm:grid-cols-2">
+      {[
+        ["phone", "Answers calls"],
+        ["message", "Captures lead details"],
+        ["calendar", "Sends booking links"],
+        ["clock", "Works after hours"],
+      ].map(([icon, label]) => (
+        <div
+          key={label}
+          className="flex items-center gap-3 rounded-2xl border border-[#6fc9bd]/20 bg-white/5 p-4 text-sm font-bold text-slate-100"
+        >
+          <Icon name={icon} className="h-5 w-5 text-[#6fc9bd]" />
+          {label}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div className="grid gap-5 lg:grid-cols-[0.85fr_1fr]">
+    <div className="mx-auto w-full max-w-[270px] rounded-[2.5rem] border border-white/20 bg-black p-3 shadow-2xl shadow-[#55a498]/20">
+      <div className="rounded-[2rem] border border-white/10 bg-[#071210] p-5 text-center">
+        <div className="mx-auto mb-5 h-5 w-24 rounded-b-2xl bg-black" />
+        <p className="text-sm text-slate-300">Incoming Call</p>
+        <h3 className="mt-1 text-xl font-bold">Dream Auto Repair</h3>
+        <p className="text-slate-400">(702) 555-0187</p>
+
+        <div className="mx-auto my-8 flex h-32 w-32 items-center justify-center rounded-full border border-[#6fc9bd]/40 bg-[#55a498]/10 p-2">
+          <BookoraLogo className="h-28 w-28" />
+        </div>
+
+        <p className="font-bold">Bookora AI</p>
+        <p className="text-sm text-slate-400">AI Receptionist</p>
+
+        <div className="mt-10 flex justify-center gap-10">
+          <div>
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-red-500">
+              <Icon name="phone" className="h-5 w-5 text-white" />
+            </div>
+            <p className="mt-2 text-xs text-slate-400">Missed</p>
+          </div>
+
+          <div>
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#6fc9bd]">
+              <Icon name="phone" className="h-5 w-5 text-[#031312]" />
+            </div>
+            <p className="mt-2 text-xs text-slate-400">Answered</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <Card className="hidden border-[#6fc9bd]/25 bg-white/5 p-5 backdrop-blur md:block">
+      <p className="mb-4 text-sm font-black uppercase tracking-wide text-[#6fc9bd]">
+        AI Lead Follow-Up
+      </p>
+
+      <div className="space-y-4 text-sm">
+        <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
+          Hi! Thanks for calling <b>Dream Auto Repair</b>. What can we help you with today?
+          <p className="mt-1 text-right text-[10px] text-slate-500">2:31 PM</p>
+        </div>
+
+        <div className="ml-auto max-w-[88%] rounded-2xl bg-[#6fc9bd] p-4 text-[#031312] shadow-lg">
+          I need brake service and maybe an oil change. Do you have anything tomorrow?
+          <p className="mt-1 text-right text-[10px] text-[#031312]/60">2:32 PM</p>
+        </div>
+
+        <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
+          Absolutely. I’ll collect your details and send the booking link to your email after this call.
+          <p className="mt-1 text-right text-[10px] text-slate-500">2:32 PM</p>
+        </div>
+
+        <div className="ml-auto max-w-[80%] rounded-2xl bg-[#6fc9bd] p-4 text-[#031312] shadow-lg">
+          Perfect, thank you.
+          <p className="mt-1 text-right text-[10px] text-[#031312]/60">2:33 PM</p>
+        </div>
+
+        <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
+          You’re all set. The shop has your request and you’ll receive the booking link shortly.
+          <p className="mt-1 text-right text-[10px] text-slate-500">2:34 PM</p>
+        </div>
+      </div>
+    </Card>
+  </div>
+</section>
+
         <section id="industries" className="border-y border-[#6fc9bd]/15 bg-black/25 py-9">
           <div className="mx-auto max-w-7xl px-5 text-center">
             <p className="mb-7 text-sm font-black uppercase tracking-[0.2em] text-[#6fc9bd]">Trusted by businesses that value every call</p>
