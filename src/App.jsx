@@ -678,13 +678,13 @@ if (
           <div className="relative">
   <div className="absolute -inset-4 rounded-[2.5rem] bg-[#55a498]/20 blur-3xl" />
 
-  <div className="relative overflow-hidden rounded-[2rem] border border-[#6fc9bd]/20 bg-white/5 shadow-2xl shadow-[#55a498]/20">
-    <img
-      src="/bookora-auto-repair-hero.png"
-      alt="Auto repair technician with Bookora AI call summary and appointment recovery notifications"
-      className="h-full w-full object-cover"
-    />
-  </div>
+  <div className="relative overflow-hidden rounded-[2rem] border border-[#6fc9bd]/20 bg-white/5 shadow-2xl shadow-[#55a498]/20 lg:min-h-[560px]">
+  <img
+    src="/bookora-auto-repair-hero.png"
+    alt="Auto repair technician with Bookora AI call summary and appointment recovery notifications"
+    className="h-full min-h-[420px] w-full object-cover lg:min-h-[560px]"
+  />
+</div>
 
   <div className="mt-4 rounded-3xl border border-[#6fc9bd]/20 bg-white/5 p-4 text-sm leading-6 text-slate-300 backdrop-blur">
     <span className="font-black text-[#6fc9bd]">Voice AI live same day.</span>{" "}
