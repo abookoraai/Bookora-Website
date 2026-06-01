@@ -615,7 +615,7 @@ if (
       </header>
 
       <main className="relative z-10">
-        <section className="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-20 pt-10 lg:grid-cols-[0.9fr_1.1fr] lg:pb-40 lg:pt-16">
+        <section className="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-20 pt-10 lg:grid-cols-[0.9fr_1.1fr] lg:pb-32 lg:pt-16">
           <div>
             <div className="mb-6 inline-flex items-center rounded-full border border-[#6fc9bd]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[##6fc9bd]">
               24/7 AI Receptionist For Your Business
