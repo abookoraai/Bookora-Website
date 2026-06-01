@@ -675,7 +675,7 @@ if (
             </div>
           </div>
 
-          <div className="relative mx-auto max-w-[520px] lg:max-w-none">
+          <div className="relative mx-auto max-w-[360px] px-3 pb-8 sm:max-w-[460px] md:max-w-[520px] lg:max-w-none lg:px-0 lg:pb-0">
   <div className="absolute -inset-4 rounded-[2.5rem] bg-[#55a498]/20 blur-3xl" />
 
   <div className="relative overflow-visible">
@@ -683,52 +683,65 @@ if (
       <img
         src="/bookora-mechanic-hero.png"
         alt="Auto repair technician using Bookora AI to recover calls and appointments"
-        className="h-[560px] w-full object-cover object-center md:h-[640px] lg:h-[700px]"
+        className="h-[500px] w-full object-cover object-center sm:h-[560px] md:h-[640px] lg:h-[700px]"
       />
     </div>
 
     {/* Call Summary Card */}
-<div className="absolute -left-3 top-8 max-w-[220px] rounded-2xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur md:-left-6 lg:-left-8">
+<div className="absolute -left-2 top-5 max-w-[175px] rounded-xl border border-white/70 bg-white p-2.5 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-left-4 sm:top-8 sm:max-w-[205px] md:-left-6 lg:-left-8">
   <div className="flex gap-2">
-    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#55a498]/15 text-[#55a498]">
-      <Icon name="phone" className="h-4 w-4" />
+    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#55a498]/15 text-[#55a498] sm:h-8 sm:w-8">
+      <Icon name="phone" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
     </div>
 
     <div>
-      <p className="text-sm font-black">Call Summary</p>
-      <p className="mt-1 text-xs leading-5 text-slate-700">
-        Caller needs brake service and oil change. Preferred time: tomorrow morning.
+      <p className="text-xs font-black sm:text-sm">Call Summary</p>
+      <p className="mt-1 text-[10px] leading-3 text-slate-700 sm:text-xs sm:leading-4">
+        Brake service and oil change. Preferred time: tomorrow morning.
       </p>
     </div>
   </div>
 </div>
 
     {/* Appointment Confirmed Card */}
-<div className="absolute -right-3 top-36 max-w-[220px] rounded-2xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur md:-right-6 lg:-right-8">
+<div className="absolute -right-2 top-32 max-w-[165px] rounded-xl border border-white/70 bg-white p-2.5 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-right-4 sm:top-40 sm:max-w-[200px] md:-right-5 lg:-right-8">
   <div className="flex items-center gap-2">
-    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#55a498] text-white">
-      <Icon name="check" className="h-4 w-4" />
+    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#55a498] text-white sm:h-8 sm:w-8">
+      <Icon name="check" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
     </div>
 
     <div>
-      <p className="text-sm font-black leading-tight">Appointment Confirmed</p>
-      <p className="mt-1 text-xs text-slate-700">Tue 10:30 AM</p>
+      <p className="text-xs font-black leading-tight sm:text-sm">
+        Appointment Confirmed
+      </p>
+      <p className="mt-0.5 text-[10px] text-slate-700 sm:text-xs">
+        Tue 10:30 AM
+      </p>
     </div>
   </div>
 
-  <div className="mt-3 border-t border-slate-200 pt-2">
-    <p className="text-xl font-black text-[#55a498]">$285</p>
+  <div className="mt-2 border-t border-slate-200 pt-1.5">
+    <p className="text-base font-black text-[#55a498] sm:text-lg">$285</p>
   </div>
 </div>
 
     {/* Recovered Appointments Card */}
-<div className="absolute -bottom-6 -right-3 w-[250px] rounded-2xl border border-white/70 bg-white p-4 text-[#031312] shadow-xl shadow-black/20 backdrop-blur md:-right-6 lg:-right-8">
-  <p className="text-sm font-black leading-tight">Recovered Appointments This Week</p>
-  <p className="mt-2 text-3xl font-black text-[#55a498]">$3,420</p>
-  <p className="mt-1 text-xs text-slate-700">12 appointments recovered</p>
+<div className="absolute -bottom-5 -right-2 w-[190px] rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-bottom-6 sm:-right-5 sm:w-[230px] md:-right-6 lg:-right-10">
+  <p className="text-xs font-black leading-tight sm:text-sm">
+    Recovered Appointments
+  </p>
 
-  <div className="mt-3 h-9 rounded-xl bg-gradient-to-r from-[#55a498]/10 to-[#55a498]/30" />
+  <p className="mt-1.5 text-2xl font-black text-[#55a498] sm:text-3xl">
+    $3,420
+  </p>
+
+  <p className="mt-0.5 text-[10px] text-slate-700 sm:text-xs">
+    12 recovered this week
+  </p>
+
+  <div className="mt-2 h-6 rounded-lg bg-gradient-to-r from-[#55a498]/10 to-[#55a498]/30 sm:h-8 sm:rounded-xl" />
 </div>
+
   </div>
 </div>
         </section>
