@@ -739,67 +739,56 @@ if (
     12 recovered this week
   </p>
 
-  <div className="absolute -bottom-5 -right-2 w-[190px] rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-bottom-6 sm:-right-5 sm:w-[230px] md:-right-6 lg:-right-10">
-  <p className="text-xs font-black leading-tight sm:text-sm">
-    Recovered Appointments This Week
-  </p>
-
-  <p className="mt-1.5 text-2xl font-black text-[#55a498] sm:text-3xl">
-    $3,420
-  </p>
-
-  <p className="mt-0.5 text-[10px] text-slate-700 sm:text-xs">
-    12 appointments recovered
-  </p>
-
   <div className="mt-3 rounded-lg bg-[#55a498]/8 p-1.5 sm:rounded-xl sm:p-2">
-    <svg
-      viewBox="0 0 220 60"
-      className="h-12 w-full sm:h-14"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="none"
-    >
-      <defs>
-        <linearGradient id="recoveredFill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#55a498" stopOpacity="0.28" />
-          <stop offset="100%" stopColor="#55a498" stopOpacity="0.04" />
-        </linearGradient>
-      </defs>
+  <svg
+    viewBox="0 0 220 60"
+    className="h-12 w-full sm:h-14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient id="recoveredFill" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#55a498" stopOpacity="0.28" />
+        <stop offset="100%" stopColor="#55a498" stopOpacity="0.04" />
+      </linearGradient>
+    </defs>
 
-      <path
-        d="M0 50
-           C12 44, 20 42, 30 45
-           C40 48, 50 46, 60 40
-           C70 34, 82 35, 92 40
-           C102 45, 112 43, 120 37
-           C128 31, 138 32, 148 37
-           C158 42, 168 39, 176 28
-           C184 17, 195 14, 205 18
-           C212 20, 217 15, 220 12
-           L220 60 L0 60 Z"
-        fill="url(#recoveredFill)"
-      />
+    {/* area fill */}
+    <path
+      d="M0 50
+         C12 44, 20 42, 30 45
+         C40 48, 50 46, 60 40
+         C70 34, 82 35, 92 40
+         C102 45, 112 43, 120 37
+         C128 31, 138 32, 148 37
+         C158 42, 168 39, 176 28
+         C184 17, 195 14, 205 18
+         C212 20, 217 15, 220 12
+         L220 60 L0 60 Z"
+      fill="url(#recoveredFill)"
+    />
 
-      <path
-        d="M0 50
-           C12 44, 20 42, 30 45
-           C40 48, 50 46, 60 40
-           C70 34, 82 35, 92 40
-           C102 45, 112 43, 120 37
-           C128 31, 138 32, 148 37
-           C158 42, 168 39, 176 28
-           C184 17, 195 14, 205 18
-           C212 20, 217 15, 220 12"
-        stroke="#55a498"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+    {/* line */}
+    <path
+      d="M0 50
+         C12 44, 20 42, 30 45
+         C40 48, 50 46, 60 40
+         C70 34, 82 35, 92 40
+         C102 45, 112 43, 120 37
+         C128 31, 138 32, 148 37
+         C158 42, 168 39, 176 28
+         C184 17, 195 14, 205 18
+         C212 20, 217 15, 220 12"
+      stroke="#55a498"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
 
-      <circle cx="220" cy="12" r="3.5" fill="#55a498" />
-    </svg>
-  </div>
+    {/* end dot */}
+    <circle cx="220" cy="12" r="3.5" fill="#55a498" />
+  </svg>
 </div>
 </div>
 
