@@ -675,57 +675,22 @@ if (
             </div>
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-[0.85fr_1fr]">
-            <div className="mx-auto w-full max-w-[270px] rounded-[2.5rem] border border-white/20 bg-black p-3 shadow-2xl shadow-[#55a498]/20">
-              <div className="rounded-[2rem] border border-white/10 bg-[#071210] p-5 text-center">
-                <div className="mx-auto mb-5 h-5 w-24 rounded-b-2xl bg-black" />
-                <p className="text-sm text-slate-300">Incoming Call</p>
-                <h3 className="mt-1 text-xl font-bold">Dream Med Spa</h3>
-                <p className="text-slate-400">(702) 555-0187</p>
-                <div className="mx-auto my-8 flex h-32 w-32 items-center justify-center rounded-full border border-[#6fc9bd]/40 bg-[#55a498]/10 p-2">
-                  <BookoraLogo className="h-28 w-28" />
-                </div>
-                <p className="font-bold">Bookora AI</p>
-                <p className="text-sm text-slate-400">AI Receptionist</p>
-                <div className="mt-10 flex justify-center gap-10">
-                  <div>
-                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-red-500"><Icon name="phone" className="h-5 w-5 text-white" /></div>
-                    <p className="mt-2 text-xs text-slate-400">Decline</p>
-                  </div>
-                  <div>
-                    <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#6fc9bd]"><Icon name="phone" className="h-5 w-5 text-[#031312]" /></div>
-                    <p className="mt-2 text-xs text-slate-400">Accept</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative">
+  <div className="absolute -inset-4 rounded-[2.5rem] bg-[#55a498]/20 blur-3xl" />
 
-            <Card className="hidden border-[#6fc9bd]/25 bg-white/5 p-5 backdrop-blur md:block">
-              <p className="mb-4 text-sm font-black uppercase tracking-wide text-[#6fc9bd]">Missed Call Text Back</p>
-              <div className="space-y-4 text-sm">
-                <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
-                  Hi! Thank you for calling <b>Dream Med Spa</b>. How can I help you today?
-                  <p className="mt-1 text-right text-[10px] text-slate-500">2:31 PM</p>
-                </div>
-                <div className="ml-auto max-w-[88%] rounded-2xl bg-[#6fc9bd] p-4 text-[#031312] shadow-lg">
-                  Hi! I was wondering if you have any availability for a facial this week?
-                  <p className="mt-1 text-right text-[10px] text-[#031312]/60">2:32 PM</p>
-                </div>
-                <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
-                  Yes! I’d be happy to help you book that. What day works best for you?
-                  <p className="mt-1 text-right text-[10px] text-slate-500">2:32 PM</p>
-                </div>
-                <div className="ml-auto max-w-[80%] rounded-2xl bg-[#6fc9bd] p-4 text-[#031312] shadow-lg">
-                  Thursday morning works!
-                  <p className="mt-1 text-right text-[10px] text-[#031312]/60">2:33 PM</p>
-                </div>
-                <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
-                  Perfect! You’re all set for <b>Thursday at 10:00 AM.</b> See you then!
-                  <p className="mt-1 text-right text-[10px] text-slate-500">2:39 PM</p>
-                </div>
-              </div>
-            </Card>
-          </div>
+  <div className="relative overflow-hidden rounded-[2rem] border border-[#6fc9bd]/20 bg-white/5 shadow-2xl shadow-[#55a498]/20">
+    <img
+      src="/bookora-auto-repair-hero.png"
+      alt="Auto repair technician with Bookora AI call summary and appointment recovery notifications"
+      className="h-full w-full object-cover"
+    />
+  </div>
+
+  <div className="mt-4 rounded-3xl border border-[#6fc9bd]/20 bg-white/5 p-4 text-sm leading-6 text-slate-300 backdrop-blur">
+    <span className="font-black text-[#6fc9bd]">Voice AI live same day.</span>{" "}
+    Bookora captures call details, sends booking links, and helps recover appointments while your team stays focused on the work.
+  </div>
+</div>
         </section>
 
         <section id="industries" className="border-y border-[#6fc9bd]/15 bg-black/25 py-9">
