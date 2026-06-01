@@ -678,11 +678,11 @@ if (
           <div className="relative">
   <div className="absolute -inset-4 rounded-[2.5rem] bg-[#55a498]/20 blur-3xl" />
 
-  <div className="relative overflow-hidden rounded-[2rem] border border-[#6fc9bd]/20 bg-white/5 shadow-2xl shadow-[#55a498]/20 lg:min-h-[560px]">
+  <div className="relative overflow-hidden rounded-[2rem] border border-[#6fc9bd]/20 bg-white/5 shadow-2xl shadow-[#55a498]/20">
   <img
     src="/bookora-auto-repair-hero.png"
     alt="Auto repair technician with Bookora AI call summary and appointment recovery notifications"
-    className="h-full min-h-[420px] w-full object-cover lg:min-h-[560px]"
+    className="h-auto w-full object-contain"
   />
 </div>
 
