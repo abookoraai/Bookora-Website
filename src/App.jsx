@@ -641,7 +641,7 @@ if (
 />
               </div>
 
-              <div className="absolute right-4 top-8 z-20 max-w-[210px] rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur lg:-right-16">
+              <div className="absolute right-[-20px] top-6 z-20 max-w-[210px] rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur lg:-right-16 lg:top-10">
                 <div className="flex gap-2">
                   <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#55a498]/15 text-[#55a498] sm:h-8 sm:w-8">
                     <Icon name="phone" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
@@ -656,7 +656,7 @@ if (
                 </div>
               </div>
 
-              <div className="absolute left-4 top-[42%] z-20 max-w-[210px] -translate-y-1/2 rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur lg:-left-20">
+              <div className="absolute left-[-25px] top-[42%] z-20 max-w-[210px] -translate-y-1/2 rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur lg:-left-20">
                 <div className="flex items-center gap-2">
                   <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#55a498] text-white sm:h-8 sm:w-8">
                     <Icon name="check" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
@@ -677,7 +677,7 @@ if (
                 </div>
               </div>
 
-              <div className="absolute bottom-6 right-4 w-[200px] rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-bottom-6 sm:-right-5 sm:w-[230px] md:-right-6 lg:-right-10">
+              <div className="absolute bottom-[-15px] right-[-20px] z-20 w-[210px] rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur lg:-bottom-6 lg:-right-10 lg:w-[230px]">
                 <p className="text-xs font-black leading-tight sm:text-sm">
                   Recovered Jobs
                 </p>
