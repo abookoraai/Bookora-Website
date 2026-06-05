@@ -567,7 +567,7 @@ if (
           <div>
 
             <h1 className="max-w-3xl text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
-  Never Miss Another Call.. <span className="text-[#6fc9bd]">Book More Jobs.</span>
+  Never Miss Another Call. <span className="text-[#6fc9bd]">Book More Jobs.</span>
 </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
@@ -700,19 +700,19 @@ if (
                     </defs>
 
                     <path
-                      d="M0 50 C12 44, 20 42, 30 45 C40 48, 50 46, 60 40 C70 34, 82 35, 92 40 C102 45, 112 43, 120 37 C128 31, 138 32, 148 37 C158 42, 168 39, 176 28 C184 17, 195 14, 205 18 C212 20, 217 15, 220 12 L220 60 L0 60 Z"
+                      d="M0 50 C12 44, 20 42, 30 45 C40 48, 50 46, 60 40 C70 34, 82 35, 92 40 C102 45, 112 43, 120 37 C128 31, 138 32, 148 37 C158 42, 168 39, 176 28 C184 17, 195 14, 205 18 C212 20, 217 15, 216 12 L220 60 L0 60 Z"
                       fill="url(#recoveredFill)"
                     />
 
                     <path
-                      d="M0 50 C12 44, 20 42, 30 45 C40 48, 50 46, 60 40 C70 34, 82 35, 92 40 C102 45, 112 43, 120 37 C128 31, 138 32, 148 37 C158 42, 168 39, 176 28 C184 17, 195 14, 205 18 C212 20, 217 15, 220 12"
+                      d="M0 50 C12 44, 20 42, 30 45 C40 48, 50 46, 60 40 C70 34, 82 35, 92 40 C102 45, 112 43, 120 37 C128 31, 138 32, 148 37 C158 42, 168 39, 176 28 C184 17, 195 14, 205 18 C212 20, 217 15, 216 12"
                       stroke="#55a498"
                       strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
 
-                    <circle cx="220" cy="12" r="3.5" fill="#55a498" />
+                    <circle cx="216" cy="12" r="3.5" fill="#55a498" />
                   </svg>
                 </div>
               </div>
