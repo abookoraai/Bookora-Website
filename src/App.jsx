@@ -68,10 +68,11 @@ const PACKAGE_DATA = [
     name: "Starter",
     price: "$500 setup",
     startup: "$500",
-    monthly: "$297/mo",
-    usage: "No Voice AI included • SMS & phone usage billed separately",
+    monthly: "$147/mo",
+    usage: "45 AI voice minutes included • then $0.50/min",
     bestFor: "Missed-call recovery + basic appointment follow-up",
     features: [
+      "45 AI voice minutes included",
       "Missed call text-back",
       "Instant SMS follow-up",
       "Appointment reminders",
@@ -85,11 +86,12 @@ const PACKAGE_DATA = [
     name: "Growth",
     price: "$1,000 setup",
     startup: "$1,000",
-    monthly: "$497/mo",
-    usage: "150 AI voice minutes included • then $0.25/min",
+    monthly: "$297/mo",
+    usage: "90 AI voice minutes included • then $0.40/min",
     setup: "Most popular",
     bestFor: "AI receptionist + lead nurturing",
     features: [
+      "90 AI voice minutes included",
       "Everything in Starter",
       "Voice AI receptionist",
       "Lead qualification",
@@ -104,11 +106,12 @@ const PACKAGE_DATA = [
     name: "Pro",
     price: "$1,500 setup",
     startup: "$1,500",
-    monthly: "$797/mo",
-    usage: "300 AI voice minutes included • then $0.25/min",
+    monthly: "$497/mo",
+    usage: "180 AI voice minutes included • then $0.30/min",
     setup: "For high-volume businesses",
     bestFor: "Full AI lead conversion system",
     features: [
+      "180 AI voice minutes included",
       "Everything in Growth",
       "Advanced Voice AI setup",
       "More complex call routing",
@@ -1002,8 +1005,7 @@ if (
           <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 text-sm leading-6 text-slate-300">
   <p className="font-black text-white">Usage-Based Costs</p>
   <p className="mt-2">
-    Growth includes 150 AI voice minutes per month. Pro includes 300 AI voice minutes per month.
-    Additional AI voice minutes are billed at $0.25/min. SMS, phone, and carrier usage may be billed separately based on actual usage.
+    Starter includes 45 AI voice minutes per month, then $0.50/min. Growth includes 90 AI voice minutes per month, then $0.40/min. Pro includes 180 AI voice minutes per month, then $0.30/min. SMS, phone, and carrier usage may be billed separately based on actual usage.
   </p>
 </div>
 
