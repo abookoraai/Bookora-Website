@@ -737,13 +737,13 @@ if (
     </h2>
 
     <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
-      Bookora answers calls, captures lead details, sends booking links, and notifies your team automatically. SMS automations can be added after carrier verification.
+      Bookora answers calls, captures job details, sends booking links, and notifies your team automatically. SMS automations can be added after carrier verification.
     </p>
 
     <div className="mt-6 grid gap-3 sm:grid-cols-2">
       {[
         ["phone", "Answers calls"],
-        ["message", "Captures lead details"],
+        ["message", "Captures job details"],
         ["calendar", "Sends booking links"],
         ["clock", "Works after hours"],
       ].map(([icon, label]) => (
@@ -763,8 +763,8 @@ if (
       <div className="rounded-[2rem] border border-white/10 bg-[#071210] p-5 text-center">
         <div className="mx-auto mb-5 h-5 w-24 rounded-b-2xl bg-black" />
         <p className="text-sm text-slate-300">Incoming Call</p>
-        <h3 className="mt-1 text-xl font-bold">Dream Auto Repair</h3>
-        <p className="text-slate-400">(702) 555-0187</p>
+        <h3 className="mt-1 text-xl font-bold">Reliable HVAC Pros</h3>
+        <p className="text-slate-400">(813) 555-0198</p>
 
         <div className="mx-auto my-8 flex h-32 w-32 items-center justify-center rounded-full border border-[#6fc9bd]/40 bg-[#55a498]/10 p-2">
           <BookoraLogo className="h-28 w-28" />
@@ -798,17 +798,17 @@ if (
 
       <div className="space-y-4 text-sm">
         <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
-          Hi! Thanks for calling <b>Dream Auto Repair</b>. What can we help you with today?
+          Hi! Thanks for calling <b>Reliable HVAC Pros</b>. What can we help you with today?
           <p className="mt-1 text-right text-[10px] text-slate-500">2:31 PM</p>
         </div>
 
         <div className="ml-auto max-w-[88%] rounded-2xl bg-[#6fc9bd] p-4 text-[#031312] shadow-lg">
-          I need brake service and maybe an oil change. Do you have anything tomorrow?
+          My AC stopped cooling. Do you have anything available tomorrow?
           <p className="mt-1 text-right text-[10px] text-[#031312]/60">2:32 PM</p>
         </div>
 
         <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
-          Absolutely. I’ll collect your details and send the booking link to your email after this call.
+          Absolutely. I can help collect your details and get you scheduled for an AC repair appointment.
           <p className="mt-1 text-right text-[10px] text-slate-500">2:32 PM</p>
         </div>
 
@@ -818,7 +818,7 @@ if (
         </div>
 
         <div className="max-w-[88%] rounded-2xl bg-white p-4 text-slate-950 shadow-lg">
-          You’re all set. The shop has your request and you’ll receive the booking link shortly.
+          You’re all set. Your AC repair appointment request has been sent to the team, and you’ll receive a confirmation shortly.
           <p className="mt-1 text-right text-[10px] text-slate-500">2:34 PM</p>
         </div>
       </div>
