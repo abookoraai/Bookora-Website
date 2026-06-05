@@ -567,7 +567,7 @@ if (
           <div>
 
             <h1 className="max-w-3xl text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
-  Answer Every Call. <span className="text-[#6fc9bd]">Book More Jobs.</span>
+  Never Miss Another Call.. <span className="text-[#6fc9bd]">Book More Jobs.</span>
 </h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
