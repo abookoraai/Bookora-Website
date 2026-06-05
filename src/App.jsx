@@ -563,18 +563,19 @@ if (
       </header>
 
       <main className="relative z-10">
-        <section className="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-20 pt-10 lg:grid-cols-[0.85fr_1.15fr] lg:pb-24 lg:pt-16">
-          <div className="mb-6 inline-flex items-center rounded-full border border-[#6fc9bd]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#6fc9bd]">
-  AI Receptionist & Follow-Up System For Home Service Businesses
-</div>
+               <section className="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-20 pt-10 lg:grid-cols-[0.85fr_1.15fr] lg:pb-24 lg:pt-16">
+          <div>
+            <div className="mb-6 inline-flex items-center rounded-full border border-[#6fc9bd]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#6fc9bd]">
+              AI Receptionist & Follow-Up System For Home Service Businesses
+            </div>
 
-<h1 className="max-w-3xl text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
-  Stop Losing Jobs To <span className="text-[#6fc9bd]">Missed Calls.</span>
-</h1>
+            <h1 className="max-w-3xl text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
+              Answer More Calls. <span className="text-[#6fc9bd]">Book More Jobs.</span>
+            </h1>
 
-<p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
-  Bookora answers calls, texts missed leads, collects job details, and helps book appointments for HVAC, plumbing, roofing, electrical, and other home service businesses — even when your team is busy, on-site, or closed.
-</p>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
+              Bookora helps home service businesses capture missed calls, respond instantly, collect job details, and follow up automatically — so more leads turn into booked appointments.
+            </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button
@@ -591,9 +592,10 @@ if (
                 }}
                 className="px-8 py-5 text-base"
               >
-                {callingDemo ? "Opening Phone..." : "Call The AI Demo"}
+                {callingDemo ? "Opening Phone..." : "Call The AI Receptionist"}
                 <Icon name="phone" className="ml-2 h-5 w-5" />
               </Button>
+
               <Button
                 variant="outline"
                 className="px-8 py-5 text-base"
@@ -612,7 +614,7 @@ if (
             <div id="features" className="mt-8 flex flex-wrap gap-2">
               {[
                 ["phone", "AI Answers Calls"],
-                ["message", "Texts Instantly"],
+                ["message", "Texts Missed Leads"],
                 ["calendar", "Books Appointments"],
                 ["clock", "Works 24/7"],
               ].map(([icon, label]) => (
@@ -625,127 +627,103 @@ if (
           </div>
 
           <div className="relative mx-auto max-w-[360px] px-3 pb-8 sm:max-w-[460px] md:max-w-[520px] lg:max-w-none lg:px-0 lg:pb-0">
-  <div className="absolute -inset-4 rounded-[2.5rem] bg-[#55a498]/20 blur-3xl" />
+            <div className="absolute -inset-4 rounded-[2.5rem] bg-[#55a498]/20 blur-3xl" />
 
-  <div className="relative overflow-visible">
-    <div className="overflow-hidden rounded-[2rem] border border-[#6fc9bd]/20 bg-white/5 shadow-2xl shadow-[#55a498]/20">
-      <img
-        src="/bookora-mechanic-hero.png"
-        alt="Auto repair technician using Bookora AI to recover calls and appointments"
-        className="h-[500px] w-full object-cover object-center sm:h-[560px] md:h-[640px] lg:h-[700px]"
-      />
-    </div>
+            <div className="relative overflow-visible">
+              <div className="overflow-hidden rounded-[2rem] border border-[#6fc9bd]/20 bg-white/5 shadow-2xl shadow-[#55a498]/20">
+                <img
+                  src="/bookora-mechanic-hero.png"
+                  alt="Home service technician using Bookora AI to recover calls and appointments"
+                  className="h-[500px] w-full object-cover object-center sm:h-[560px] md:h-[640px] lg:h-[700px]"
+                />
+              </div>
 
-    {/* Call Summary Card */}
-<div className="absolute -left-2 top-5 max-w-[175px] rounded-xl border border-white/70 bg-white p-2.5 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-left-4 sm:top-8 sm:max-w-[205px] md:-left-6 lg:-left-8">
-  <div className="flex gap-2">
-    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#55a498]/15 text-[#55a498] sm:h-8 sm:w-8">
-      <Icon name="phone" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-    </div>
+              <div className="absolute -left-2 top-5 max-w-[175px] rounded-xl border border-white/70 bg-white p-2.5 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-left-4 sm:top-8 sm:max-w-[205px] md:-left-6 lg:-left-8">
+                <div className="flex gap-2">
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#55a498]/15 text-[#55a498] sm:h-8 sm:w-8">
+                    <Icon name="phone" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                  </div>
 
-    <div>
-      <p className="text-xs font-black sm:text-sm">Call Summary</p>
-      <p className="mt-1 text-[10px] leading-3 text-slate-700 sm:text-xs sm:leading-4">
-        Brake service and oil change. Preferred time: tomorrow morning.
-      </p>
-    </div>
-  </div>
-</div>
+                  <div>
+                    <p className="text-xs font-black sm:text-sm">Call Summary</p>
+                    <p className="mt-1 text-[10px] leading-3 text-slate-700 sm:text-xs sm:leading-4">
+                      AC not cooling. Preferred time: tomorrow morning.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-    {/* Appointment Confirmed Card */}
-<div className="absolute -right-2 top-32 max-w-[165px] rounded-xl border border-white/70 bg-white p-2.5 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-right-4 sm:top-40 sm:max-w-[200px] md:-right-5 lg:-right-8">
-  <div className="flex items-center gap-2">
-    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#55a498] text-white sm:h-8 sm:w-8">
-      <Icon name="check" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-    </div>
+              <div className="absolute -right-2 top-32 max-w-[165px] rounded-xl border border-white/70 bg-white p-2.5 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-right-4 sm:top-40 sm:max-w-[200px] md:-right-5 lg:-right-8">
+                <div className="flex items-center gap-2">
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#55a498] text-white sm:h-8 sm:w-8">
+                    <Icon name="check" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                  </div>
 
-    <div>
-      <p className="text-xs font-black leading-tight sm:text-sm">
-        Appointment Confirmed
-      </p>
-      <p className="mt-0.5 text-[10px] text-slate-700 sm:text-xs">
-        Tue 10:30 AM
-      </p>
-    </div>
-  </div>
+                  <div>
+                    <p className="text-xs font-black leading-tight sm:text-sm">
+                      Appointment Confirmed
+                    </p>
+                    <p className="mt-0.5 text-[10px] text-slate-700 sm:text-xs">
+                      Tue 10:30 AM
+                    </p>
+                  </div>
+                </div>
 
-  <div className="mt-2 border-t border-slate-200 pt-1.5">
-    <p className="text-base font-black text-[#55a498] sm:text-lg">$285</p>
-  </div>
-</div>
+                <div className="mt-2 border-t border-slate-200 pt-1.5">
+                  <p className="text-base font-black text-[#55a498] sm:text-lg">$285</p>
+                </div>
+              </div>
 
-    {/* Recovered Appointments Card */}
-<div className="absolute -bottom-5 -right-2 w-[190px] rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-bottom-6 sm:-right-5 sm:w-[230px] md:-right-6 lg:-right-10">
-  <p className="text-xs font-black leading-tight sm:text-sm">
-    Recovered Appointments
-  </p>
+              <div className="absolute -bottom-5 -right-2 w-[190px] rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-bottom-6 sm:-right-5 sm:w-[230px] md:-right-6 lg:-right-10">
+                <p className="text-xs font-black leading-tight sm:text-sm">
+                  Recovered Jobs
+                </p>
 
-  <p className="mt-1.5 text-2xl font-black text-[#55a498] sm:text-3xl">
-    $3,420
-  </p>
+                <p className="mt-1.5 text-2xl font-black text-[#55a498] sm:text-3xl">
+                  $3,420
+                </p>
 
-  <p className="mt-0.5 text-[10px] text-slate-700 sm:text-xs">
-    12 recovered this week
-  </p>
+                <p className="mt-0.5 text-[10px] text-slate-700 sm:text-xs">
+                  12 recovered this week
+                </p>
 
-  <div className="mt-3 rounded-lg bg-[#55a498]/8 p-1.5 sm:rounded-xl sm:p-2">
-  <svg
-    viewBox="0 0 220 60"
-    className="h-12 w-full sm:h-14"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    preserveAspectRatio="none"
-  >
-    <defs>
-      <linearGradient id="recoveredFill" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#55a498" stopOpacity="0.28" />
-        <stop offset="100%" stopColor="#55a498" stopOpacity="0.04" />
-      </linearGradient>
-    </defs>
+                <div className="mt-3 rounded-lg bg-[#55a498]/8 p-1.5 sm:rounded-xl sm:p-2">
+                  <svg
+                    viewBox="0 0 220 60"
+                    className="h-12 w-full sm:h-14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                  >
+                    <defs>
+                      <linearGradient id="recoveredFill" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stopColor="#55a498" stopOpacity="0.28" />
+                        <stop offset="100%" stopColor="#55a498" stopOpacity="0.04" />
+                      </linearGradient>
+                    </defs>
 
-    {/* area fill */}
-    <path
-      d="M0 50
-         C12 44, 20 42, 30 45
-         C40 48, 50 46, 60 40
-         C70 34, 82 35, 92 40
-         C102 45, 112 43, 120 37
-         C128 31, 138 32, 148 37
-         C158 42, 168 39, 176 28
-         C184 17, 195 14, 205 18
-         C212 20, 217 15, 220 12
-         L220 60 L0 60 Z"
-      fill="url(#recoveredFill)"
-    />
+                    <path
+                      d="M0 50 C12 44, 20 42, 30 45 C40 48, 50 46, 60 40 C70 34, 82 35, 92 40 C102 45, 112 43, 120 37 C128 31, 138 32, 148 37 C158 42, 168 39, 176 28 C184 17, 195 14, 205 18 C212 20, 217 15, 220 12 L220 60 L0 60 Z"
+                      fill="url(#recoveredFill)"
+                    />
 
-    {/* line */}
-    <path
-      d="M0 50
-         C12 44, 20 42, 30 45
-         C40 48, 50 46, 60 40
-         C70 34, 82 35, 92 40
-         C102 45, 112 43, 120 37
-         C128 31, 138 32, 148 37
-         C158 42, 168 39, 176 28
-         C184 17, 195 14, 205 18
-         C212 20, 217 15, 220 12"
-      stroke="#55a498"
-      strokeWidth="2.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
+                    <path
+                      d="M0 50 C12 44, 20 42, 30 45 C40 48, 50 46, 60 40 C70 34, 82 35, 92 40 C102 45, 112 43, 120 37 C128 31, 138 32, 148 37 C158 42, 168 39, 176 28 C184 17, 195 14, 205 18 C212 20, 217 15, 220 12"
+                      stroke="#55a498"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
 
-    {/* end dot */}
-    <circle cx="220" cy="12" r="3.5" fill="#55a498" />
-  </svg>
-</div>
-</div>
+                    <circle cx="220" cy="12" r="3.5" fill="#55a498" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> 
 
-  </div>
-</div>
-        </section>
-
-        <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[0.9fr_1.1fr]">
+                <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[0.9fr_1.1fr]">
   <div>
     <p className="text-sm font-black uppercase tracking-[0.22em] text-[#6fc9bd]">
       See It In Action
