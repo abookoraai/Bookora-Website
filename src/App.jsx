@@ -570,8 +570,8 @@ if (
             </div>
 
             <h1 className="max-w-3xl text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
-              Answer More Calls. <span className="text-[#6fc9bd]">Book More Jobs.</span>
-            </h1>
+  Answer Every Call. <span className="text-[#6fc9bd]">Book More Jobs.</span>
+</h1>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
               Bookora helps home service businesses capture missed calls, respond instantly, collect job details, and follow up automatically — so more leads turn into booked appointments.
