@@ -564,16 +564,17 @@ if (
 
       <main className="relative z-10">
         <section className="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-20 pt-10 lg:grid-cols-[0.85fr_1.15fr] lg:pb-24 lg:pt-16">
-          <div>
-            <div className="mb-6 inline-flex items-center rounded-full border border-[#6fc9bd]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#6fc9bd]">
-              24/7 AI Receptionist For Home Service Businesses
-            </div>
-            <h1 className="max-w-3xl text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
-              Never Miss Another Job. <span className="text-[#6fc9bd]">Turn More Calls Into Booked Work.</span>
-            </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
-              Bookora answers calls, texts missed leads instantly, collects job details, and helps home service businesses book more jobs — even when your team is busy, on-site, or closed for the day.
-            </p>
+          <div className="mb-6 inline-flex items-center rounded-full border border-[#6fc9bd]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#6fc9bd]">
+  AI Receptionist & Follow-Up System For Home Service Businesses
+</div>
+
+<h1 className="max-w-3xl text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
+  Stop Losing Jobs To <span className="text-[#6fc9bd]">Missed Calls.</span>
+</h1>
+
+<p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
+  Bookora answers calls, texts missed leads, collects job details, and helps book appointments for HVAC, plumbing, roofing, electrical, and other home service businesses — even when your team is busy, on-site, or closed.
+</p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Button
