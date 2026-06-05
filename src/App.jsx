@@ -1021,8 +1021,9 @@ if (
   </p>
 
   <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">
-    Questions Before You <span className="text-[#6fc9bd]">Get Started?</span>
-  </h2>
+  Your AI Receptionist Handles The Call{" "}
+  <span className="text-[#6fc9bd]">While You Handle The Work.</span>
+</h2>
 
   <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-300">
     Here are the most common questions businesses ask before using Bookora to capture missed calls, follow up with leads, and book more appointments.
