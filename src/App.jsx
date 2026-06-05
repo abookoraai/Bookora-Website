@@ -65,20 +65,21 @@ function Card({ children, className = "" }) {
 
 const PACKAGE_DATA = [
   {
-    name: "Starter",
+    name: "Basic",
     price: "$500 setup",
     startup: "$500",
-    monthly: "$147/mo",
+    monthly: "$197/mo",
     usage: "45 AI voice minutes included • then $0.50/min",
-    bestFor: "Missed-call recovery + basic appointment follow-up",
+    bestFor: "AI receptionist + appointment booking",
     features: [
       "45 AI voice minutes included",
-      "Missed call text-back",
-      "Instant SMS follow-up",
-      "Appointment reminders",
-      "Review request automation",
-      "Basic booking link/calendar setup",
-      "Simple lead pipeline",
+      "24/7 AI receptionist",
+      "Text follow-up",
+      "Appointment booking",
+      "Calendar integration",
+      "Call summaries",
+      "Basic lead capture",
+      "Email notifications",
       "Email support",
     ],
   },
@@ -86,40 +87,42 @@ const PACKAGE_DATA = [
     name: "Growth",
     price: "$1,000 setup",
     startup: "$1,000",
-    monthly: "$297/mo",
+    monthly: "$397/mo",
     usage: "90 AI voice minutes included • then $0.40/min",
     setup: "Most popular",
     bestFor: "AI receptionist + lead nurturing",
     features: [
       "90 AI voice minutes included",
-      "Everything in Starter",
-      "Voice AI receptionist",
+      "Everything in Basic",
+      "Custom AI call flow",
       "Lead qualification",
-      "Appointment booking support",
-      "Custom call flow",
-      "Call summaries/transcripts",
-      "Advanced lead follow-up",
+      "Lead nurturing",
+      "Missed call text-back",
+      "Google review requests",
+      "Internal team notifications",
+      "Call transcripts",
       "Priority support",
     ],
   },
   {
-    name: "Pro",
+    name: "Enterprise",
     price: "$1,500 setup",
     startup: "$1,500",
-    monthly: "$497/mo",
+    monthly: "$697/mo",
     usage: "180 AI voice minutes included • then $0.30/min",
-    setup: "For high-volume businesses",
+    setup: "For advanced businesses",
     bestFor: "Full AI lead conversion system",
     features: [
       "180 AI voice minutes included",
       "Everything in Growth",
-      "Advanced Voice AI setup",
-      "More complex call routing",
-      "Multi-location or multi-department support",
+      "Advanced AI receptionist setup",
+      "Advanced call routing",
+      "Multi-location support",
+      "Multi-phone-number support",
+      "Multi-department call flows",
       "Advanced automations",
-      "Reactivation campaigns",
-      "Advanced analytics",
-      "Dedicated account manager",
+      "Monthly performance report",
+      "Dedicated account support",
       "VIP support",
     ],
   },
@@ -145,7 +148,7 @@ function buildTelLink(phoneNumber) {
 
 function runSmokeTests() {
   console.assert(PACKAGE_DATA.length === 3, "Expected exactly 3 packages.");
-  console.assert(getPackageByName(PACKAGE_DATA, "Growth").monthly === "$497/mo", "Growth package monthly price should be $497/mo.");
+  console.assert(getPackageByName(PACKAGE_DATA, "Growth").monthly === "$397/mo", "Growth package monthly price should be $397/mo.");
   console.assert(getPackageByName(PACKAGE_DATA, "Missing").name === "Growth", "Unknown package should default to Growth.");
   console.assert(ACCENT === "#55a498", "Accent color should match the Bookora logo teal.");
 }
@@ -454,9 +457,9 @@ export default function BookoraAIReceptionistDemoPage() {
 
 const CLIENT_LOGIN_URL = "https://app.gohighlevel.com/";
 
-const STARTER_URL = "https://links.bookora.ai/payment-link/6a00004634d67b041e7e893f";
+const Basic_URL = "https://links.bookora.ai/payment-link/6a00004634d67b041e7e893f";
 const GROWTH_URL = "https://links.bookora.ai/payment-link/6a00009134d67b041e7e8940";
-const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a";
+const Enterprise_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a";
 
 const AI_DEMO_PHONE_NUMBER = "7278664823";
 
@@ -954,11 +957,11 @@ if (
     setActivePackage(pkg.name);
 
     openLink(
-      pkg.name === "Starter"
-        ? STARTER_URL
-        : pkg.name === "Growth"
-        ? GROWTH_URL
-        : PRO_URL
+      pkg.name === "Basic"
+  ? Basic_URL
+  : pkg.name === "Growth"
+  ? GROWTH_URL
+  : Enterprise_URL
     );
   }}
 >
@@ -1005,7 +1008,7 @@ if (
           <div className="mt-6 rounded-3xl border border-white/10 bg-white/5 p-6 text-sm leading-6 text-slate-300">
   <p className="font-black text-white">Usage-Based Costs</p>
   <p className="mt-2">
-    Starter includes 45 AI voice minutes per month, then $0.50/min. Growth includes 90 AI voice minutes per month, then $0.40/min. Pro includes 180 AI voice minutes per month, then $0.30/min. SMS, phone, and carrier usage may be billed separately based on actual usage.
+    Basic includes 45 AI voice minutes per month, then $0.50/min. Growth includes 90 AI voice minutes per month, then $0.40/min. Pro includes 180 AI voice minutes per month, then $0.30/min. SMS, phone, and carrier usage may be billed separately based on actual usage.
   </p>
 </div>
 
@@ -1061,7 +1064,7 @@ if (
       {
   question: "Are there usage fees?",
   answer:
-    "Yes. Starter does not include Voice AI. Growth includes 150 AI voice minutes. Pro includes 300 AI voice minutes. Additional minutes are $0.25/min. SMS, phone, carrier usage, and compliance-supported medical workflows may be billed separately depending on the plan.",
+    "Yes. Basic does not include Voice AI. Growth includes 150 AI voice minutes. Enterprise includes 300 AI voice minutes. Additional minutes are $0.25/min. SMS, phone, carrier usage, and compliance-supported medical workflows may be billed separately depending on the plan.",
       },
       {
   question: "Can med spas use Bookora?",
