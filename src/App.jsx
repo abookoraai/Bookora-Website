@@ -49,7 +49,7 @@ function Icon({ name, className = "h-6 w-6" }) {
 function Button({ children, onClick, variant = "solid", className = "" }) {
   const base = "inline-flex items-center justify-center rounded-2xl px-6 py-4 font-bold transition focus:outline-none focus:ring-2 focus:ring-[#6fc9bd] focus:ring-offset-2 focus:ring-offset-[#030908]";
   const styles = variant === "outline"
-    ? "border border-[#6fc9bd]/40 bg-white/5 text-white hover:bg-[##55a498]/10"
+    ? "border border-[#6fc9bd]/40 bg-white/5 text-white hover:bg-[#55a498]/10"
     : "bg-[#6fc9bd] text-[#031312] hover:bg-[#8BE7DA]";
 
   return (
@@ -117,63 +117,6 @@ const PACKAGE_DATA = [
       "Reactivation campaigns",
       "Advanced analytics",
       "Dedicated account manager",
-      "VIP support",
-    ],
-  },
-];
-
-const MEDICAL_PACKAGE_DATA = [
-  {
-    name: "Healthcare Starter",
-    price: "$1,000 setup",
-    startup: "$1,000",
-    monthly: "$497/mo",
-    usage: "Privacy-conscious setup • No sensitive client data collected by standard SMS",
-    bestFor: "Businesses that need missed-call recovery and basic booking support while protecting sensitive client information",
-    features: [
-      "Missed call text-back",
-      "Privacy-safe SMS templates",
-      "Appointment reminders",
-      "Review request automation",
-      "Basic booking link/calendar setup",
-      "Simple lead pipeline",
-      "Medical-safe messaging rules",
-    ],
-  },
-  {
-    name: "Healthcare Growth",
-    price: "$1,500 setup",
-    startup: "$1,500",
-    monthly: "$697/mo",
-    usage: "HIPAA-supported setup available when required • 150 AI voice minutes included",
-    setup: "Best for healthcare",
-    bestFor: "AI receptionist + privacy-conscious lead follow-up for sensitive client conversations",
-    features: [
-      "Everything in Med Spa Starter",
-      "Voice AI receptionist",
-      "Privacy-safe AI voice instructions",
-      "Lead qualification without collecting medical details",
-      "Appointment booking support",
-      "Call summaries/transcripts",
-      "Priority support",
-    ],
-  },
-  {
-    name: "Healthcare Pro",
-    price: "$2,500 setup",
-    startup: "$2,500",
-    monthly: "$997/mo+",
-    usage: "HIPAA-supported setup available when required • 300 AI voice minutes included",
-    setup: "For high-volume healthcare businesses",
-    bestFor: "Full AI lead conversion system for privacy-sensitive businesses",
-    features: [
-      "Everything in Med Spa Growth",
-      "Advanced Voice AI setup",
-      "More complex call routing",
-      "Multi-provider or multi-location support",
-      "Advanced automations",
-      "Reactivation campaigns",
-      "Advanced analytics",
       "VIP support",
     ],
   },
@@ -512,22 +455,16 @@ const STARTER_URL = "https://links.bookora.ai/payment-link/6a00004634d67b041e7e8
 const GROWTH_URL = "https://links.bookora.ai/payment-link/6a00009134d67b041e7e8940";
 const PRO_URL = "https://links.bookora.ai/payment-link/6a0000a7c43a7488828c277a";
 
-const MED_SPA_STARTER_URL = "https://links.bookora.ai/payment-link/6a167597f4e3f699673a5de1";
-const MED_SPA_GROWTH_URL = "https://links.bookora.ai/payment-link/6a167701f4e3f699673a5de6";
-const MED_SPA_PRO_URL = "https://links.bookora.ai/payment-link/6a167732f4e3f699673a5de7";
-
 const AI_DEMO_PHONE_NUMBER = "7278664823";
 
   const openLink = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };
   const [activePackage, setActivePackage] = useState("Growth");
-  const [activeMedicalPackage, setActiveMedicalPackage] = useState("Healthcare Growth");
   const [billing, setBilling] = useState("monthly");
   const [callingDemo, setCallingDemo] = useState(false);
 
   const packages = useMemo(() => PACKAGE_DATA, []);
-  const medicalPackages = useMemo(() => MEDICAL_PACKAGE_DATA, []);
   const active = getPackageByName(packages, activePackage);
 
   const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
@@ -558,7 +495,18 @@ if (
 ) {
   return <BookoraRevenueLossCalculator />;
 }
-  const industries = ["Auto Repair Shops", "med Spas", "HVAC / Plumbing / Roofing / Electrical", "Law Firms", "Dental / Chiropractic Care"];
+  const industries = [
+  "HVAC Companies",
+  "Plumbers",
+  "Roofers",
+  "Electricians",
+  "Landscapers",
+  "Cleaners",
+  "Garage Door Companies",
+  "Pest Control",
+  "Restoration Companies",
+  "Auto Repair Shops",
+];
   const steps = [
     ["phone", "AI Answers Calls", "Bookora answers your calls instantly, just like a real receptionist."],
     ["message", "Engages & Qualifies", "It has natural conversations, answers questions, and qualifies leads."],
@@ -599,7 +547,7 @@ if (
     href={CLIENT_LOGIN_URL}
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-xl border border-[#6fc9bd]/40 bg-white/5 px-3 py-2 text-xs font-bold text-white transition hover:bg-[##55a498]/10 focus:outline-none focus:ring-2 focus:ring-[#6fc9bd] focus:ring-offset-2 focus:ring-offset-[#030908] sm:rounded-2xl sm:px-5 sm:py-4 sm:text-base"
+    className="inline-flex items-center justify-center rounded-xl border border-[#6fc9bd]/40 bg-white/5 px-3 py-2 text-xs font-bold text-white transition hover:bg-[#55a498]/10 focus:outline-none focus:ring-2 focus:ring-[#6fc9bd] focus:ring-offset-2 focus:ring-offset-[#030908] sm:rounded-2xl sm:px-5 sm:py-4 sm:text-base"
   >
     Client Login
   </a>
@@ -617,14 +565,14 @@ if (
       <main className="relative z-10">
         <section className="mx-auto grid max-w-7xl items-center gap-16 px-5 pb-20 pt-10 lg:grid-cols-[0.85fr_1.15fr] lg:pb-24 lg:pt-16">
           <div>
-            <div className="mb-6 inline-flex items-center rounded-full border border-[#6fc9bd]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[##6fc9bd]">
-              24/7 AI Receptionist For Your Business
+            <div className="mb-6 inline-flex items-center rounded-full border border-[#6fc9bd]/40 px-4 py-2 text-sm font-bold uppercase tracking-wide text-[#6fc9bd]">
+              24/7 AI Receptionist For Home Service Businesses
             </div>
             <h1 className="max-w-3xl text-5xl font-black leading-[1.04] tracking-tight md:text-7xl">
-              Never Miss Another Call. <span className="text-[#6fc9bd]">Book More Appointments.</span>
+              Never Miss Another Job. <span className="text-[#6fc9bd]">Turn More Calls Into Booked Work.</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-200">
-              Bookora’s AI Receptionist answers your calls, texts missed calls instantly, and books appointments — so you never lose a customer again.
+              Bookora answers calls, texts missed leads instantly, collects job details, and helps home service businesses book more jobs — even when your team is busy, on-site, or closed for the day.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -936,7 +884,7 @@ if (
 </h2>
 
 <p className="mt-3 max-w-2xl text-slate-300">
-  Choose a standard plan for everyday appointment follow-up, or a healthcare plan when your business needs privacy-conscious workflows and HIPAA-supported setup.
+  Choose the plan that fits your call volume. Bookora helps home service businesses capture missed calls, respond instantly, follow up with leads, and turn more inquiries into booked jobs.
 </p>
             </div>
           </div>
@@ -945,13 +893,13 @@ if (
   <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
     <div>
       <p className="text-sm font-black uppercase tracking-[0.22em] text-[#6fc9bd]">
-        Standard Business Plans
+        Home Service Growth Plans
       </p>
       <h3 className="mt-2 text-2xl font-black text-white">
-        For businesses that want to capture more calls, leads, and appointments.
+        For home service businesses that want to capture more calls, book more jobs, and stop losing leads after hours.
       </h3>
       <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300">
-        Perfect for auto shops, salons, home services, studios, and local service businesses that need faster follow-up without hiring more staff.
+        Perfect for HVAC, plumbing, roofing, electrical, landscaping, cleaning, pest control, restoration, and other local service businesses.
       </p>
     </div>
 
@@ -1080,119 +1028,6 @@ if (
   <p className="mt-2">
     Growth includes 150 AI voice minutes per month. Pro includes 300 AI voice minutes per month.
     Additional AI voice minutes are billed at $0.25/min. SMS, phone, and carrier usage may be billed separately based on actual usage.
-  </p>
-</div>
-
-<div className="mt-12 rounded-3xl border border-[#6fc9bd]/20 bg-gradient-to-r from-[#55a498]/10 to-white/5 p-6">
-  <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-    <div>
-      <p className="text-sm font-black uppercase tracking-[0.22em] text-[#6fc9bd]">
-        Healthcare & Privacy-Sensitive Plans
-      </p>
-      <h3 className="mt-2 text-2xl font-black text-white">
-        For businesses that need safer follow-up and HIPAA-supported workflows.
-      </h3>
-      <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-300">
-        Built for healthcare, wellness, medical-aesthetic, dental, chiropractic, and other businesses where client information needs to be handled carefully.
-      </p>
-    </div>
-
-    <div className="rounded-2xl border border-[#6fc9bd]/25 bg-black/20 px-4 py-3 text-sm font-bold text-[#C8FFF7]">
-      HIPAA-supported setup available
-    </div>
-  </div>
-</div>
-
-<div className="mt-6 grid gap-5 lg:grid-cols-3">
-  {medicalPackages.map((pkg) => (
-    <Card
-      key={pkg.name}
-      className={`relative h-full cursor-pointer overflow-hidden bg-white/5 transition hover:-translate-y-1 ${
-  activeMedicalPackage === pkg.name
-    ? "scale-[1.02] border-[#6fc9bd] shadow-2xl shadow-[#55a498]/30"
-    : "border-white/10 hover:border-[#6fc9bd]/40"
-}`}
-    >
-      {pkg.name === "Healthcare Growth" && (
-        <div className="bg-[#6fc9bd] py-2 text-center text-xs font-black text-[#031312]">
-          Best For Healthcare
-        </div>
-      )}
-
-      <div
-  className="p-7"
-  onClick={() => setActiveMedicalPackage(pkg.name)}
->
-        <h3 className="text-2xl font-black">{pkg.name}</h3>
-        <p className="mt-1 text-sm text-slate-400">{pkg.bestFor}</p>
-
-        <div className="mt-6">
-          <p className="text-5xl font-black">{pkg.monthly}</p>
-
-          <p className="mt-2 text-sm font-semibold text-slate-400">
-            after setup
-          </p>
-
-          <div className="mt-4 rounded-2xl border border-[#6fc9bd]/25 bg-[##55a498]/10 p-4">
-            <p className="text-sm font-black text-[#6fc9bd]">
-              {pkg.startup} Setup Fee
-            </p>
-            <p className="mt-1 text-xs text-slate-300">
-              Medical-safe setup • onboarding • workflow launch
-            </p>
-          </div>
-
-          <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4">
-            <p className="text-xs font-black uppercase tracking-wide text-[#6fc9bd]">
-              Compliance Note
-            </p>
-            <p className="mt-1 text-sm font-semibold leading-6 text-slate-200">
-              {pkg.usage}
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-6 space-y-3">
-          {pkg.features.map((feature) => (
-            <div key={feature} className="flex gap-3 text-sm text-slate-200">
-              <Icon name="check" className="mt-0.5 h-4 w-4 shrink-0 text-[#6fc9bd]" />
-              {feature}
-            </div>
-          ))}
-        </div>
-
-<Button
-  variant={activeMedicalPackage === pkg.name ? "solid" : "outline"}
-  className="mt-7 w-full"
-  onClick={(e) => {
-    e.stopPropagation();
-
-    setActiveMedicalPackage(pkg.name);
-
-    openLink(
-  pkg.name === "Healthcare Starter"
-    ? MED_SPA_STARTER_URL
-    : pkg.name === "Healthcare Growth"
-    ? MED_SPA_GROWTH_URL
-    : MED_SPA_PRO_URL
-);
-  }}
->
-  Get Started
-</Button>
-
-        <p className="mt-3 text-center text-xs text-slate-400">
-          Medical workflows may require additional agreements and HIPAA-supported setup.
-        </p>
-      </div>
-    </Card>
-  ))}
-</div>
-
-<div className="mt-6 rounded-3xl border border-[#6fc9bd]/25 bg-[#55a498]/10 p-6 text-sm leading-6 text-slate-300">
-  <p className="font-black text-white">Healthcare Compliance Note</p>
-  <p className="mt-2">
-    Bookora’s standard automations are designed for appointment follow-up and lead conversion, not medical intake. For healthcare, wellness, and privacy-sensitive businesses, we use privacy-conscious workflows and avoid collecting sensitive client information through standard SMS or AI conversations unless a HIPAA-supported workflow and required agreements are in place.
   </p>
 </div>
 
