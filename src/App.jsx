@@ -733,8 +733,13 @@ if (
     </p>
 
     <h2 className="mt-3 text-4xl font-black tracking-tight md:text-5xl">
-      Your AI Receptionist Handles The Call While You Handle The Work.
-    </h2>
+  <span className="block text-white">
+    Your AI Receptionist Handles The Call
+  </span>
+  <span className="block text-[#6fc9bd]">
+    While You Handle The Work.
+  </span>
+</h2>
 
     <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
       Bookora answers calls, captures job details, sends booking links, and notifies your team automatically. SMS automations can be added after carrier verification.
