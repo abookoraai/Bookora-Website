@@ -629,10 +629,10 @@ if (
             <div className="relative overflow-visible">
               <div className="overflow-hidden rounded-[2rem] border border-[#6fc9bd]/20 bg-white/5 shadow-2xl shadow-[#55a498]/20">
                 <img
-                  src="/bookora-mechanic-hero.png"
-                  alt="Home service technician using Bookora AI to recover calls and appointments"
-                  className="h-[500px] w-full object-cover object-center sm:h-[560px] md:h-[640px] lg:h-[700px]"
-                />
+  src="/bookora-home-services-hero.png"
+  alt="Home service professionals using Bookora AI to answer calls and book more jobs"
+  className="h-[500px] w-full object-cover object-center sm:h-[560px] md:h-[640px] lg:h-[700px]"
+/>
               </div>
 
               <div className="absolute -left-2 top-5 max-w-[175px] rounded-xl border border-white/70 bg-white p-2.5 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-left-4 sm:top-8 sm:max-w-[205px] md:-left-6 lg:-left-8">
