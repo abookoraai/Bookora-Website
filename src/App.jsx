@@ -622,7 +622,7 @@ if (
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
           <div className="relative mx-auto max-w-[360px] px-3 pb-8 sm:max-w-[460px] md:max-w-[520px] lg:max-w-none lg:px-0 lg:pb-0">
   <div className="absolute -inset-4 rounded-[2.5rem] bg-[#55a498]/20 blur-3xl" />
