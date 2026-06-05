@@ -635,7 +635,7 @@ if (
 />
               </div>
 
-              <div className="absolute left-4 top-8 max-w-[190px] rounded-xl border border-white/70 bg-white p-2.5 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-left-4 sm:top-8 sm:max-w-[205px] md:-left-6 lg:-left-8"
+              <div className="absolute right-4 top-8 z-20 max-w-[210px] rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur lg:-right-16">
                 <div className="flex gap-2">
                   <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#55a498]/15 text-[#55a498] sm:h-8 sm:w-8">
                     <Icon name="phone" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
@@ -650,7 +650,7 @@ if (
                 </div>
               </div>
 
-              <div className="absolute right-4 top-40 max-w-[180px] rounded-xl border border-white/70 bg-white p-2.5 text-[#031312] shadow-xl shadow-black/20 backdrop-blur sm:-right-4 sm:top-40 sm:max-w-[200px] md:-right-5 lg:-right-8"
+              <div className="absolute left-4 top-[42%] z-20 max-w-[210px] -translate-y-1/2 rounded-xl border border-white/70 bg-white p-3 text-[#031312] shadow-xl shadow-black/20 backdrop-blur lg:-left-20">
                 <div className="flex items-center gap-2">
                   <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#55a498] text-white sm:h-8 sm:w-8">
                     <Icon name="check" className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
