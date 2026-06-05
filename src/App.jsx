@@ -743,7 +743,7 @@ if (
 
   </div>
 </div>
-        </section>
+        </main>
 
         <section className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-16 lg:grid-cols-[0.9fr_1.1fr]">
   <div>
@@ -1182,7 +1182,7 @@ if (
 
   </div>
 </footer>
-      </main>
+            </div>
     </div>
   );
 }
