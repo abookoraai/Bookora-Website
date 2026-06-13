@@ -455,7 +455,7 @@ export default function BookoraAIReceptionistDemoPage() {
   // ===== REPLACE THESE WITH YOUR REAL LINKS =====
   const DEMO_BOOKING_URL = "https://links.bookora.ai/widget/booking/gdVSUoWSEXFMddK3zFO7";
 
-const CLIENT_LOGIN_URL = "https://app.gohighlevel.com/";
+const CLIENT_LOGIN_URL = "https://bookora-dashboard.vercel.app";
 
 const Basic_URL = "https://links.bookora.ai/payment-link/6a00004634d67b041e7e893f";
 const GROWTH_URL = "https://links.bookora.ai/payment-link/6a00009134d67b041e7e8940";
